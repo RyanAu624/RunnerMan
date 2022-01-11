@@ -394,7 +394,81 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YV9-QN-VDk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-898" y="102"/>
+            <point key="canvasLocation" x="-820" y="102"/>
+        </scene>
+        <!--Teacher Home View Controller-->
+        <scene sceneID="ImC-Bc-ya5">
+            <objects>
+                <viewController id="4SV-I4-GZC" customClass="TeacherHomeViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PSl-ZG-n9K"/>
+                        <viewControllerLayoutGuide type="bottom" id="BtL-uC-Rqi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HU4-5X-dH1">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="WelCome *Name* !!!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ggZ-lv-YdT">
+                                <rect key="frame" x="20" y="55" width="350" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ika-DS-DaE">
+                                <rect key="frame" x="20" y="115" width="350" height="166"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="addTrainingBox" title=""/>
+                                <connections>
+                                    <segue destination="ZHk-0g-N4F" kind="presentation" id="SfW-sL-kcZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8AD-zk-Hco">
+                                <rect key="frame" x="20" y="291" width="170" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="blankBox" title=""/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S08-QD-t9C">
+                                <rect key="frame" x="200" y="291" width="170" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="blankBox" title=""/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0AY-V6-Xrc">
+                                <rect key="frame" x="20" y="464" width="170" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="blankBox" title=""/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNG-SZ-D3S">
+                                <rect key="frame" x="200" y="464" width="170" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="blankBox" title=""/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOc-sv-ZZ7">
+                                <rect key="frame" x="20" y="639" width="170" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="createStudentUserBox" title=""/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5B-I6-WCE">
+                                <rect key="frame" x="200" y="639" width="170" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="blankBox" title=""/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1iP-nB-QqB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ax-Ta-J5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918" y="-599"/>
         </scene>
         <!--Student Home View Controller-->
         <scene sceneID="yyU-oK-Igs">
@@ -469,84 +543,10 @@
             </objects>
             <point key="canvasLocation" x="917" y="102"/>
         </scene>
-        <!--Teacher Home View Controller-->
-        <scene sceneID="ImC-Bc-ya5">
-            <objects>
-                <viewController id="4SV-I4-GZC" customClass="TeacherHomeViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PSl-ZG-n9K"/>
-                        <viewControllerLayoutGuide type="bottom" id="BtL-uC-Rqi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HU4-5X-dH1">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="WelCome *Name* !!!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ggZ-lv-YdT">
-                                <rect key="frame" x="20" y="55" width="350" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ika-DS-DaE">
-                                <rect key="frame" x="20" y="115" width="350" height="166"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="addTrainingBox" title=""/>
-                                <connections>
-                                    <segue destination="ZHk-0g-N4F" kind="presentation" id="SfW-sL-kcZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8AD-zk-Hco">
-                                <rect key="frame" x="20" y="291" width="170" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="blankBox" title=""/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S08-QD-t9C">
-                                <rect key="frame" x="200" y="291" width="170" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="blankBox" title=""/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0AY-V6-Xrc">
-                                <rect key="frame" x="20" y="464" width="170" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="blankBox" title=""/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNG-SZ-D3S">
-                                <rect key="frame" x="200" y="464" width="170" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="StudentUserBox" title=""/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOc-sv-ZZ7">
-                                <rect key="frame" x="20" y="639" width="170" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="createStudentUserBox" title=""/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5B-I6-WCE">
-                                <rect key="frame" x="200" y="639" width="170" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="blankBox" title=""/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="1iP-nB-QqB"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4ax-Ta-J5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="918" y="-599"/>
-        </scene>
-        <!--View Controller-->
+        <!--Teacher Add Training View Controller-->
         <scene sceneID="eTi-Wz-Bip">
             <objects>
-                <viewController id="ZHk-0g-N4F" sceneMemberID="viewController">
+                <viewController id="ZHk-0g-N4F" customClass="TeacherAddTrainingViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SRB-Yu-oua"/>
                         <viewControllerLayoutGuide type="bottom" id="juT-HK-Sbg"/>
@@ -743,55 +743,10 @@
             </objects>
             <point key="canvasLocation" x="1840" y="-599"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="Kot-hM-zOU">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="94c-95-GJl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tableViewController id="bdN-Cu-34h" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="6sv-C4-Jan">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="99" id="zPw-7v-uM7">
-                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="99"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zPw-7v-uM7" id="1sM-bQ-HqB">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="99"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="bdN-Cu-34h" id="kBb-Lv-OHf"/>
-                            <outlet property="delegate" destination="bdN-Cu-34h" id="EGW-m9-cNe"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="8Yx-dh-9RE"/>
-                </tableViewController>
-            </objects>
-            <point key="canvasLocation" x="3860" y="-244.54976303317534"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="H0L-2A-QJt">
-            <objects>
-                <navigationController id="hfQ-GO-Poh" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S2K-N4-ZYJ">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="bdN-Cu-34h" kind="relationship" relationship="rootViewController" id="LUB-Lq-mvE"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JBU-Xf-xlj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2954" y="-244"/>
-        </scene>
-        <!--View Controller-->
+        <!--Student Add Training View Controller-->
         <scene sceneID="QOP-Q6-GfY">
             <objects>
-                <viewController id="A0o-XI-9kA" sceneMemberID="viewController">
+                <viewController id="A0o-XI-9kA" customClass="StudentAddTrainingViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kf4-lM-jNd"/>
                         <viewControllerLayoutGuide type="bottom" id="n0G-We-Lfn"/>
@@ -964,10 +919,55 @@
             </objects>
             <point key="canvasLocation" x="1840" y="101.65876777251184"/>
         </scene>
+        <!--Root View Controller-->
+        <scene sceneID="Kot-hM-zOU">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94c-95-GJl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tableViewController id="bdN-Cu-34h" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="6sv-C4-Jan">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="zPw-7v-uM7">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zPw-7v-uM7" id="1sM-bQ-HqB">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bdN-Cu-34h" id="kBb-Lv-OHf"/>
+                            <outlet property="delegate" destination="bdN-Cu-34h" id="EGW-m9-cNe"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="8Yx-dh-9RE"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="3724.6153846153843" y="-240.28436018957345"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H0L-2A-QJt">
+            <objects>
+                <navigationController id="hfQ-GO-Poh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S2K-N4-ZYJ">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bdN-Cu-34h" kind="relationship" relationship="rootViewController" id="LUB-Lq-mvE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JBU-Xf-xlj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2820" y="-240"/>
+        </scene>
     </scenes>
     <resources>
         <image name="RunnerManLogo" width="252" height="134"/>
-        <image name="StudentUserBox" width="170" height="165"/>
         <image name="addBtn" width="350" height="50"/>
         <image name="addTrainingBox" width="350" height="165.66667175292969"/>
         <image name="bigTextFieldBG" width="362" height="92"/>
