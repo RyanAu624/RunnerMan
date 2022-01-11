@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9ABBEB2E278C41D800FB9F22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB2D278C41D800FB9F22 /* AppDelegate.swift */; };
 		9ABBEB30278C41D800FB9F22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB2F278C41D800FB9F22 /* SceneDelegate.swift */; };
-		9ABBEB32278C41D800FB9F22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB31278C41D800FB9F22 /* ViewController.swift */; };
 		9ABBEB35278C41D800FB9F22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ABBEB33278C41D800FB9F22 /* Main.storyboard */; };
 		9ABBEB37278C41DA00FB9F22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ABBEB36278C41DA00FB9F22 /* Assets.xcassets */; };
 		9ABBEB3A278C41DA00FB9F22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ABBEB38278C41DA00FB9F22 /* LaunchScreen.storyboard */; };
@@ -22,13 +21,14 @@
 		9ABBEB57278C56C200FB9F22 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9ABBEB56278C56C200FB9F22 /* FirebaseStorage */; };
 		9ABBEB59278C686900FB9F22 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB58278C686900FB9F22 /* Training.swift */; };
 		9ABBEB5B278C6A1500FB9F22 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB5A278C6A1400FB9F22 /* Comment.swift */; };
+		9ABBEB5D278D240F00FB9F22 /* StudentLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB5C278D240F00FB9F22 /* StudentLoginViewController.swift */; };
+		9ABBEB5F278D242300FB9F22 /* TeacherLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB5E278D242300FB9F22 /* TeacherLoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9ABBEB2A278C41D800FB9F22 /* RunnerMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunnerMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ABBEB2D278C41D800FB9F22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ABBEB2F278C41D800FB9F22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9ABBEB31278C41D800FB9F22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9ABBEB34278C41D800FB9F22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9ABBEB36278C41DA00FB9F22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9ABBEB39278C41DA00FB9F22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +38,8 @@
 		9ABBEB47278C514700FB9F22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9ABBEB58278C686900FB9F22 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 		9ABBEB5A278C6A1400FB9F22 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		9ABBEB5C278D240F00FB9F22 /* StudentLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLoginViewController.swift; sourceTree = "<group>"; };
+		9ABBEB5E278D242300FB9F22 /* TeacherLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherLoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +78,13 @@
 			children = (
 				9ABBEB2D278C41D800FB9F22 /* AppDelegate.swift */,
 				9ABBEB2F278C41D800FB9F22 /* SceneDelegate.swift */,
-				9ABBEB31278C41D800FB9F22 /* ViewController.swift */,
 				9ABBEB43278C49E600FB9F22 /* Teacher.swift */,
 				9ABBEB45278C4AED00FB9F22 /* Student.swift */,
 				9ABBEB58278C686900FB9F22 /* Training.swift */,
 				9ABBEB5A278C6A1400FB9F22 /* Comment.swift */,
 				9ABBEB33278C41D800FB9F22 /* Main.storyboard */,
+				9ABBEB5C278D240F00FB9F22 /* StudentLoginViewController.swift */,
+				9ABBEB5E278D242300FB9F22 /* TeacherLoginViewController.swift */,
 				9ABBEB36278C41DA00FB9F22 /* Assets.xcassets */,
 				9ABBEB38278C41DA00FB9F22 /* LaunchScreen.storyboard */,
 				9ABBEB3B278C41DA00FB9F22 /* Info.plist */,
@@ -173,10 +176,11 @@
 			files = (
 				9ABBEB44278C49E600FB9F22 /* Teacher.swift in Sources */,
 				9ABBEB59278C686900FB9F22 /* Training.swift in Sources */,
-				9ABBEB32278C41D800FB9F22 /* ViewController.swift in Sources */,
 				9ABBEB5B278C6A1500FB9F22 /* Comment.swift in Sources */,
 				9ABBEB2E278C41D800FB9F22 /* AppDelegate.swift in Sources */,
+				9ABBEB5D278D240F00FB9F22 /* StudentLoginViewController.swift in Sources */,
 				9ABBEB46278C4AED00FB9F22 /* Student.swift in Sources */,
+				9ABBEB5F278D242300FB9F22 /* TeacherLoginViewController.swift in Sources */,
 				9ABBEB30278C41D800FB9F22 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
