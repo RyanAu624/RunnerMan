@@ -10,4 +10,5 @@ import Foundation
 struct Teacher {
     var teacherName : String
     var teacherEmail : String
+    var teacherContactNumber : String
 }

@@ -9,5 +9,7 @@ import Foundation
 
 struct Comment {
     var commentID : String
-    var comment : String
+    var commentDescription : String
+    var commentDate : Date
+    var commentTime : String
 }

@@ -11,6 +11,8 @@ struct Student {
     var studentID : String
     var studentName : String
     var studentEmail : String
+    var studentContactNumber : String
+    var studentAge : Int
     var studentWeight : Double
     var studentHeight : Double
 }
