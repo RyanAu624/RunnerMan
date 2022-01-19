@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "StudentUserBox.png",
+      "filename" : "addCommentBtn.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "StudentUserBox-1.png",
+      "filename" : "addCommentBtn-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "StudentUserBox-2.png",
+      "filename" : "addCommentBtn-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
