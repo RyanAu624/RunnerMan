@@ -28,6 +28,9 @@
 		9ABBEB65278D50C300FB9F22 /* StudentSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB64278D50C300FB9F22 /* StudentSignUpViewController.swift */; };
 		9ABBEB67278DA68E00FB9F22 /* TeacherAddTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB66278DA68E00FB9F22 /* TeacherAddTrainingViewController.swift */; };
 		9ABBEB69278DA6A900FB9F22 /* StudentAddTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB68278DA6A900FB9F22 /* StudentAddTrainingViewController.swift */; };
+		9AC814F52799104600BBF2BC /* StudentRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC814F42799104600BBF2BC /* StudentRecordViewController.swift */; };
+		9AC814F7279934CA00BBF2BC /* TeacherRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC814F6279934CA00BBF2BC /* TeacherRecordViewController.swift */; };
+		9AC814F9279C0DBA00BBF2BC /* TeacherSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC814F8279C0DBA00BBF2BC /* TeacherSignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		9ABBEB64278D50C300FB9F22 /* StudentSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSignUpViewController.swift; sourceTree = "<group>"; };
 		9ABBEB66278DA68E00FB9F22 /* TeacherAddTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherAddTrainingViewController.swift; sourceTree = "<group>"; };
 		9ABBEB68278DA6A900FB9F22 /* StudentAddTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAddTrainingViewController.swift; sourceTree = "<group>"; };
+		9AC814F42799104600BBF2BC /* StudentRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRecordViewController.swift; sourceTree = "<group>"; };
+		9AC814F6279934CA00BBF2BC /* TeacherRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherRecordViewController.swift; sourceTree = "<group>"; };
+		9AC814F8279C0DBA00BBF2BC /* TeacherSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherSignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +101,14 @@
 				9ABBEB33278C41D800FB9F22 /* Main.storyboard */,
 				9ABBEB66278DA68E00FB9F22 /* TeacherAddTrainingViewController.swift */,
 				9ABBEB68278DA6A900FB9F22 /* StudentAddTrainingViewController.swift */,
-				9ABBEB64278D50C300FB9F22 /* StudentSignUpViewController.swift */,
-				9ABBEB60278D3C5C00FB9F22 /* StudentHomeViewController.swift */,
 				9ABBEB62278D3C7200FB9F22 /* TeacherHomeViewController.swift */,
-				9ABBEB5C278D240F00FB9F22 /* StudentLoginViewController.swift */,
+				9ABBEB60278D3C5C00FB9F22 /* StudentHomeViewController.swift */,
+				9AC814F6279934CA00BBF2BC /* TeacherRecordViewController.swift */,
+				9AC814F42799104600BBF2BC /* StudentRecordViewController.swift */,
 				9ABBEB5E278D242300FB9F22 /* TeacherLoginViewController.swift */,
+				9ABBEB5C278D240F00FB9F22 /* StudentLoginViewController.swift */,
+				9AC814F8279C0DBA00BBF2BC /* TeacherSignUpViewController.swift */,
+				9ABBEB64278D50C300FB9F22 /* StudentSignUpViewController.swift */,
 				9ABBEB36278C41DA00FB9F22 /* Assets.xcassets */,
 				9ABBEB38278C41DA00FB9F22 /* LaunchScreen.storyboard */,
 				9ABBEB3B278C41DA00FB9F22 /* Info.plist */,
@@ -194,7 +203,10 @@
 				9ABBEB65278D50C300FB9F22 /* StudentSignUpViewController.swift in Sources */,
 				9ABBEB61278D3C5C00FB9F22 /* StudentHomeViewController.swift in Sources */,
 				9ABBEB5B278C6A1500FB9F22 /* Comment.swift in Sources */,
+				9AC814F52799104600BBF2BC /* StudentRecordViewController.swift in Sources */,
 				9ABBEB67278DA68E00FB9F22 /* TeacherAddTrainingViewController.swift in Sources */,
+				9AC814F9279C0DBA00BBF2BC /* TeacherSignUpViewController.swift in Sources */,
+				9AC814F7279934CA00BBF2BC /* TeacherRecordViewController.swift in Sources */,
 				9ABBEB2E278C41D800FB9F22 /* AppDelegate.swift in Sources */,
 				9ABBEB5D278D240F00FB9F22 /* StudentLoginViewController.swift in Sources */,
 				9ABBEB46278C4AED00FB9F22 /* Student.swift in Sources */,
