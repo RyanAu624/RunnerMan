@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import FirebaseFirestore
 
 class TeacherSignUpViewController: UIViewController {
 
@@ -83,9 +84,10 @@ class TeacherSignUpViewController: UIViewController {
     }
     
     func transitionToSignIn() {
-        if let controller = storyboard?.instantiateViewController(withIdentifier: "teacherSignInPage") {
-            present(controller, animated: true, completion: nil)
-        }
+//        if let controller = storyboard?.instantiateViewController(withIdentifier: "teacherSignInPage") {
+//            present(controller, animated: true, completion: nil)
+//        }
+        dismiss(animated: true, completion: nil)
     }
     
     func showAlertMessage(_ number:Int) {
@@ -103,10 +105,10 @@ class TeacherSignUpViewController: UIViewController {
             break
         }
         
-        let controller = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        controller.addAction(okAction)
-        present(controller, animated: true, completion: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
         
     override func viewDidLoad() {

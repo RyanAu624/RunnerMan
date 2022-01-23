@@ -129,6 +129,7 @@
                             <constraint firstItem="Era-s0-iZB" firstAttribute="top" secondItem="l9N-nb-SaS" secondAttribute="bottom" constant="40" id="tK7-D4-X8n"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jty-rC-SCj"/>
                     <connections>
                         <outlet property="CpasswdTextField" destination="bSe-Fk-8O5" id="18Q-do-f4l"/>
                         <outlet property="emailTextField" destination="3dv-GX-BFU" id="vgD-H1-jIO"/>
@@ -144,7 +145,7 @@
         <!--Teacher Login View Controller-->
         <scene sceneID="MBX-ZI-Up9">
             <objects>
-                <viewController storyboardIdentifier="teacherSignInPage" id="Vyq-fa-etr" customClass="TeacherLoginViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Vyq-fa-etr" customClass="TeacherLoginViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aAn-zx-5xW"/>
                         <viewControllerLayoutGuide type="bottom" id="xgF-M6-dzh"/>
@@ -187,6 +188,9 @@
                                 <rect key="frame" x="8" y="568" width="374" height="64"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="teacherloginBtn" title=""/>
+                                <connections>
+                                    <action selector="teacherLogin:" destination="Vyq-fa-etr" eventType="touchUpInside" id="t9c-GO-p5v"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f72-bt-pL5">
                                 <rect key="frame" x="16" y="652" width="153" height="33.333333333333371"/>
@@ -201,7 +205,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="signUpBtn" title=""/>
                                 <connections>
-                                    <segue destination="e0b-Gl-rfV" kind="showDetail" id="bJ9-Qg-OzV"/>
+                                    <segue destination="e0b-Gl-rfV" kind="show" id="bJ9-Qg-OzV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -231,6 +235,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SHf-4j-GOs"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="zho-iU-z2o" id="zWc-14-Akl"/>
+                        <outlet property="passwdTextField" destination="IMj-P5-UzN" id="SsA-2a-Q5o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y5v-gO-Rka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -282,13 +290,16 @@
                                 <rect key="frame" x="8" y="568" width="374" height="64"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="studentloginBtn" title=""/>
+                                <connections>
+                                    <action selector="studentLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8bV-B3-fkB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDW-hA-QMm">
                                 <rect key="frame" x="278" y="652" width="96" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="signUpBtn" title=""/>
                                 <connections>
-                                    <segue destination="oDu-2O-SkZ" kind="showDetail" id="G7A-zi-v9g"/>
+                                    <segue destination="oDu-2O-SkZ" kind="show" id="G7A-zi-v9g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tch-zl-Sbq">
@@ -325,6 +336,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="md8-yI-sMV"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="ALs-gg-lZ8" id="o18-3z-DGk"/>
+                        <outlet property="passwdTextField" destination="UQG-OS-wNe" id="MMW-ra-aul"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -476,6 +491,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="studentSignUpBtn" title=""/>
+                                <connections>
+                                    <action selector="studentSignUp:" destination="oDu-2O-SkZ" eventType="touchUpInside" id="4R6-CR-Kau"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up Here !!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zrg-o8-Odg">
                                 <rect key="frame" x="20" y="25" width="174" height="30"/>
@@ -534,6 +552,16 @@
                             <constraint firstItem="Oq2-Sw-JVh" firstAttribute="leading" secondItem="xos-BV-qW7" secondAttribute="leading" constant="10" id="y4n-Hu-CIh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="MhA-Gm-5tH"/>
+                    <connections>
+                        <outlet property="CpasswdTextField" destination="H2L-ow-DMO" id="gyB-Ys-SMt"/>
+                        <outlet property="ageTextField" destination="7LY-bK-RXV" id="NO9-Ce-Y1v"/>
+                        <outlet property="emailTextField" destination="3yg-gj-ZMn" id="SN8-eM-eQN"/>
+                        <outlet property="inviteCodeTextField" destination="qWf-v1-REj" id="X5U-A8-g17"/>
+                        <outlet property="nameTextField" destination="b8y-bT-XD3" id="BF9-bj-Ft9"/>
+                        <outlet property="passwdTextField" destination="P2f-hK-UOh" id="C7B-Rc-oPn"/>
+                        <outlet property="phoneNumTextField" destination="Xpz-yQ-9u0" id="cu6-gi-PVf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YV9-QN-VDk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -559,7 +587,7 @@
         <!--Teacher Home View Controller-->
         <scene sceneID="ImC-Bc-ya5">
             <objects>
-                <viewController id="4SV-I4-GZC" customClass="TeacherHomeViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="teacherHomePage" id="4SV-I4-GZC" customClass="TeacherHomeViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PSl-ZG-n9K"/>
                         <viewControllerLayoutGuide type="bottom" id="BtL-uC-Rqi"/>
@@ -703,7 +731,7 @@
         <!--Student Home View Controller-->
         <scene sceneID="yyU-oK-Igs">
             <objects>
-                <viewController id="bv2-bS-WSE" customClass="StudentHomeViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="studentHomePage" id="bv2-bS-WSE" customClass="StudentHomeViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ugu-Fj-Igl"/>
                         <viewControllerLayoutGuide type="bottom" id="AS3-Pn-ape"/>
