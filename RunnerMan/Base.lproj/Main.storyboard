@@ -145,7 +145,7 @@
         <!--Teacher Login View Controller-->
         <scene sceneID="MBX-ZI-Up9">
             <objects>
-                <viewController id="Vyq-fa-etr" customClass="TeacherLoginViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="teacherLoginPage" id="Vyq-fa-etr" customClass="TeacherLoginViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aAn-zx-5xW"/>
                         <viewControllerLayoutGuide type="bottom" id="xgF-M6-dzh"/>
@@ -596,14 +596,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="WelCome *Name* !!!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ggZ-lv-YdT">
-                                <rect key="frame" x="20" y="55" width="350" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ika-DS-DaE">
                                 <rect key="frame" x="20" y="115" width="350" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -648,6 +640,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="createStudentUserBox" title=""/>
+                                <connections>
+                                    <action selector="createStu:" destination="4SV-I4-GZC" eventType="touchUpInside" id="zjk-KZ-hMz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5B-I6-WCE">
                                 <rect key="frame" x="200" y="639" width="170" height="165"/>
@@ -659,7 +654,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="6xH-Uq-qjB"/>
-                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ax-Ta-J5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -705,7 +699,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Manage Student" id="FZZ-Ab-uE4"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6h-DG-T2v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -740,14 +733,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="WelCome *Name* !!!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S2K-w9-bL8">
-                                <rect key="frame" x="20" y="55" width="350" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2k-2K-WJX">
                                 <rect key="frame" x="20" y="115" width="350" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -800,7 +785,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="9pC-8o-YMP"/>
-                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ICg-Lb-ed0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1248,7 +1232,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="T8x-a7-50y"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3i-XF-Ffd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1516,7 +1499,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="8Yx-dh-9RE"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94c-95-GJl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1749,9 +1731,6 @@
         <image name="trainingInformationBox" width="402" height="92"/>
         <image name="trainingRecordBox" width="170" height="165"/>
         <image name="weatherBox" width="170" height="165"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

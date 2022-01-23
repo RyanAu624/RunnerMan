@@ -40,6 +40,24 @@ class StudentSignUpViewController: UIViewController {
             return "Make sure your password is correct."
         }
         
+        let db = Firestore.firestore()
+        
+//        db.collection("inviteCode").document("code").getDocument{ (document, error) in
+//
+//            if error == nil {
+//
+//                //Get invite code from firestore
+//                if document != nil && document!.exists {
+//                    let inviteCode = document!.data()
+//                }
+//            }
+//        }
+        
+        //Check inviteCode == user input inviteCode
+//        if inviteCodeTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != inviteCode {
+//
+//        }
+        
         return nil
     }
     
@@ -51,6 +69,8 @@ class StudentSignUpViewController: UIViewController {
             showAlertMessage(0)
         } else if error == "Make sure your password is correct." {
             showAlertMessage(1)
+            self.passwdTextField.text? = ""
+            self.CpasswdTextField.text? = ""
         } else {
             
             let name = nameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)

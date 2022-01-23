@@ -42,6 +42,8 @@ class StudentLoginViewController: UIViewController {
                 if error != nil {
                     //Could'n sign in
                     self.showAlertMessage(1)
+                    self.emailTextField.text? = ""
+                    self.passwdTextField.text? = ""
                 } else {
                     
                     if let controller = self.storyboard?.instantiateViewController(withIdentifier: "studentHomePage") {

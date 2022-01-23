@@ -42,6 +42,9 @@ class TeacherLoginViewController: UIViewController {
                 if error != nil {
                     //Couldn't sign in
                     self.showAlertMessage(1)
+                    self.emailTextField.text? = ""
+                    self.passwdTextField.text? = ""
+                    
                 } else {
                     
                     if let controller = self.storyboard?.instantiateViewController(withIdentifier: "teacherHomePage") {

@@ -48,6 +48,8 @@ class TeacherSignUpViewController: UIViewController {
             showAlertMessage(0)
         } else if error == "Make sure your password is correct." {
             showAlertMessage(1)
+            self.passwdTextField.text? = ""
+            self.CpasswdTextField.text? = ""
         } else {
             
             let name = nameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
