@@ -7,17 +7,21 @@
 
 import UIKit
 import FirebaseFirestore
+import FirebaseAuth
 
 class TeacherHomeViewController: UIViewController {
     
     let db = Firestore.firestore()
+    let id = Auth.auth().currentUser?.uid
     
     @IBAction func createStu(_ sender: Any) {
         
         let inviteCode = Int.random(in: 123009...987654)
         showAlertMessage(inviteCode)
         
-        db.collection("inviteCode").document("code").setData(["code":inviteCode])
+        let ref = db.collection("teacher").document(id!)
+        
+        ref.updateData((["code":inviteCode]), completion: nil)
     }
     
     func showAlertMessage(_ inviteCode:Int) {
