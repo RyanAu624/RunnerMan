@@ -570,7 +570,7 @@
         <!--Navigation Controller-->
         <scene sceneID="88q-ic-EBG">
             <objects>
-                <navigationController id="V7x-zn-aPC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="teacherHomePage" modalPresentationStyle="fullScreen" id="V7x-zn-aPC" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="M7W-5O-XOY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UWK-eP-E5p">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
@@ -587,7 +587,7 @@
         <!--Teacher Home View Controller-->
         <scene sceneID="ImC-Bc-ya5">
             <objects>
-                <viewController storyboardIdentifier="teacherHomePage" id="4SV-I4-GZC" customClass="TeacherHomeViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4SV-I4-GZC" customClass="TeacherHomeViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PSl-ZG-n9K"/>
                         <viewControllerLayoutGuide type="bottom" id="BtL-uC-Rqi"/>
@@ -709,7 +709,7 @@
         <!--Navigation Controller-->
         <scene sceneID="xlc-bF-bAO">
             <objects>
-                <navigationController modalPresentationStyle="fullScreen" id="Sbd-fr-o8T" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="studentHomePage" modalPresentationStyle="fullScreen" id="Sbd-fr-o8T" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Y6Z-pO-Ym7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cVM-sV-bBV">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
@@ -726,7 +726,7 @@
         <!--Student Home View Controller-->
         <scene sceneID="yyU-oK-Igs">
             <objects>
-                <viewController storyboardIdentifier="studentHomePage" id="bv2-bS-WSE" customClass="StudentHomeViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bv2-bS-WSE" customClass="StudentHomeViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ugu-Fj-Igl"/>
                         <viewControllerLayoutGuide type="bottom" id="AS3-Pn-ape"/>
