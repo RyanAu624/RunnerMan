@@ -709,7 +709,7 @@
         <!--Navigation Controller-->
         <scene sceneID="xlc-bF-bAO">
             <objects>
-                <navigationController restorationIdentifier="studentHomePage" modalPresentationStyle="fullScreen" id="Sbd-fr-o8T" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="studentHomePage" modalPresentationStyle="fullScreen" id="Sbd-fr-o8T" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Y6Z-pO-Ym7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cVM-sV-bBV">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
