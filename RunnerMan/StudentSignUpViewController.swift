@@ -40,7 +40,7 @@ class StudentSignUpViewController: UIViewController {
             return "Make sure your password is correct."
         }
         
-        let db = Firestore.firestore()
+//        let db = Firestore.firestore()
         
 //        db.collection("inviteCode").document("code").getDocument{ (document, error) in
 //
@@ -91,14 +91,14 @@ class StudentSignUpViewController: UIViewController {
                     
                     //Student created successfully
                     let db = Firestore.firestore()
-                    
-                    db.collection("student").addDocument(data: ["email":email,
-                                                                "name":name,
-                                                                "phoneNumber":phoneNumber,
-                                                                "age":age,
-                                                                "weight":weight,
-                                                                "height":height,
-                                                                "uid":result!.user.uid]) { (error) in
+
+                    db.collection("student").document(result!.user.uid).setData(["email":email,
+                                                                                 "name":name,
+                                                                                 "phoneNumber":phoneNumber,
+                                                                                 "age":age,
+                                                                                 "weight":weight,
+                                                                                 "height":height,
+                                                                                 "uid":result!.user.uid]){ (error) in
                         if error != nil {
                             //Error to create student
                             self.showAlertMessage(2)
@@ -115,6 +115,7 @@ class StudentSignUpViewController: UIViewController {
     }
     
     func transitionToSignIn() {
+        //Transition to sign in page
         dismiss(animated: true, completion: nil)
     }
     

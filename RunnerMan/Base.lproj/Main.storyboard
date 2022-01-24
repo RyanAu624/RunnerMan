@@ -653,7 +653,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6xH-Uq-qjB"/>
+                    <navigationItem key="navigationItem" id="6xH-Uq-qjB">
+                        <barButtonItem key="leftBarButtonItem" image="navLogo" id="rgv-xI-cUZ"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ax-Ta-J5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -784,7 +786,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9pC-8o-YMP"/>
+                    <navigationItem key="navigationItem" id="9pC-8o-YMP">
+                        <barButtonItem key="leftBarButtonItem" image="navLogo" id="eLg-C6-w2a"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ICg-Lb-ed0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1716,6 +1720,7 @@
         <image name="loginTextFieldBG" width="350" height="150"/>
         <image name="loginTextFieldLine" width="350" height="1"/>
         <image name="manageStudentBox" width="172.66667175292969" height="165"/>
+        <image name="navLogo" width="180.33332824707031" height="29"/>
         <image name="settingBox" width="170" height="165"/>
         <image name="signUpBtn" width="71.666664123535156" height="19.333333969116211"/>
         <image name="studentLogin" width="129" height="19.333333969116211"/>
