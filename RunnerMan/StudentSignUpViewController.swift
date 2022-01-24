@@ -80,6 +80,7 @@ class StudentSignUpViewController: UIViewController {
             let weight = ""
             let height = ""
             let password = passwdTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let supcode = inviteCodeTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             //Create the student
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
