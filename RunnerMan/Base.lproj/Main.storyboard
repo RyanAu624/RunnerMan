@@ -990,6 +990,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wV2-0a-3AC"/>
+                    <connections>
+                        <outlet property="EndTime" destination="oY4-W1-Auo" id="PiR-pI-eXp"/>
+                        <outlet property="StartTime" destination="mcB-5k-wy7" id="yTN-Io-HwX"/>
+                        <outlet property="TrainDay" destination="Dru-Jg-eK1" id="klf-s3-d9K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htP-sN-0Wt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
