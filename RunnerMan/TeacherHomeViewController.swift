@@ -14,7 +14,7 @@ class TeacherHomeViewController: UIViewController {
     
     @IBAction func createStu(_ sender: Any) {
         
-        let inviteCode = Int.random(in: 111112...999998)
+        let inviteCode = Int.random(in: 123009...987654)
         showAlertMessage(inviteCode)
         
         db.collection("inviteCode").document("code").setData(["code":inviteCode])

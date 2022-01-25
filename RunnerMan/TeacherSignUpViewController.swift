@@ -31,7 +31,7 @@ class TeacherSignUpViewController: UIViewController {
             return "Please fill in all fields."
         }
         
-        //Check Comfirm password == password
+        //Comfirm password == password
         if CpasswdTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != passwdTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
             
             return "Make sure your password is correct."
@@ -68,9 +68,10 @@ class TeacherSignUpViewController: UIViewController {
                     //Teacher created successfully
                     let db = Firestore.firestore()
                     
-                    db.collection("teacher").addDocument(data: ["email":email,
-                                                                "name":name, "phoneNumber":phoneNumber,
-                                                                "uid":result!.user.uid]) { (error) in
+                    db.collection("teacher").document(result!.user.uid).setData(["email":email,
+                                                                                    "name":name,
+                                                                                    "phoneNumber":phoneNumber,
+                                                                                    "uid":result!.user.uid]) { (error) in
                         if error != nil {
                             //Error to create teacher
                             self.showAlertMessage(2)
@@ -86,9 +87,7 @@ class TeacherSignUpViewController: UIViewController {
     }
     
     func transitionToSignIn() {
-//        if let controller = storyboard?.instantiateViewController(withIdentifier: "teacherSignInPage") {
-//            present(controller, animated: true, completion: nil)
-//        }
+        //Transition to sign in page
         dismiss(animated: true, completion: nil)
     }
     
