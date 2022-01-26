@@ -12,7 +12,9 @@ struct Student {
     var studentName : String
     var studentEmail : String
     var studentContactNumber : String
-    var studentAge : Int
-    var studentWeight : Double
-    var studentHeight : Double
+    var studentClass : String
+    var studentAge : String
+    var studentWeight : String
+    var studentHeight : String
+    var uid : String
 }

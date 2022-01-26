@@ -375,26 +375,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCo-35-ahG">
-                                <rect key="frame" x="19.999999999999996" y="341" width="34.666666666666657" height="20.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCo-35-ahG">
+                                <rect key="frame" x="20" y="341" width="46" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comfirm Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Uq-uU-jsE">
-                                <rect key="frame" x="20" y="512.33333333333337" width="149" height="21"/>
+                                <rect key="frame" x="20" y="513" width="149" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSK-Go-oI1">
-                                <rect key="frame" x="20" y="426.33333333333331" width="78" height="21"/>
+                                <rect key="frame" x="20" y="427" width="78" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invite Code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2z-kc-edb">
-                                <rect key="frame" x="19.999999999999993" y="598.33333333333337" width="90.333333333333314" height="20.333333333333371"/>
+                                <rect key="frame" x="19.999999999999993" y="599" width="90.333333333333314" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -409,18 +409,18 @@
                                 <rect key="frame" x="10" y="284" width="362" height="52"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="textFieldBG" translatesAutoresizingMaskIntoConstraints="NO" id="QJb-A2-eRE">
-                                <rect key="frame" x="10" y="369.33333333333331" width="362" height="52"/>
+                                <rect key="frame" x="10" y="370" width="362" height="52"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="textFieldBG" translatesAutoresizingMaskIntoConstraints="NO" id="oD3-IC-UtF">
-                                <rect key="frame" x="10" y="455.33333333333331" width="362" height="52"/>
+                                <rect key="frame" x="10" y="456" width="362" height="52"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="textFieldBG" translatesAutoresizingMaskIntoConstraints="NO" id="dmR-FN-L2o">
-                                <rect key="frame" x="10" y="541.33333333333337" width="362" height="52"/>
+                                <rect key="frame" x="10" y="542" width="362" height="52"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="textFieldBG" translatesAutoresizingMaskIntoConstraints="NO" id="Q4h-Q2-u2j">
-                                <rect key="frame" x="10" y="626.66666666666663" width="362" height="52"/>
+                                <rect key="frame" x="10" y="627.33333333333337" width="362" height="52"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8y-bT-XD3">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8y-bT-XD3">
                                 <rect key="frame" x="30" y="127.33333333333331" width="330" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="AEI-tk-YyD"/>
@@ -429,7 +429,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your School Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3yg-gj-ZMn">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3yg-gj-ZMn">
                                 <rect key="frame" x="30" y="212.66666666666666" width="330" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="l1w-v3-O0e"/>
@@ -438,7 +438,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your Contact Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xpz-yQ-9u0">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xpz-yQ-9u0">
                                 <rect key="frame" x="30" y="298" width="330" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="gC5-jh-h4d"/>
@@ -447,8 +447,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7LY-bK-RXV">
-                                <rect key="frame" x="30" y="383.33333333333331" width="330" height="25"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7LY-bK-RXV">
+                                <rect key="frame" x="30" y="384" width="330" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="5sd-5C-G3k"/>
                                     <constraint firstAttribute="height" constant="25" id="NfJ-Xe-ADK"/>
@@ -456,8 +456,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P2f-hK-UOh">
-                                <rect key="frame" x="30" y="469.33333333333331" width="330" height="25"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P2f-hK-UOh">
+                                <rect key="frame" x="30" y="470" width="330" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="mmo-sb-xUq"/>
                                     <constraint firstAttribute="height" constant="25" id="oGq-73-Wal"/>
@@ -465,8 +465,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your Password Again" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H2L-ow-DMO">
-                                <rect key="frame" x="30" y="555.33333333333337" width="330" height="25"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H2L-ow-DMO">
+                                <rect key="frame" x="30" y="556" width="330" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="bai-mo-6ew"/>
                                     <constraint firstAttribute="height" constant="25" id="m0N-ER-55M"/>
@@ -474,8 +474,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Invite Code Teacher showing to you" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWf-v1-REj">
-                                <rect key="frame" x="30" y="640.66666666666663" width="330" height="25"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWf-v1-REj">
+                                <rect key="frame" x="30" y="641.33333333333337" width="330" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="ptG-Ab-WG0"/>
                                     <constraint firstAttribute="width" constant="330" id="sL3-K2-euY"/>
@@ -555,7 +555,7 @@
                     <navigationItem key="navigationItem" id="MhA-Gm-5tH"/>
                     <connections>
                         <outlet property="CpasswdTextField" destination="H2L-ow-DMO" id="gyB-Ys-SMt"/>
-                        <outlet property="ageTextField" destination="7LY-bK-RXV" id="NO9-Ce-Y1v"/>
+                        <outlet property="classTextField" destination="7LY-bK-RXV" id="uCf-bL-XaH"/>
                         <outlet property="emailTextField" destination="3yg-gj-ZMn" id="SN8-eM-eQN"/>
                         <outlet property="inviteCodeTextField" destination="qWf-v1-REj" id="X5U-A8-g17"/>
                         <outlet property="nameTextField" destination="b8y-bT-XD3" id="BF9-bj-Ft9"/>
@@ -664,13 +664,13 @@
         <!--Manage Student-->
         <scene sceneID="vlP-aV-X5q">
             <objects>
-                <tableViewController id="SB7-GD-1gW" sceneMemberID="viewController">
+                <tableViewController id="SB7-GD-1gW" customClass="ManageStuTableViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="zB7-jk-GU2">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="5Rc-VW-uPr" detailTextLabel="loy-mp-5pF" style="IBUITableViewCellStyleValue1" id="iOl-iP-spA">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mStuCell" textLabel="5Rc-VW-uPr" detailTextLabel="loy-mp-5pF" style="IBUITableViewCellStyleValue1" id="iOl-iP-spA" customClass="ManageStuCell" customModule="RunnerMan" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iOl-iP-spA" id="I9x-Bz-Q8T">
@@ -693,6 +693,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="5Rc-VW-uPr" id="NzD-iZ-M3H"/>
+                                    <outlet property="stuId" destination="loy-mp-5pF" id="fz1-RA-LNU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

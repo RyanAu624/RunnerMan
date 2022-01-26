@@ -15,7 +15,7 @@ class StudentSignUpViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var phoneNumTextField: UITextField!
-    @IBOutlet weak var ageTextField: UITextField!
+    @IBOutlet weak var classTextField: UITextField!
     @IBOutlet weak var passwdTextField: UITextField!
     @IBOutlet weak var CpasswdTextField: UITextField!
     @IBOutlet weak var inviteCodeTextField: UITextField!
@@ -26,7 +26,7 @@ class StudentSignUpViewController: UIViewController {
         if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             phoneNumTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            ageTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            classTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             passwdTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             CpasswdTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             inviteCodeTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
@@ -39,24 +39,6 @@ class StudentSignUpViewController: UIViewController {
             
             return "Make sure your password is correct."
         }
-        
-//        let db = Firestore.firestore()
-        
-//        db.collection("inviteCode").document("code").getDocument{ (document, error) in
-//
-//            if error == nil {
-//
-//                //Get invite code from firestore
-//                if document != nil && document!.exists {
-//                    let inviteCode = document!.data()
-//                }
-//            }
-//        }
-        
-        //Check inviteCode == user input inviteCode
-//        if inviteCodeTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != inviteCode {
-//
-//        }
         
         return nil
     }
@@ -76,11 +58,13 @@ class StudentSignUpViewController: UIViewController {
             let name = nameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let phoneNumber = phoneNumTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let age = ageTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let clss = classTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let stuId = ""
+            let age = ""
             let weight = ""
             let height = ""
             let password = passwdTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let supcode = inviteCodeTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+//            let supcode = inviteCodeTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             //Create the student
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
@@ -93,12 +77,14 @@ class StudentSignUpViewController: UIViewController {
                     //Student created successfully
                     let db = Firestore.firestore()
 
-                    db.collection("student").document(result!.user.uid).setData(["email":email,
-                                                                                 "name":name,
-                                                                                 "phoneNumber":phoneNumber,
-                                                                                 "age":age,
-                                                                                 "weight":weight,
-                                                                                 "height":height,
+                    db.collection("student").document(result!.user.uid).setData(["studentEmail":email,
+                                                                                 "studentName":name,
+                                                                                 "studentContactNumber":phoneNumber,
+                                                                                 "studentId":stuId,
+                                                                                 "studentClass":clss,
+                                                                                 "studentAge":age,
+                                                                                 "studentWeight":weight,
+                                                                                 "studentHeight":height,
                                                                                  "uid":result!.user.uid]){ (error) in
                         if error != nil {
                             //Error to create student
