@@ -26,6 +26,7 @@
 		9ABBEB69278DA6A900FB9F22 /* StudentAddTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB68278DA6A900FB9F22 /* StudentAddTrainingViewController.swift */; };
 		9ABC72DA27A1579C0079908B /* ManageStuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABC72D927A1579C0079908B /* ManageStuCell.swift */; };
 		9ABC72DC27A15AFD0079908B /* ManageStuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABC72DB27A15AFD0079908B /* ManageStuTableViewController.swift */; };
+		9ABC72E027AE8DE70079908B /* ManageStuDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABC72DF27AE8DE70079908B /* ManageStuDetailViewController.swift */; };
 		9AC814F52799104600BBF2BC /* StudentRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC814F42799104600BBF2BC /* StudentRecordViewController.swift */; };
 		9AC814F7279934CA00BBF2BC /* TeacherRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC814F6279934CA00BBF2BC /* TeacherRecordViewController.swift */; };
 		9AC814F9279C0DBA00BBF2BC /* TeacherSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC814F8279C0DBA00BBF2BC /* TeacherSignUpViewController.swift */; };
@@ -67,6 +68,7 @@
 		9ABBEB68278DA6A900FB9F22 /* StudentAddTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAddTrainingViewController.swift; sourceTree = "<group>"; };
 		9ABC72D927A1579C0079908B /* ManageStuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageStuCell.swift; sourceTree = "<group>"; };
 		9ABC72DB27A15AFD0079908B /* ManageStuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageStuTableViewController.swift; sourceTree = "<group>"; };
+		9ABC72DF27AE8DE70079908B /* ManageStuDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageStuDetailViewController.swift; sourceTree = "<group>"; };
 		9AC814F42799104600BBF2BC /* StudentRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRecordViewController.swift; sourceTree = "<group>"; };
 		9AC814F6279934CA00BBF2BC /* TeacherRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherRecordViewController.swift; sourceTree = "<group>"; };
 		9AC814F8279C0DBA00BBF2BC /* TeacherSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherSignUpViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				9ABBEB58278C686900FB9F22 /* Training.swift */,
 				9ABBEB5A278C6A1400FB9F22 /* Comment.swift */,
 				9ABBEB33278C41D800FB9F22 /* Main.storyboard */,
+				9ABC72DF27AE8DE70079908B /* ManageStuDetailViewController.swift */,
 				9ABC72DB27A15AFD0079908B /* ManageStuTableViewController.swift */,
 				9ABBEB66278DA68E00FB9F22 /* TeacherAddTrainingViewController.swift */,
 				9ABBEB68278DA6A900FB9F22 /* StudentAddTrainingViewController.swift */,
@@ -236,6 +239,7 @@
 			files = (
 				9ABBEB44278C49E600FB9F22 /* Teacher.swift in Sources */,
 				9ABC72DA27A1579C0079908B /* ManageStuCell.swift in Sources */,
+				9ABC72E027AE8DE70079908B /* ManageStuDetailViewController.swift in Sources */,
 				9ABBEB59278C686900FB9F22 /* Training.swift in Sources */,
 				9ABBEB65278D50C300FB9F22 /* StudentSignUpViewController.swift in Sources */,
 				9ABBEB61278D3C5C00FB9F22 /* StudentHomeViewController.swift in Sources */,

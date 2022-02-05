@@ -48,6 +48,21 @@ class ManageStuTableViewController: UITableViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ManageStuDetailViewController {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                destination.studentNumber = student[indexPath.row].studentID
+                destination.studentName = student[indexPath.row].studentName
+                destination.studentEmail = student[indexPath.row].studentEmail
+                destination.studentPhoneNum = student[indexPath.row].studentContactNumber
+                destination.studentClass = student[indexPath.row].studentClass
+                destination.studentAge = student[indexPath.row].studentAge
+                destination.studentWeight = student[indexPath.row].studentWeight
+                destination.studentHeight = student[indexPath.row].studentHeight
+            }
+        }
+    }
 
     // MARK: - Table view data source
 
