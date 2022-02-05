@@ -60,6 +60,7 @@ class ManageStuTableViewController: UITableViewController {
                 destination.studentAge = student[indexPath.row].studentAge
                 destination.studentWeight = student[indexPath.row].studentWeight
                 destination.studentHeight = student[indexPath.row].studentHeight
+                destination.studentUid = student[indexPath.row].uid
             }
         }
     }

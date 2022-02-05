@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
+import FirebaseFirestore
 
 class ManageStuDetailViewController: UIViewController {
+    
+    let db = Firestore.firestore()
     
     var studentNumber : String!
     var studentName : String!
@@ -17,7 +22,7 @@ class ManageStuDetailViewController: UIViewController {
     var studentAge : String!
     var studentWeight : String!
     var studentHeight : String!
-    
+    var studentUid : String!
 
     @IBOutlet weak var studentNumberTF: UITextField!
     @IBOutlet weak var studentNameTF: UITextField!
@@ -40,8 +45,37 @@ class ManageStuDetailViewController: UIViewController {
         studentHeightTF.text = studentHeight
     }
     
+    @IBAction func updateBtnClicked(_ sender: Any) {
+
+        updateData()
+    }
+    
+    func updateData() {
+        
+        let stuNum = studentNumberTF.text
+        let stuName = studentNameTF.text
+        let stuEmail = studentEmailTF.text
+        let stuPhoneNum = studentPhoneNumTF.text
+        let stuClass = studentClassTF.text
+        let stuAge = studentAgeTF.text
+        let stuWeight = studentWeightTF.text
+        let stuHeight = studentHeightTF.text
+        
+        let ref = db.collection("student").document(studentUid)
+        
+        ref.updateData(["studentEmail":stuEmail as Any,
+                        "studentName":stuName as Any,
+                        "studentContactNumber":stuPhoneNum as Any,
+                        "studentId":stuNum as Any,
+                        "studentClass":stuClass as Any,
+                        "studentAge":stuAge as Any,
+                        "studentWeight":stuWeight as Any,
+                        "studentHeight": stuHeight as Any])
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
     

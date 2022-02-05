@@ -922,7 +922,13 @@
                             <constraint firstItem="lJU-E6-vgT" firstAttribute="leading" secondItem="7vD-OB-er8" secondAttribute="leadingMargin" constant="14" id="yZk-nM-yEt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="5su-Dj-taJ"/>
+                    <navigationItem key="navigationItem" id="5su-Dj-taJ">
+                        <barButtonItem key="rightBarButtonItem" image="Update" id="yTK-Op-MrQ">
+                            <connections>
+                                <action selector="updateBtnClicked:" destination="sb6-XX-bFG" id="BZY-kh-0SZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="studentAgeTF" destination="IKN-Em-IAq" id="7fI-hR-eCa"/>
                         <outlet property="studentClassTF" destination="lJU-E6-vgT" id="W7B-OT-OYx"/>
@@ -1946,6 +1952,7 @@
     </scenes>
     <resources>
         <image name="RunnerManLogo" width="252" height="134"/>
+        <image name="Update" width="52.666667938232422" height="16.666666030883789"/>
         <image name="addBtn" width="350" height="50"/>
         <image name="addCommentBtn" width="62" height="62"/>
         <image name="addTrainingBox" width="350" height="165.66667175292969"/>
