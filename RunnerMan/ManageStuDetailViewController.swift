@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FirebaseAuth
 import Firebase
 import FirebaseFirestore
 
@@ -46,11 +45,6 @@ class ManageStuDetailViewController: UIViewController {
     }
     
     @IBAction func updateBtnClicked(_ sender: Any) {
-
-        updateData()
-    }
-    
-    func updateData() {
         
         let stuNum = studentNumberTF.text
         let stuName = studentNameTF.text

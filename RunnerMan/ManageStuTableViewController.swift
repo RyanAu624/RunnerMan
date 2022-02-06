@@ -43,8 +43,6 @@ class ManageStuTableViewController: UITableViewController {
                         self.tableView.reloadData()
                     }
                 }
-                
-                print(self.student)
             }
         }
     }
