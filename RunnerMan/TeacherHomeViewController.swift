@@ -33,6 +33,22 @@ class TeacherHomeViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    @IBAction func logout(_ sender: Any) {
+        if Auth.auth().currentUser != nil {
+            do {
+                try Auth.auth().signOut()
+                
+                if let controller = self.storyboard?.instantiateViewController(withIdentifier: "teacherLoginPage") {
+                    controller.modalPresentationStyle = .fullScreen
+                    self.present(controller, animated: true, completion: nil)
+                }
+                
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

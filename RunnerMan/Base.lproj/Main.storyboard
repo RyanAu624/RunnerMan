@@ -247,7 +247,7 @@
         <!--Student Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StudentLoginViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="studentLoginPage" id="BYZ-38-t0r" customClass="StudentLoginViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZkF-5z-0Wk"/>
                         <viewControllerLayoutGuide type="bottom" id="vCe-qX-E2Z"/>
@@ -659,6 +659,11 @@
                     <navigationItem key="navigationItem" id="6xH-Uq-qjB">
                         <barButtonItem key="leftBarButtonItem" image="navLogo" id="rgv-xI-cUZ">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="rectangle.portrait.and.arrow.right" catalog="system" id="pQ0-68-hr1">
+                            <connections>
+                                <action selector="logout:" destination="4SV-I4-GZC" id="F1N-eH-g9R"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -1370,6 +1375,11 @@
                     <navigationItem key="navigationItem" id="9pC-8o-YMP">
                         <barButtonItem key="leftBarButtonItem" image="navLogo" id="eLg-C6-w2a">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="rectangle.portrait.and.arrow.right" catalog="system" id="ppS-Cr-dKE">
+                            <connections>
+                                <action selector="logout:" destination="bv2-bS-WSE" id="sNp-vG-dhQ"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -2310,6 +2320,7 @@
         <image name="loginTextFieldLine" width="350" height="1"/>
         <image name="manageStudentBox" width="172.66667175292969" height="165"/>
         <image name="navLogo" width="180.33332824707031" height="29"/>
+        <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="108"/>
         <image name="settingBox" width="170" height="165"/>
         <image name="signUpBtn" width="71.666664123535156" height="19.333333969116211"/>
         <image name="studentLogin" width="129" height="19.333333969116211"/>
