@@ -1359,6 +1359,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="targetBox" title=""/>
+                                <connections>
+                                    <segue destination="fgf-AO-j0H" kind="show" id="VMe-f0-vJ5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xU-fB-Fs8">
                                 <rect key="frame" x="200" y="639" width="170" height="165"/>
@@ -1592,6 +1595,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htP-sN-0Wt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1868" y="-1305"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VdH-7b-266">
+            <objects>
+                <viewController id="fgf-AO-j0H" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R5k-F6-Vk0"/>
+                        <viewControllerLayoutGuide type="bottom" id="4tL-mT-mT6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4aD-OC-x7c">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LyS-9U-uHp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q3T-I3-Ray" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071" y="977"/>
         </scene>
         <!--Student Add Training View Controller-->
         <scene sceneID="QOP-Q6-GfY">

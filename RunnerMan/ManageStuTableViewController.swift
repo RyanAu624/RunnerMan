@@ -12,12 +12,11 @@ import FirebaseFirestore
 class ManageStuTableViewController: UITableViewController {
     
     var student = [Student]()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         getStu()
         self.tableView.reloadData()
-
     }
     
     func getStu() {
@@ -82,5 +81,9 @@ class ManageStuTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
+    }
 }

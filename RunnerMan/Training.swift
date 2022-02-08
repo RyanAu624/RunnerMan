@@ -15,4 +15,5 @@ struct Training {
     var trainingDay : Date
     var trainingStartTime : String
     var trainingEndTime : String
+    var studentuId : String
 }
