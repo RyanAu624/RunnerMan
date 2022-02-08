@@ -11,6 +11,8 @@ import Firebase
 import FirebaseFirestore
 
 class StudentSignUpViewController: UIViewController {
+    
+    let db = Firestore.firestore()
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -38,6 +40,16 @@ class StudentSignUpViewController: UIViewController {
         if CpasswdTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != passwdTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
             
             return "Make sure your password is correct."
+        }
+        
+        //Get inviteCode from firebase
+        let ref = db.collection("inviteCode").document("code")
+        
+        ref.getDocument{(document, err) in
+            if let document = document, document.exists {
+                let code = document.data()!["code"]
+                print(code!)
+            }
         }
         
         return nil
@@ -75,9 +87,7 @@ class StudentSignUpViewController: UIViewController {
                 } else {
                     
                     //Student created successfully
-                    let db = Firestore.firestore()
-
-                    db.collection("student").document(result!.user.uid).setData(["studentEmail":email,
+                    self.db.collection("student").document(result!.user.uid).setData(["studentEmail":email,
                                                                                  "studentName":name,
                                                                                  "studentContactNumber":phoneNumber,
                                                                                  "studentId":stuId,
