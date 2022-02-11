@@ -1,21 +1,32 @@
 //
-//  StudentHomeViewController.swift
+//  StudentHomeTableViewController.swift
 //  RunnerMan
 //
-//  Created by Long Hei Au on 11/1/2022.
+//  Created by Long Hei Au on 11/2/2022.
 //
 
 import UIKit
 import FirebaseAuth
 
-class StudentHomeViewController: UIViewController {
+class StudentHomeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+
     }
-    
+
+    // MARK: - Table view data source
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 0
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 0
+    }
+
     @IBAction func logout(_ sender: Any) {
         if Auth.auth().currentUser != nil {
             do {
@@ -31,7 +42,7 @@ class StudentHomeViewController: UIViewController {
             }
         }
     }
-    
+
     /*
     // MARK: - Navigation
 
