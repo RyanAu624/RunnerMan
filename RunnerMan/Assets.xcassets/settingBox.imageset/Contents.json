@@ -6,12 +6,12 @@
       "scale" : "1x"
     },
     {
-      "filename" : "settingBox-1.png",
+      "filename" : "settingBox@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "settingBox-2.png",
+      "filename" : "settingBox@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

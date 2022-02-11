@@ -6,12 +6,12 @@
       "scale" : "1x"
     },
     {
-      "filename" : "addTrainingBox-1.png",
+      "filename" : "addTrainingBox@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "addTrainingBox-2.png",
+      "filename" : "addTrainingBox@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

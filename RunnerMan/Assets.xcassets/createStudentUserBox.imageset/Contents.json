@@ -6,12 +6,12 @@
       "scale" : "1x"
     },
     {
-      "filename" : "createStudentUserBox-1.png",
+      "filename" : "createStudentUserBox@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "createStudentUserBox-2.png",
+      "filename" : "createStudentUserBox@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
