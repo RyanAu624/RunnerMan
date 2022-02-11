@@ -95,6 +95,7 @@ class StudentSignUpViewController: UIViewController {
                                                                                  "studentAge":age,
                                                                                  "studentWeight":weight,
                                                                                  "studentHeight":height,
+                                                                                 "TargetList":[],
                                                                                  "uid":result!.user.uid]){ (error) in
                         if error != nil {
                             //Error to create student
