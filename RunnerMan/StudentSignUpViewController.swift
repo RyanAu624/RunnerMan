@@ -23,7 +23,6 @@ class StudentSignUpViewController: UIViewController {
     @IBOutlet weak var inviteCodeTextField: UITextField!
     
     func vaildateFields() -> String? {
-        
         //Check that all fields are filled in
         if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
@@ -56,7 +55,6 @@ class StudentSignUpViewController: UIViewController {
     }
     
     @IBAction func studentSignUp(_ sender: Any) {
-        
         let error = vaildateFields()
         
         if error == "Please fill in all fields." {
@@ -76,7 +74,6 @@ class StudentSignUpViewController: UIViewController {
             let weight = ""
             let height = ""
             let password = passwdTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-//            let supcode = inviteCodeTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             //Create the student
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
@@ -95,7 +92,6 @@ class StudentSignUpViewController: UIViewController {
                                                                                  "studentAge":age,
                                                                                  "studentWeight":weight,
                                                                                  "studentHeight":height,
-                                                                                 "TargetList":[],
                                                                                  "uid":result!.user.uid]){ (error) in
                         if error != nil {
                             //Error to create student
@@ -106,9 +102,7 @@ class StudentSignUpViewController: UIViewController {
                     //Transition to student sign in page
                     self.transitionToSignIn()
                 }
-                
             }
-            
         }
     }
     
@@ -118,7 +112,6 @@ class StudentSignUpViewController: UIViewController {
     }
     
     func showAlertMessage(_ number:Int) {
-        
         var message = ""
         
         switch number {
@@ -137,22 +130,4 @@ class StudentSignUpViewController: UIViewController {
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

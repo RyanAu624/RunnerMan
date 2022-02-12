@@ -37,7 +37,6 @@ class TeacherAddTrainingViewController: UIViewController {
     }
     
     func createData(_ textField: UITextField) {
-
         if textField == TrainDay {
             datePicker.datePickerMode = .date
         }

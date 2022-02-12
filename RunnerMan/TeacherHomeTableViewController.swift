@@ -13,23 +13,6 @@ class TeacherHomeTableViewController: UITableViewController {
     
     let db = Firestore.firestore()
     let id = Auth.auth().currentUser?.uid
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
     
     @IBAction func createStu(_ sender: Any) {
         
@@ -42,7 +25,6 @@ class TeacherHomeTableViewController: UITableViewController {
     }
     
     func showAlertMessage(_ inviteCode:Int) {
-        
         let alertController = UIAlertController(title: String(inviteCode), message: "InviteCode...", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
         alertController.addAction(okAction)
@@ -50,14 +32,20 @@ class TeacherHomeTableViewController: UITableViewController {
         present(alertController, animated: true, completion: nil)
     }
 
-    /*
-    // MARK: - Navigation
+    // MARK: - Table view data source
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
     }
-    */
 
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 0
+    }
+    
+    // set table view height
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
 }

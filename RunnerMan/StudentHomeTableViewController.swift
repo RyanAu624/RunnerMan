@@ -7,26 +7,54 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class StudentHomeTableViewController: UITableViewController {
+    
+    var target = [Target]()
+    
+    let db = Firestore.firestore()
+    let uID = Auth.auth().currentUser?.uid
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getStuTarget()
+        self.tableView.reloadData()
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    @IBAction func addTargetClicked(_ sender: Any) {
+        showAlertController()
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    
+    func showAlertController() {
+        let alertController = UIAlertController(title: "Post", message: "Let's setup a new task.", preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.keyboardType = UIKeyboardType.phonePad
+        }
+        
+        let okAction = UIAlertAction(title: "OK", style: .default) { [unowned alertController] _ in
+            let targetInput = alertController.textFields?[0].text
+            //Check user input
+            //If user input equal to null the data will not save to firestore
+            if targetInput != "" {
+                self.saveTargetDataToFirestore(targetInput!)
+            }
+         }
+        alertController.addAction(okAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
-
+    
+    func saveTargetDataToFirestore(_ targetInput:String) {
+        let ref = db.collection("student").document(uID!).collection("targetList").document()
+                
+        ref.setData(["target":targetInput,
+                     "mark":false])
+    }
+    
     @IBAction func logout(_ sender: Any) {
         if Auth.auth().currentUser != nil {
             do {
@@ -42,15 +70,47 @@ class StudentHomeTableViewController: UITableViewController {
             }
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func getStuTarget() {
+        let ref = db.collection("student").document(uID!).collection("targetList")
+        
+        ref.getDocuments() {(snapshot, err) in
+            
+            if err == nil {
+                if let snapshot = snapshot {
+                    self.target = snapshot.documents.map{ d in
+                        return Target(target: d["target"] as? String ?? "",
+                                      mark: d["mark"] as! Bool)
+                    }
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                }
+            }
+        }
     }
-    */
 
+    // MARK: - Table view data source
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return target.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tCell", for: indexPath) as! TargetCell
+        cell.taskLabel.text = target[indexPath.row].target
+        
+        return cell
+    }
+    
+    // set table view height
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
 }

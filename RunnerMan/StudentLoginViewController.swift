@@ -14,7 +14,6 @@ class StudentLoginViewController: UIViewController {
     @IBOutlet weak var passwdTextField: UITextField!
     
     func vaildateFields() -> String? {
-        
         //Check that all fields are filled in
         if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)  == "" ||
             passwdTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
@@ -26,7 +25,6 @@ class StudentLoginViewController: UIViewController {
     }
     
     @IBAction func studentLogin(_ sender: Any) {
-        
         let error = vaildateFields()
         
         if error == "Please fill in all fields." {
@@ -55,7 +53,6 @@ class StudentLoginViewController: UIViewController {
     }
     
     func showAlertMessage(_ number:Int) {
-        
         var message = ""
         
         switch number {
@@ -72,22 +69,4 @@ class StudentLoginViewController: UIViewController {
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -24,15 +24,12 @@ class StudentSettingViewController: UIViewController {
     @IBOutlet weak var studentWeightTF: UITextField!
     @IBOutlet weak var studentHeightTF: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         getUserData()
-        
-        // Do any additional setup after loading the view.
     }
     
     func getUserData() {
-        
         let ref = db.collection("student")
         
         ref.whereField("uid", isEqualTo: uID!).getDocuments {(snapshot, err) in
@@ -64,7 +61,6 @@ class StudentSettingViewController: UIViewController {
     }
     
     @IBAction func updateBtnClicked(_ sender: Any) {
-        
         let stuNumber = studentNumberTF.text
         let stuName = studentNameTF.text
         let stuEmail = studentEmailTF.text
@@ -85,17 +81,4 @@ class StudentSettingViewController: UIViewController {
                         "studentWeight":stuWeight as Any,
                         "studentHeight":stuHeight as Any])
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

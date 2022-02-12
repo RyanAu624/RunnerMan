@@ -20,7 +20,6 @@ class ManageStuTableViewController: UITableViewController {
     }
     
     func getStu() {
-        
         let db = Firestore.firestore()
         
         db.collection("student").getDocuments() {(snapshot, err) in
@@ -80,10 +79,5 @@ class ManageStuTableViewController: UITableViewController {
         cell.stuId.text = student[indexPath.row].studentID
         
         return cell
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
     }
 }

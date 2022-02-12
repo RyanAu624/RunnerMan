@@ -19,11 +19,9 @@ class TeacherSettingViewController: UIViewController {
     @IBOutlet weak var teacherEmailTF: UITextField!
     @IBOutlet weak var teacherPhoneNumTF: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         getUserData()
-
-        // Do any additional setup after loading the view.
     }
     
     func getUserData() {
@@ -76,16 +74,4 @@ class TeacherSettingViewController: UIViewController {
                 }
             }
         }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

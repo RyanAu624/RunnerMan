@@ -18,9 +18,7 @@ class TeacherSignUpViewController: UIViewController {
     @IBOutlet weak var passwdTextField: UITextField!
     @IBOutlet weak var CpasswdTextField: UITextField!
     
-    
     func validateFields() -> String? {
-        
         //Check that all fields are filled in
         if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)  == "" ||
@@ -41,7 +39,6 @@ class TeacherSignUpViewController: UIViewController {
     }
     
     @IBAction func teacherSignUp(_ sender: Any) {
-        
         let error = validateFields()
         
         if error == "Please fill in all fields." {
@@ -92,7 +89,6 @@ class TeacherSignUpViewController: UIViewController {
     }
     
     func showAlertMessage(_ number:Int) {
-        
         var message = ""
         
         switch number {
@@ -111,22 +107,4 @@ class TeacherSignUpViewController: UIViewController {
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
-        
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
