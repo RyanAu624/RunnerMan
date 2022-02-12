@@ -17,6 +17,7 @@ class ManageStuTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         getStu()
         self.tableView.reloadData()
+        self.tableView.separatorStyle = .none
     }
     
     func getStu() {
@@ -79,5 +80,10 @@ class ManageStuTableViewController: UITableViewController {
         cell.stuId.text = student[indexPath.row].studentID
         
         return cell
+    }
+    
+    // set table view height
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
 }

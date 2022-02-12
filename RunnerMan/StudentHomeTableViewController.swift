@@ -20,6 +20,7 @@ class StudentHomeTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         getStuTarget()
         self.tableView.reloadData()
+        self.tableView.separatorStyle = .none
     }
     
     @IBAction func addTargetClicked(_ sender: Any) {
@@ -49,10 +50,10 @@ class StudentHomeTableViewController: UITableViewController {
     }
     
     func saveTargetDataToFirestore(_ targetInput:String) {
-        let ref = db.collection("student").document(uID!).collection("targetList").document()
+        let ref = db.collection("student").document(uID!).collection("targetList")
                 
-        ref.setData(["target":targetInput,
-                     "mark":false])
+        ref.document(targetInput).setData(["target":targetInput,
+                                "mark":false])
     }
     
     @IBAction func logout(_ sender: Any) {
@@ -105,6 +106,11 @@ class StudentHomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tCell", for: indexPath) as! TargetCell
         cell.taskLabel.text = target[indexPath.row].target
+        if target[indexPath.row].mark == false {
+            cell.markCheck.image = UIImage(named: "unmark")
+        } else {
+            cell.markCheck.image = UIImage(named: "marked")
+        }
         
         return cell
     }
@@ -112,5 +118,23 @@ class StudentHomeTableViewController: UITableViewController {
     // set table view height
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let cell = tableView.cellForRow(at: indexPath) as? TargetCell else { return }
+        
+        if target[indexPath.row].mark == false {
+            //Update target condition
+            let ref = db.collection("student").document(uID!).collection("targetList")
+            ref.document(target[indexPath.row].target).updateData(["mark":true])
+            
+            cell.markCheck.image = UIImage(named: "marked")
+        } else {
+            let ref = db.collection("student").document(uID!).collection("targetList")
+            ref.document(target[indexPath.row].target).updateData(["mark":false])
+            
+            cell.markCheck.image = UIImage(named: "unmark")
+        }
     }
 }

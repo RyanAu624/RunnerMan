@@ -14,6 +14,11 @@ class TeacherHomeTableViewController: UITableViewController {
     let db = Firestore.firestore()
     let id = Auth.auth().currentUser?.uid
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.separatorStyle = .none
+    }
+    
     @IBAction func createStu(_ sender: Any) {
         
         let inviteCode = Int.random(in: 123009...987654)
