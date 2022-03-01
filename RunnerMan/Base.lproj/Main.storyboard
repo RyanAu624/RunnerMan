@@ -1739,6 +1739,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Upload Video"/>
+                                <connections>
+                                    <action selector="selectVideo:" destination="ZHk-0g-N4F" eventType="touchUpInside" id="4hZ-j8-sMC"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1YS-qR-WZq">
                                 <rect key="frame" x="30" y="603" width="330" height="73"/>
@@ -1754,6 +1757,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="addBtn" title=""/>
+                                <connections>
+                                    <action selector="uploadbtn:" destination="ZHk-0g-N4F" eventType="touchUpInside" id="uhf-KI-5IB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1802,7 +1808,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="wV2-0a-3AC"/>
                     <connections>
+                        <outlet property="DescriText" destination="1YS-qR-WZq" id="NeG-Qu-B9w"/>
                         <outlet property="EndTime" destination="oY4-W1-Auo" id="PiR-pI-eXp"/>
+                        <outlet property="MethodText" destination="7X4-xV-ZC5" id="SOa-Ev-6kA"/>
                         <outlet property="StartTime" destination="mcB-5k-wy7" id="yTN-Io-HwX"/>
                         <outlet property="TrainDay" destination="Dru-Jg-eK1" id="klf-s3-d9K"/>
                     </connections>
@@ -2219,13 +2227,13 @@
                                                 <constraint firstAttribute="height" constant="120" id="4C6-6z-KNj"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNx-eN-hHp">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNx-eN-hHp">
                                             <rect key="frame" x="32" y="18" width="45" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dr-3c-k0N">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Comment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dr-3c-k0N">
                                             <rect key="frame" x="32" y="49" width="75" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>

@@ -6,16 +6,25 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import AVFoundation
+import FirebaseStorage
+import MobileCoreServices
 
-class TeacherAddTrainingViewController: UIViewController {
+class TeacherAddTrainingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
 
+    @IBOutlet weak var MethodText: UITextField!
+    @IBOutlet weak var DescriText: UITextField!
     @IBOutlet weak var TrainDay: UITextField!
     @IBOutlet weak var StartTime: UITextField!
     @IBOutlet weak var EndTime: UITextField!
     let bar = UIToolbar()
     let datePicker = UIDatePicker()
     let formatter = DateFormatter()
+    let picker = UIImagePickerController()
+    let storage = Storage.storage().reference()
+    let db = Firestore.firestore()
 
     
     override func viewDidLoad() {
@@ -65,6 +74,51 @@ class TeacherAddTrainingViewController: UIViewController {
             EndTime.text = formatter.string(from: datePicker.date)
         }
         self.view.endEditing(true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let videourl = info[UIImagePickerController.InfoKey.mediaURL] as? NSURL {
+            storage.child("video").child("tes").putFile(from: videourl as URL, metadata: nil, completion: {(metadata, error) in
+                if error != nil{
+                    print(error)
+                    return
+                }
+                
+                self.storage.child("video").child("tes").downloadURL(completion: {url, error in
+                    guard let url = url, error == nil else{
+                        return
+                    }
+                    print(url)
+                })
+            })
+                
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func selectVideo(_ sender: Any) {
+        picker.delegate = self
+        picker.allowsEditing = true
+        picker.sourceType = .photoLibrary
+        picker.mediaTypes = [kUTTypeMovie as String]
+        
+        present(picker, animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func uploadbtn(_ sender: Any) {
+        
+        let date = ["Training Method": MethodText.text!,
+                    "Train Day": TrainDay.text!,
+                    "Start time": StartTime.text!,
+                    "End time": EndTime.text!,
+                    "Video" : "",
+                    "description": DescriText.text!]
+        
+        db.collection("Training").addDocument(data: date)
+        dismiss(animated: true, completion: nil)
+        
     }
     
     
