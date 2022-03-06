@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseFirestore
+import FirebaseAuth
 import AVFoundation
 import FirebaseStorage
 import MobileCoreServices
@@ -24,6 +25,7 @@ class TeacherAddTrainingViewController: UIViewController, UIImagePickerControlle
     let formatter = DateFormatter()
     let picker = UIImagePickerController()
     let db = Firestore.firestore()
+    let id = Auth.auth().currentUser?.uid
 
     
     override func viewDidLoad() {
@@ -76,7 +78,7 @@ class TeacherAddTrainingViewController: UIViewController, UIImagePickerControlle
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let storage2 = Storage.storage().reference().child("video")
+        let storage2 = Storage.storage().reference().child("video").child(id!)
         let metadata = StorageMetadata()
         var videoData : Data = Data()
         
