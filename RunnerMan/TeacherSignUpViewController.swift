@@ -68,6 +68,7 @@ class TeacherSignUpViewController: UIViewController {
                     db.collection("teacher").document(result!.user.uid).setData(["teacherEmail":email,
                                                                                     "teacherName":name,
                                                                                     "teacherContactNumber":phoneNumber,
+                                                                                 "Code": "",
                                                                                     "uid":result!.user.uid]) { (error) in
                         if error != nil {
                             //Error to create teacher

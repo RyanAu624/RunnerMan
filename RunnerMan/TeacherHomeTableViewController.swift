@@ -24,9 +24,10 @@ class TeacherHomeTableViewController: UITableViewController {
         let inviteCode = Int.random(in: 123009...987654)
         showAlertMessage(inviteCode)
         
-        let ref = db.collection("inviteCode").document("code")
+        let id = Auth.auth().currentUser?.uid
+        let ref = db.collection("teacher").document(id!)
         
-        ref.updateData(["code":String(inviteCode)])
+        ref.updateData(["Code":String(inviteCode)])
     }
     
     func showAlertMessage(_ inviteCode:Int) {

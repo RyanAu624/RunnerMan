@@ -56,6 +56,7 @@ class StudentSignUpViewController: UIViewController {
     
     @IBAction func studentSignUp(_ sender: Any) {
         let error = vaildateFields()
+        checkCode()
         
         if error == "Please fill in all fields." {
             showAlertMessage(0)
@@ -109,6 +110,12 @@ class StudentSignUpViewController: UIViewController {
     func transitionToSignIn() {
         //Transition to sign in page
         dismiss(animated: true, completion: nil)
+    }
+    
+    func checkCode(){
+        let ref = db.collection("teacher").getDocuments(){ data, error in
+            print(data)
+        }
     }
     
     func showAlertMessage(_ number:Int) {
