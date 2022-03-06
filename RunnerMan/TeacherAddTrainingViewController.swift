@@ -23,7 +23,6 @@ class TeacherAddTrainingViewController: UIViewController, UIImagePickerControlle
     let datePicker = UIDatePicker()
     let formatter = DateFormatter()
     let picker = UIImagePickerController()
-    let storage = Storage.storage().reference()
     let db = Firestore.firestore()
 
     
@@ -77,20 +76,25 @@ class TeacherAddTrainingViewController: UIViewController, UIImagePickerControlle
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let storage2 = Storage.storage().reference().child("video")
+        let metadata = StorageMetadata()
+        var videoData : Data = Data()
+        
         if let videourl = info[UIImagePickerController.InfoKey.mediaURL] as? NSURL {
-            storage.child("video").child("tes").putFile(from: videourl as URL, metadata: nil, completion: {(metadata, error) in
-                if error != nil{
-                    print(error)
+            
+            do{
+                videoData = try Data(contentsOf: videourl as URL)
+            } catch {
+                print(error.localizedDescription)
+                return
+            }
+            
+            storage2.putData(videoData, metadata: metadata) { (metaData, error) in
+                guard error == nil else {
+                    print("ERROR HERE: \(error?.localizedDescription)")
                     return
                 }
-                
-                self.storage.child("video").child("tes").downloadURL(completion: {url, error in
-                    guard let url = url, error == nil else{
-                        return
-                    }
-                    print(url)
-                })
-            })
+            }
                 
         }
         
@@ -108,6 +112,7 @@ class TeacherAddTrainingViewController: UIViewController, UIImagePickerControlle
     }
     
     @IBAction func uploadbtn(_ sender: Any) {
+        
         
         let date = ["Training Method": MethodText.text!,
                     "Train Day": TrainDay.text!,
