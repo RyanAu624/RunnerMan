@@ -21,6 +21,7 @@ class StudentHomeTableViewController: UITableViewController {
         getStuTarget()
         self.tableView.reloadData()
         self.tableView.separatorStyle = .none
+        getWeather()
     }
     
     @IBAction func addTargetClicked(_ sender: Any) {
@@ -54,22 +55,8 @@ class StudentHomeTableViewController: UITableViewController {
                 
         ref.document(targetInput).setData(["target":targetInput,
                                 "mark":false])
-    }
-    
-    @IBAction func logout(_ sender: Any) {
-        if Auth.auth().currentUser != nil {
-            do {
-                try Auth.auth().signOut()
-                
-                if let controller = self.storyboard?.instantiateViewController(withIdentifier: "studentLoginPage") {
-                    controller.modalPresentationStyle = .fullScreen
-                    self.present(controller, animated: true, completion: nil)
-                }
-                
-            } catch let error as NSError {
-                print(error.localizedDescription)
-            }
-        }
+        
+        getStuTarget()
     }
     
     func getStuTarget() {
@@ -115,6 +102,18 @@ class StudentHomeTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            //remove data
+            let removedTarget = target.remove(at: indexPath.row)
+            
+            let ref = db.collection("student").document(uID!).collection("targetList")
+            ref.document(removedTarget.target).delete()
+            //remote table cell
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
     // set table view height
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
@@ -128,13 +127,71 @@ class StudentHomeTableViewController: UITableViewController {
             //Update target condition
             let ref = db.collection("student").document(uID!).collection("targetList")
             ref.document(target[indexPath.row].target).updateData(["mark":true])
-            
+            target[indexPath.row].mark = true
             cell.markCheck.image = UIImage(named: "marked")
         } else {
             let ref = db.collection("student").document(uID!).collection("targetList")
             ref.document(target[indexPath.row].target).updateData(["mark":false])
-            
+            target[indexPath.row].mark = false
             cell.markCheck.image = UIImage(named: "unmark")
         }
     }
+    
+    @IBAction func logout(_ sender: Any) {
+        if Auth.auth().currentUser != nil {
+            do {
+                try Auth.auth().signOut()
+                
+                if let controller = self.storyboard?.instantiateViewController(withIdentifier: "studentLoginPage") {
+                    controller.modalPresentationStyle = .fullScreen
+                    self.present(controller, animated: true, completion: nil)
+                }
+                
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func getWeather() {
+        
+        if let url = URL(string: "https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=en") {
+            URLSession.shared.dataTask(with: url) { data, response, error in
+                
+//                data?.prettyPrintedJSONString()
+                let decoder = JSONDecoder()
+                if let weatherInfo = try? decoder.decode(WeatherInfo.self, from: data!){
+                    print("\(weatherInfo.temperature.data)")
+                }
+                
+            }.resume()
+        }
+
+    }
 }
+
+class WeatherInfo : Codable {
+    var temperature : Temperature
+}
+class Temperature : Codable {
+    var data : [TempRecord]
+}
+class TempRecord : Codable {
+    var place : String
+    var value : Double
+    var unit  : String
+}
+//
+//extension Data {
+//
+//    func prettyPrintedJSONString() {
+//        guard
+//            let jsonObject = try? JSONSerialization.jsonObject(with: self, options: []),
+//            let jsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: [.prettyPrinted]),
+//            let prettyJSONString = String(data: jsonData, encoding: .utf8) else {
+//                print("Failed to read JSON Object.")
+//                return
+//        }
+//        print(prettyJSONString)
+//    }
+//}
