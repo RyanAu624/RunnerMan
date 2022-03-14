@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		252A45B627DF3D1B00F92519 /* CalendarKit in Frameworks */ = {isa = PBXBuildFile; productRef = 252A45B527DF3D1B00F92519 /* CalendarKit */; };
+		252A45B827DF3D9D00F92519 /* CalendarVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252A45B727DF3D9D00F92519 /* CalendarVIewController.swift */; };
 		9A866F3727B681F90070EF54 /* TeacherHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A866F3627B681F90070EF54 /* TeacherHomeTableViewController.swift */; };
 		9A866F3927B686090070EF54 /* StudentHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A866F3827B686090070EF54 /* StudentHomeTableViewController.swift */; };
 		9A866F3B27B69A350070EF54 /* TargetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A866F3A27B69A350070EF54 /* TargetCell.swift */; };
@@ -44,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		252A45B727DF3D9D00F92519 /* CalendarVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVIewController.swift; sourceTree = "<group>"; };
 		9A866F3627B681F90070EF54 /* TeacherHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherHomeTableViewController.swift; sourceTree = "<group>"; };
 		9A866F3827B686090070EF54 /* StudentHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeTableViewController.swift; sourceTree = "<group>"; };
 		9A866F3A27B69A350070EF54 /* TargetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetCell.swift; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 				9ABC72EE27B272540079908B /* FirebaseDatabaseSwift-Beta in Frameworks */,
 				9ABC72F227B272540079908B /* FirebaseFunctions in Frameworks */,
 				9ABC72F427B272540079908B /* FirebaseStorage in Frameworks */,
+				252A45B627DF3D1B00F92519 /* CalendarKit in Frameworks */,
 				9ABC72F027B272540079908B /* FirebaseFirestore in Frameworks */,
 				9ABC72EA27B272540079908B /* FirebaseAuthCombine-Community in Frameworks */,
 			);
@@ -120,6 +124,7 @@
 				9A866F4027B77AD60070EF54 /* Target.swift */,
 				9ABBEB5A278C6A1400FB9F22 /* Comment.swift */,
 				9ABBEB33278C41D800FB9F22 /* Main.storyboard */,
+				252A45B727DF3D9D00F92519 /* CalendarVIewController.swift */,
 				9ABC72DB27A15AFD0079908B /* ManageStuTableViewController.swift */,
 				9ABC72DF27AE8DE70079908B /* ManageStuDetailViewController.swift */,
 				9ABC72E127AFB3BE0079908B /* TeacherSettingViewController.swift */,
@@ -168,6 +173,7 @@
 				9ABC72EF27B272540079908B /* FirebaseFirestore */,
 				9ABC72F127B272540079908B /* FirebaseFunctions */,
 				9ABC72F327B272540079908B /* FirebaseStorage */,
+				252A45B527DF3D1B00F92519 /* CalendarKit */,
 			);
 			productName = RunnerMan;
 			productReference = 9ABBEB2A278C41D800FB9F22 /* RunnerMan.app */;
@@ -199,6 +205,7 @@
 			mainGroup = 9ABBEB21278C41D800FB9F22;
 			packageReferences = (
 				9ABC72E627B272540079908B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit" */,
 			);
 			productRefGroup = 9ABBEB2B278C41D800FB9F22 /* Products */;
 			projectDirPath = "";
@@ -244,6 +251,7 @@
 				9AC814F7279934CA00BBF2BC /* TeacherRecordViewController.swift in Sources */,
 				9A866F3927B686090070EF54 /* StudentHomeTableViewController.swift in Sources */,
 				9ABBEB2E278C41D800FB9F22 /* AppDelegate.swift in Sources */,
+				252A45B827DF3D9D00F92519 /* CalendarVIewController.swift in Sources */,
 				9A866F3727B681F90070EF54 /* TeacherHomeTableViewController.swift in Sources */,
 				9ABBEB5D278D240F00FB9F22 /* StudentLoginViewController.swift in Sources */,
 				9ABBEB46278C4AED00FB9F22 /* Student.swift in Sources */,
@@ -399,6 +407,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29963AF748;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RunnerMan/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -406,6 +415,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -426,6 +436,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29963AF748;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RunnerMan/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -433,6 +444,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,6 +482,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/richardtop/CalendarKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		9ABC72E627B272540079908B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -481,6 +501,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		252A45B527DF3D1B00F92519 /* CalendarKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit" */;
+			productName = CalendarKit;
+		};
 		9ABC72E727B272540079908B /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9ABC72E627B272540079908B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
