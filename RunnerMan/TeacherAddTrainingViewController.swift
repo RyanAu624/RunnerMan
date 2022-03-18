@@ -26,6 +26,7 @@ class TeacherAddTrainingViewController: UIViewController, UIImagePickerControlle
     let picker = UIImagePickerController()
     let db = Firestore.firestore()
     let id = Auth.auth().currentUser?.uid
+    var videoData : Data = Data()
 
     
     override func viewDidLoad() {
@@ -80,7 +81,6 @@ class TeacherAddTrainingViewController: UIViewController, UIImagePickerControlle
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let storage2 = Storage.storage().reference().child("video").child(id!)
         let metadata = StorageMetadata()
-        var videoData : Data = Data()
         
         if let videourl = info[UIImagePickerController.InfoKey.mediaURL] as? NSURL {
             
@@ -91,12 +91,6 @@ class TeacherAddTrainingViewController: UIViewController, UIImagePickerControlle
                 return
             }
             
-            storage2.putData(videoData, metadata: metadata) { (metaData, error) in
-                guard error == nil else {
-                    print("ERROR HERE: \(error?.localizedDescription)")
-                    return
-                }
-            }
                 
         }
         
@@ -115,12 +109,23 @@ class TeacherAddTrainingViewController: UIViewController, UIImagePickerControlle
     
     @IBAction func uploadbtn(_ sender: Any) {
         
+        let metadata = StorageMetadata()
+        let postid = db.collection("Training").document().documentID
+        let storage2 = Storage.storage().reference().child("video").child("\(postid)")
         
-        let date = ["Training Method": MethodText.text!,
+        storage2.putData(videoData, metadata: metadata) { (metaData, error) in
+            guard error == nil else {
+                print("ERROR HERE: \(error?.localizedDescription)")
+                return
+            }
+        }
+        
+        let date = ["Postid" : postid,
+                    "Training Method": MethodText.text!,
                     "Train Day": TrainDay.text!,
                     "Start time": StartTime.text!,
                     "End time": EndTime.text!,
-                    "Video" : "",
+                    "Video" : "\(videoData)",
                     "description": DescriText.text!]
         
         db.collection("Training").addDocument(data: date)
