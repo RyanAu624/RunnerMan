@@ -9,19 +9,22 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 
-class StudentHomeTableViewController: UITableViewController {
+class StudentHomeTableViewController: UITableViewController, UICollectionViewDataSource {
     
     var target = [Target]()
-    
     let db = Firestore.firestore()
     let uID = Auth.auth().currentUser?.uid
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    var banner = HeroBanner.fetchBanner()
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getStuTarget()
         self.tableView.reloadData()
         self.tableView.separatorStyle = .none
-        getWeather()
+        collectionView.dataSource = self
+//        getWeather()
     }
     
     @IBAction func addTargetClicked(_ sender: Any) {
@@ -77,6 +80,24 @@ class StudentHomeTableViewController: UITableViewController {
             }
         }
     }
+    
+    // MARK: - Table view data source
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return banner.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StuWeatherCell", for: indexPath) as! StudentHomeCollectionViewCell
+        let banner = banner[indexPath.item]
+        cell.heroBanner = banner
+        return cell
+    }
+
 
     // MARK: - Table view data source
 
@@ -166,9 +187,29 @@ class StudentHomeTableViewController: UITableViewController {
                 
             }.resume()
         }
-
     }
+    
 }
+
+//// MARK: - collection view data source
+//
+//extension StudentHomeCollectionViewCell: UICollectionViewDataSource {
+//
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return 1
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 2
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StuWeatherCell", for: indexPath) as! StudentHomeCollectionViewCell
+//        let banner = banner[indexPath.item]
+//        cell.banner = banner
+//        return cell
+//    }
+//}
 
 class WeatherInfo : Codable {
     var temperature : Temperature

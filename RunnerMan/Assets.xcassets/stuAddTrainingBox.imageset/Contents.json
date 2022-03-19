@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "weatherBox.png",
+      "filename" : "addTrainingBox.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "weatherBox@2x.png",
+      "filename" : "addTrainingBox@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "weatherBox@3x.png",
+      "filename" : "addTrainingBox@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
