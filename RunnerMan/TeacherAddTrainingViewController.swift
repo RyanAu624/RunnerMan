@@ -27,6 +27,7 @@ class TeacherAddTrainingViewController: UIViewController, UIImagePickerControlle
     let db = Firestore.firestore()
     let id = Auth.auth().currentUser?.uid
     var videoData : Data = Data()
+    var PostUrl : NSURL!
 
     
     override func viewDidLoad() {
@@ -83,9 +84,9 @@ class TeacherAddTrainingViewController: UIViewController, UIImagePickerControlle
         let metadata = StorageMetadata()
         
         if let videourl = info[UIImagePickerController.InfoKey.mediaURL] as? NSURL {
-            
             do{
                 videoData = try Data(contentsOf: videourl as URL)
+                PostUrl = videourl
             } catch {
                 print(error.localizedDescription)
                 return
@@ -125,7 +126,7 @@ class TeacherAddTrainingViewController: UIViewController, UIImagePickerControlle
                     "Train Day": TrainDay.text!,
                     "Start time": StartTime.text!,
                     "End time": EndTime.text!,
-                    "Video" : "\(videoData)",
+                    "Video" : "\(PostUrl)",
                     "description": DescriText.text!]
         
         db.collection("Training").addDocument(data: date)

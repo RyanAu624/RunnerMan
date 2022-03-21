@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00D48FC627E8728B00885E66 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D48FC527E8728B00885E66 /* DetailTableViewController.swift */; };
+		00D48FC827E8733B00885E66 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D48FC727E8733B00885E66 /* RecordTableViewCell.swift */; };
 		00F9674427E85809007AF4D1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 00F9674327E85809007AF4D1 /* FirebaseAnalytics */; };
 		00F9674627E85809007AF4D1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 00F9674527E85809007AF4D1 /* FirebaseAuth */; };
 		00F9674827E85809007AF4D1 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 00F9674727E85809007AF4D1 /* FirebaseDatabase */; };
@@ -42,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00D48FC527E8728B00885E66 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		00D48FC727E8733B00885E66 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		9A866F3627B681F90070EF54 /* TeacherHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherHomeTableViewController.swift; sourceTree = "<group>"; };
 		9A866F3827B686090070EF54 /* StudentHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeTableViewController.swift; sourceTree = "<group>"; };
 		9A866F3A27B69A350070EF54 /* TargetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetCell.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 				9ABBEB38278C41DA00FB9F22 /* LaunchScreen.storyboard */,
 				9ABBEB3B278C41DA00FB9F22 /* Info.plist */,
 				9ABBEB47278C514700FB9F22 /* GoogleService-Info.plist */,
+				00D48FC527E8728B00885E66 /* DetailTableViewController.swift */,
+				00D48FC727E8733B00885E66 /* RecordTableViewCell.swift */,
 			);
 			path = RunnerMan;
 			sourceTree = "<group>";
@@ -234,6 +240,8 @@
 				9AC814F52799104600BBF2BC /* StudentRecordViewController.swift in Sources */,
 				9ABC72DC27A15AFD0079908B /* ManageStuTableViewController.swift in Sources */,
 				9ABBEB67278DA68E00FB9F22 /* TeacherAddTrainingViewController.swift in Sources */,
+				00D48FC627E8728B00885E66 /* DetailTableViewController.swift in Sources */,
+				00D48FC827E8733B00885E66 /* RecordTableViewCell.swift in Sources */,
 				9AC814F9279C0DBA00BBF2BC /* TeacherSignUpViewController.swift in Sources */,
 				9AC814F7279934CA00BBF2BC /* TeacherRecordViewController.swift in Sources */,
 				9A866F3927B686090070EF54 /* StudentHomeTableViewController.swift in Sources */,

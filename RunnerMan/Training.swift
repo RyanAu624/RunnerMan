@@ -8,12 +8,11 @@
 import Foundation
 
 struct Training {
-    var trainingID : Int
+    var trainingID : String
     var trainingMethod : String
     var trainingVideo : String
     var trainingDescription : String
-    var trainingDay : Date
+    var trainingDay : String
     var trainingStartTime : String
     var trainingEndTime : String
-    var studentuId : String
 }
