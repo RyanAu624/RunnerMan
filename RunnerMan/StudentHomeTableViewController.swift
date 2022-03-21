@@ -24,8 +24,8 @@ class StudentHomeTableViewController: UITableViewController, UICollectionViewDat
         self.tableView.reloadData()
         self.tableView.separatorStyle = .none
         collectionView.dataSource = self
-//        getWeather()
     }
+    //MARK: - Target Func
     
     @IBAction func addTargetClicked(_ sender: Any) {
         showAlertController()
@@ -98,7 +98,6 @@ class StudentHomeTableViewController: UITableViewController, UICollectionViewDat
         return cell
     }
 
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -130,7 +129,7 @@ class StudentHomeTableViewController: UITableViewController, UICollectionViewDat
             
             let ref = db.collection("student").document(uID!).collection("targetList")
             ref.document(removedTarget.target).delete()
-            //remote table cell
+            //remove table cell
             self.tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -158,6 +157,8 @@ class StudentHomeTableViewController: UITableViewController, UICollectionViewDat
         }
     }
     
+    // MARK: - Logout Func
+    
     @IBAction func logout(_ sender: Any) {
         if Auth.auth().currentUser != nil {
             do {
@@ -174,55 +175,45 @@ class StudentHomeTableViewController: UITableViewController, UICollectionViewDat
         }
     }
     
-    func getWeather() {
-        
-        if let url = URL(string: "https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=en") {
-            URLSession.shared.dataTask(with: url) { data, response, error in
-                
-//                data?.prettyPrintedJSONString()
-                let decoder = JSONDecoder()
-                if let weatherInfo = try? decoder.decode(WeatherInfo.self, from: data!){
-                    print("\(weatherInfo.temperature.data)")
-                }
-                
-            }.resume()
-        }
-    }
-    
+//    // MARK: - Weather Func
+//
+//    func getWeather() -> String {
+//
+//        var TempValue : String = ""
+//
+//        if let url = URL(string: "https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=en") {
+//            URLSession.shared.dataTask(with: url) { data, response, error in
+//
+////                data?.prettyPrintedJSONString()
+//                let decoder = JSONDecoder()
+//                if let weatherInfo = try? decoder.decode(WeatherInfo.self, from: data!){
+////                    print("\(weatherInfo.temperature.data)")
+//
+//                    for TempRecord in weatherInfo.temperature.data where TempRecord.place == "Sham Shui Po" {
+//                        TempValue = "\(TempRecord.value) °\(TempRecord.unit)"
+////                        print("\(TempRecord.value) °\(TempRecord.unit)")
+//
+//                        print(TempValue)
+//                    }
+//                }
+//            }.resume()
+//        }
+//        return TempValue
+//    }
 }
-
-//// MARK: - collection view data source
 //
-//extension StudentHomeCollectionViewCell: UICollectionViewDataSource {
-//
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 1
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 2
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StuWeatherCell", for: indexPath) as! StudentHomeCollectionViewCell
-//        let banner = banner[indexPath.item]
-//        cell.banner = banner
-//        return cell
-//    }
+//class WeatherInfo : Codable {
+//    var temperature : Temperature
+//}
+//class Temperature : Codable {
+//    var data : [TempRecord]
+//}
+//class TempRecord : Codable {
+//    var place : String
+//    var value : Double
+//    var unit  : String
 //}
 
-class WeatherInfo : Codable {
-    var temperature : Temperature
-}
-class Temperature : Codable {
-    var data : [TempRecord]
-}
-class TempRecord : Codable {
-    var place : String
-    var value : Double
-    var unit  : String
-}
-//
 //extension Data {
 //
 //    func prettyPrintedJSONString() {
