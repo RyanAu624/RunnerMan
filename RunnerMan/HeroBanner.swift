@@ -64,6 +64,16 @@ class HeroBanner {
 
 class WeatherInfo : Codable {
     var temperature : Temperature
+    var rainfall : Rainfall
+}
+class Rainfall : Codable {
+    var data : [RainRecord]
+}
+class RainRecord : Codable {
+    var unit : String
+    var place : String
+    var max : Double
+    var main : String
 }
 class Temperature : Codable {
     var data : [TempRecord]
