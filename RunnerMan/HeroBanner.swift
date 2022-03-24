@@ -18,18 +18,28 @@ class HeroBanner {
         self.temperature = temperature
         self.featuredImage = featuredImage
         
-        getWeather()
+//        HeroBanner.getWeather(completion: {
+//            string in
+//        })
+    }
+    
+    static func handleFetchedData(_ data : String){
+        
     }
     
     //  Hero Banner data
-    static func fetchBanner() -> [HeroBanner] {
-        return [
-            HeroBanner(temperature: "", featuredImage: UIImage(named: "stuAddTrainingBox")!),
-            HeroBanner(temperature: "25%%%", featuredImage: UIImage(named: "weatherBox")!)
-        ]
+    static func fetchBanner(completion : @escaping ([HeroBanner])->Void) {
+        getWeather(completion: {
+            tempValue in
+            let banners = [
+                HeroBanner(temperature: "", featuredImage: UIImage(named: "stuAddTrainingBox")!),
+                HeroBanner(temperature: "\(tempValue)", featuredImage: UIImage(named: "weatherBox")!)
+            ]
+            completion(banners)
+        })
     }
     
-    func getWeather() -> String {
+    static func getWeather( completion : @escaping ((String) -> Void)) {
         
         var TempValue : String = ""
         
@@ -43,11 +53,11 @@ class HeroBanner {
 //                        print("\(TempRecord.value) °\(TempRecord.unit)")
 
 //                        print(TempValue)
+                        completion(TempValue)
                     }
                 }
             }.resume()
         }
-        return TempValue
     }
         
 }

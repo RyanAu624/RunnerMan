@@ -16,7 +16,7 @@ class StudentHomeTableViewController: UITableViewController, UICollectionViewDat
     let uID = Auth.auth().currentUser?.uid
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var banner = HeroBanner.fetchBanner()
+    var banners : [HeroBanner] = []
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -24,6 +24,14 @@ class StudentHomeTableViewController: UITableViewController, UICollectionViewDat
         self.tableView.reloadData()
         self.tableView.separatorStyle = .none
         collectionView.dataSource = self
+        
+        HeroBanner.fetchBanner(completion: {
+            banners in
+            self.banners = banners
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        })
     }
     //MARK: - Target Func
     
@@ -88,12 +96,12 @@ class StudentHomeTableViewController: UITableViewController, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return banner.count
+        return banners.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StuWeatherCell", for: indexPath) as! StudentHomeCollectionViewCell
-        let banner = banner[indexPath.item]
+        let banner = banners[indexPath.item]
         cell.heroBanner = banner
         return cell
     }
