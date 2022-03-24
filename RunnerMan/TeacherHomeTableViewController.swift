@@ -13,10 +13,13 @@ class TeacherHomeTableViewController: UITableViewController {
     
     let db = Firestore.firestore()
     let id = Auth.auth().currentUser?.uid
+    var traning = [Training]()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tableView.separatorStyle = .none
+        getRecord()
+        self.tableView.reloadData()
     }
     
     @IBAction func createStu(_ sender: Any) {
@@ -37,6 +40,29 @@ class TeacherHomeTableViewController: UITableViewController {
         
         present(alertController, animated: true, completion: nil)
     }
+    
+    func getRecord(){
+        let db = Firestore.firestore()
+        
+        db.collection("Training").getDocuments() {(snapshot, err) in
+            if err == nil {
+                if let snapshot = snapshot {
+                    self.traning = snapshot.documents.map { d in
+                        return Training(trainingID: d.documentID,
+                                        trainingMethod: d["Training Method"] as? String ?? "",
+                                        trainingVideo: "" as? String ?? "",
+                                        trainingDescription: d["description"] as? String ?? "",
+                                        trainingDay: d["Train Day"] as? String ?? "",
+                                        trainingStartTime: d["Start time"] as? String ?? "",
+                                        trainingEndTime: d["End time"] as? String ?? "")
+                    }
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                }
+            }
+        }
+    }
 
     // MARK: - Table view data source
 
@@ -47,11 +73,22 @@ class TeacherHomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return traning.count
     }
     
     // set table view height
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "recordcell", for: indexPath) as! RecordTableViewCell
+        
+        cell.StdName.text = "hello"
+        cell.TrainingMethod.text = traning[indexPath.row].trainingMethod
+        cell.TrainingDay.text = traning[indexPath.row].trainingDay
+        // Configure the cell...
+
+        return cell
     }
 }
