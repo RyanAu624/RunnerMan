@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		252A45B627DF3D1B00F92519 /* CalendarKit in Frameworks */ = {isa = PBXBuildFile; productRef = 252A45B527DF3D1B00F92519 /* CalendarKit */; };
 		252A45B827DF3D9D00F92519 /* CalendarVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252A45B727DF3D9D00F92519 /* CalendarVIewController.swift */; };
+		25B5C1F827F2E06B00A4F084 /* EKWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5C1F727F2E06B00A4F084 /* EKWrapper.swift */; };
 		9A866F3727B681F90070EF54 /* TeacherHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A866F3627B681F90070EF54 /* TeacherHomeTableViewController.swift */; };
 		9A866F3927B686090070EF54 /* StudentHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A866F3827B686090070EF54 /* StudentHomeTableViewController.swift */; };
 		9A866F3B27B69A350070EF54 /* TargetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A866F3A27B69A350070EF54 /* TargetCell.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		252A45B727DF3D9D00F92519 /* CalendarVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVIewController.swift; sourceTree = "<group>"; };
+		25B5C1F727F2E06B00A4F084 /* EKWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKWrapper.swift; sourceTree = "<group>"; };
 		9A866F3627B681F90070EF54 /* TeacherHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherHomeTableViewController.swift; sourceTree = "<group>"; };
 		9A866F3827B686090070EF54 /* StudentHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeTableViewController.swift; sourceTree = "<group>"; };
 		9A866F3A27B69A350070EF54 /* TargetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetCell.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				9ABBEB5A278C6A1400FB9F22 /* Comment.swift */,
 				9ABBEB33278C41D800FB9F22 /* Main.storyboard */,
 				252A45B727DF3D9D00F92519 /* CalendarVIewController.swift */,
+				25B5C1F727F2E06B00A4F084 /* EKWrapper.swift */,
 				9ABC72DB27A15AFD0079908B /* ManageStuTableViewController.swift */,
 				9ABC72DF27AE8DE70079908B /* ManageStuDetailViewController.swift */,
 				9ABC72E127AFB3BE0079908B /* TeacherSettingViewController.swift */,
@@ -244,6 +247,7 @@
 				9ABC72E227AFB3BE0079908B /* TeacherSettingViewController.swift in Sources */,
 				9A866F4127B77AD60070EF54 /* Target.swift in Sources */,
 				9ABBEB5B278C6A1500FB9F22 /* Comment.swift in Sources */,
+				25B5C1F827F2E06B00A4F084 /* EKWrapper.swift in Sources */,
 				9AC814F52799104600BBF2BC /* StudentRecordViewController.swift in Sources */,
 				9ABC72DC27A15AFD0079908B /* ManageStuTableViewController.swift in Sources */,
 				9ABBEB67278DA68E00FB9F22 /* TeacherAddTrainingViewController.swift in Sources */,
@@ -410,6 +414,7 @@
 				DEVELOPMENT_TEAM = 29963AF748;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RunnerMan/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "access calendar to display eventkit";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -439,6 +444,7 @@
 				DEVELOPMENT_TEAM = 29963AF748;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RunnerMan/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "access calendar to display eventkit";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -640,6 +640,9 @@
                                     </constraints>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="calendarBox" title=""/>
+                                    <connections>
+                                        <segue destination="VpD-Au-teg" kind="show" id="6L1-Ge-7J7"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnW-kx-r2H">
                                     <rect key="frame" x="200" y="265" width="170" height="70"/>
@@ -1475,9 +1478,6 @@
                                     </constraints>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="calendarBox" title=""/>
-                                    <connections>
-                                        <segue destination="VpD-Au-teg" kind="presentation" id="oS6-Wt-Vsp"/>
-                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJF-RL-OUW">
                                     <rect key="frame" x="200" y="266" width="170" height="70"/>
@@ -2532,14 +2532,15 @@
                         <viewControllerLayoutGuide type="bottom" id="39y-gT-JTa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TBV-R1-hH6">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="NOg-LA-Tu0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJy-ud-aQy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2925" y="-35"/>
+            <point key="canvasLocation" x="2403" y="-254"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
