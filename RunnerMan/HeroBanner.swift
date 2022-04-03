@@ -9,21 +9,12 @@ import UIKit
 
 class HeroBanner {
     
-    var stuHome: StudentHomeTableViewController!
-    
     var featuredImage: UIImage
     var temperature = ""
     
     init(temperature: String, featuredImage: UIImage) {
         self.temperature = temperature
         self.featuredImage = featuredImage
-        
-//        HeroBanner.getWeather(completion: {
-//            string in
-//        })
-    }
-    
-    static func handleFetchedData(_ data : String){
         
     }
     
@@ -50,9 +41,6 @@ class HeroBanner {
                 if let weatherInfo = try? decoder.decode(WeatherInfo.self, from: data!){
                     for TempRecord in weatherInfo.temperature.data where TempRecord.place == "Sham Shui Po" {
                         TempValue = "\(TempRecord.value) °\(TempRecord.unit)"
-//                        print("\(TempRecord.value) °\(TempRecord.unit)")
-
-//                        print(TempValue)
                         completion(TempValue)
                     }
                 }

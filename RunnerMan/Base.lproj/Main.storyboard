@@ -1874,7 +1874,7 @@
         <!--Student Add Training View Controller-->
         <scene sceneID="QOP-Q6-GfY">
             <objects>
-                <viewController id="A0o-XI-9kA" customClass="StudentAddTrainingViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="studentAddTrainingPage" id="A0o-XI-9kA" customClass="StudentAddTrainingViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kf4-lM-jNd"/>
                         <viewControllerLayoutGuide type="bottom" id="n0G-We-Lfn"/>

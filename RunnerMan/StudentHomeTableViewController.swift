@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 
-class StudentHomeTableViewController: UITableViewController, UICollectionViewDataSource {
+class StudentHomeTableViewController: UITableViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var target = [Target]()
     let db = Firestore.firestore()
@@ -89,7 +89,7 @@ class StudentHomeTableViewController: UITableViewController, UICollectionViewDat
         }
     }
     
-    // MARK: - Table view data source
+    // MARK: - Collection view data source
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -104,6 +104,21 @@ class StudentHomeTableViewController: UITableViewController, UICollectionViewDat
         let banner = banners[indexPath.item]
         cell.heroBanner = banner
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let cell = collectionView.cellForItem(at: indexPath) as? StudentHomeCollectionViewCell
+        
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "studentAddTrainingPage") {
+            self.present(controller, animated: true, completion: nil)
+        }
+        
+//        if banners[indexPath.item].featuredImage == UIImage(named: "stuAddTrainingBox") {
+//            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "studentAddTrainingPage") {
+//                self.present(controller, animated: true, completion: nil)
+//            }
+//        }
     }
 
     // MARK: - Table view data source
