@@ -16,8 +16,10 @@ class TeacherSettingViewController: UIViewController {
     let uID = Auth.auth().currentUser?.uid
     
     @IBOutlet weak var teacherNameTF: UITextField!
-    @IBOutlet weak var teacherEmailTF: UITextField!
+    @IBOutlet weak var teacherEmailLabel: UILabel!
     @IBOutlet weak var teacherPhoneNumTF: UITextField!
+    
+    @IBOutlet weak var teacherPasswdTF: UITextField!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -38,7 +40,7 @@ class TeacherSettingViewController: UIViewController {
                         let teacherPhoneNum = document.data()["teacherContactNumber"]
                         
                         self.teacherNameTF.text = (teacherName as! String)
-                        self.teacherEmailTF.text = (teacherEmail as! String)
+                        self.teacherEmailLabel.text = (teacherEmail as! String)
                         self.teacherPhoneNumTF.text = (teacherPhoneNum as! String)
                     }
                 }
@@ -49,29 +51,30 @@ class TeacherSettingViewController: UIViewController {
     @IBAction func updateBtnClicked(_ sender: Any) {
         
         let teaName = teacherNameTF.text
-        let teaEmail = teacherEmailTF.text
         let teaPhoneNum = teacherPhoneNumTF.text
         
         let ref = db.collection("teacher").document(uID!)
         
-        ref.updateData(["teacherEmail":teaEmail as Any,
-                        "teacherName":teaName as Any,
+        ref.updateData(["teacherName":teaName as Any,
                         "teacherContactNumber":teaPhoneNum as Any])
     }
     
-        @IBAction func logout(_ sender: Any) {
-            if Auth.auth().currentUser != nil {
-                do {
-                    try Auth.auth().signOut()
+    @IBAction func updatePasswdClicked(_ sender: Any) {
+    }
     
-                    if let controller = self.storyboard?.instantiateViewController(withIdentifier: "teacherLoginPage") {
-                        controller.modalPresentationStyle = .fullScreen
-                        self.present(controller, animated: true, completion: nil)
-                    }
-    
-                } catch let error as NSError {
-                    print(error.localizedDescription)
+    @IBAction func logout(_ sender: Any) {
+        if Auth.auth().currentUser != nil {
+            do {
+                try Auth.auth().signOut()
+
+                if let controller = self.storyboard?.instantiateViewController(withIdentifier: "teacherLoginPage") {
+                    controller.modalPresentationStyle = .fullScreen
+                    self.present(controller, animated: true, completion: nil)
                 }
+
+            } catch let error as NSError {
+                print(error.localizedDescription)
             }
         }
+    }
 }

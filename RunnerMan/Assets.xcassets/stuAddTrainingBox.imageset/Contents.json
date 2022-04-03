@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "blankBox.png",
+      "filename" : "addTrainingBox.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "addTrainingBox@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "addTrainingBox@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

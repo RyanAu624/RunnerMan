@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "targetBox.png",
+      "filename" : "runnermanLogo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "targetBox-1.png",
+      "filename" : "runnermanLogo@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "targetBox-2.png",
+      "filename" : "runnermanLogo@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
