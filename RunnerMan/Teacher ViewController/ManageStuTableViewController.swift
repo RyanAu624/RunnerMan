@@ -17,7 +17,6 @@ class ManageStuTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         getStu()
         self.tableView.reloadData()
-        self.tableView.separatorStyle = .none
     }
     
     func getStu() {
