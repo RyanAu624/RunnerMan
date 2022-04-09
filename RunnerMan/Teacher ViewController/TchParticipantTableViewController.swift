@@ -27,12 +27,8 @@ class TchParticipantTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
-    override func viewDidLoad() {
-        print("********\(trainingID!)**********")
-    }
-    
     func getFirebaseData() {
-        let ref = db.collection("Training").document("JH4PePVfbaUZFKzQAgRN")
+        let ref = db.collection("Training").document(trainingID)
         
         ref.collection("participant").getDocuments() {(snapshot, err) in
             if err == nil {

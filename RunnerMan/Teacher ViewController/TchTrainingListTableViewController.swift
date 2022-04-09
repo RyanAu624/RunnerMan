@@ -28,7 +28,7 @@ class TchTrainingListTableViewController: UITableViewController {
             if err == nil {
                 if let snapshot = snapshot {
                     self.training = snapshot.documents.map { d in
-                        return Training(trainingID: d.documentID,
+                        return Training(trainingID: d["Postid"] as? String ?? "",
                                         trainingMethod: d["Training Method"] as? String ?? "",
                                         trainingVideo: "" as? String ?? "",
                                         trainingDescription: d["description"] as? String ?? "",
