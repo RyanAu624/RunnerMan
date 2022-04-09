@@ -8,8 +8,6 @@
 import Foundation
 
 struct Comment {
-    var commentID : String
+    var reviewer : String
     var commentDescription : String
-    var commentDate : Date
-    var commentTime : String
 }

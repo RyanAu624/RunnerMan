@@ -1,5 +1,5 @@
 //
-//  ManageStuTableViewController.swift
+//  TchStudentListTableViewController.swift
 //  RunnerMan
 //
 //  Created by Long Hei Au on 26/1/2022.
@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class ManageStuTableViewController: UITableViewController {
+class TchStudentListTableViewController: UITableViewController {
     
     var student = [Student]()
     
@@ -46,7 +46,7 @@ class ManageStuTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? ManageStuDetailViewController {
+        if let destination = segue.destination as? TchStuProfileDetailViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 destination.studentNumber = student[indexPath.row].studentID
                 destination.studentName = student[indexPath.row].studentName

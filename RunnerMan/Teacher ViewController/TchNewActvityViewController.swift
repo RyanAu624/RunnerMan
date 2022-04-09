@@ -1,5 +1,5 @@
 //
-//  TeacherAddTrainingViewController.swift
+//  TchNewActvityViewController.swift
 //  RunnerMan
 //
 //  Created by Long Hei Au on 11/1/2022.
@@ -12,7 +12,7 @@ import AVFoundation
 import FirebaseStorage
 import MobileCoreServices
 
-class TeacherAddTrainingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class TchNewActvityViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
 
     @IBOutlet weak var MethodText: UITextField!

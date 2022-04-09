@@ -9,7 +9,6 @@ import UIKit
 
 class RecordTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var StdName: UILabel!
     @IBOutlet weak var TrainingMethod: UILabel!
     @IBOutlet weak var TrainingDay: UILabel!
     override func awakeFromNib() {

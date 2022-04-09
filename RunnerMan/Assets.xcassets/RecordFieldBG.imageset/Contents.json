@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "textFieldBG.png",
+      "filename" : "RecordFieldBG.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "textFieldBG@2x.png",
+      "filename" : "RecordFieldBG@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "textFieldBG@3x.png",
+      "filename" : "RecordFieldBG@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

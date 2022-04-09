@@ -1,5 +1,5 @@
 //
-//  TeacherLoginViewController.swift
+//  StuLoginViewController.swift
 //  RunnerMan
 //
 //  Created by Long Hei Au on 11/1/2022.
@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseAuth
 
-class TeacherLoginViewController: UIViewController {
+class StuLoginViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwdTextField: UITextField!
@@ -20,10 +20,11 @@ class TeacherLoginViewController: UIViewController {
             
             return "Please fill in all fields."
         }
+        
         return nil
     }
     
-    @IBAction func teacherLogin(_ sender: Any) {
+    @IBAction func studentLogin(_ sender: Any) {
         let error = vaildateFields()
         
         if error == "Please fill in all fields." {
@@ -37,14 +38,13 @@ class TeacherLoginViewController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                 
                 if error != nil {
-                    //Couldn't sign in
+                    //Could'n sign in
                     self.showAlertMessage(1)
                     self.emailTextField.text? = ""
                     self.passwdTextField.text? = ""
-                    
                 } else {
                     
-                    if let controller = self.storyboard?.instantiateViewController(withIdentifier: "teacherHomePage") {
+                    if let controller = self.storyboard?.instantiateViewController(withIdentifier: "studentHomePage") {
                         self.present(controller, animated: true, completion: nil)
                     }
                 }

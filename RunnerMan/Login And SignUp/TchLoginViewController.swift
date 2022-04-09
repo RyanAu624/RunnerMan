@@ -1,5 +1,5 @@
 //
-//  StudentLoginViewController.swift
+//  TchLoginViewController.swift
 //  RunnerMan
 //
 //  Created by Long Hei Au on 11/1/2022.
@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseAuth
 
-class StudentLoginViewController: UIViewController {
+class TchLoginViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwdTextField: UITextField!
@@ -20,11 +20,10 @@ class StudentLoginViewController: UIViewController {
             
             return "Please fill in all fields."
         }
-        
         return nil
     }
     
-    @IBAction func studentLogin(_ sender: Any) {
+    @IBAction func teacherLogin(_ sender: Any) {
         let error = vaildateFields()
         
         if error == "Please fill in all fields." {
@@ -38,13 +37,14 @@ class StudentLoginViewController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                 
                 if error != nil {
-                    //Could'n sign in
+                    //Couldn't sign in
                     self.showAlertMessage(1)
                     self.emailTextField.text? = ""
                     self.passwdTextField.text? = ""
+                    
                 } else {
                     
-                    if let controller = self.storyboard?.instantiateViewController(withIdentifier: "studentHomePage") {
+                    if let controller = self.storyboard?.instantiateViewController(withIdentifier: "teacherHomePage") {
                         self.present(controller, animated: true, completion: nil)
                     }
                 }

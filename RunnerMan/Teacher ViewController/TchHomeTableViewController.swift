@@ -1,5 +1,5 @@
 //
-//  TeacherHomeTableViewController.swift
+//  TchHomeTableViewController.swift
 //  RunnerMan
 //
 //  Created by Long Hei Au on 11/2/2022.
@@ -9,7 +9,7 @@ import UIKit
 import FirebaseFirestore
 import FirebaseAuth
 
-class TeacherHomeTableViewController: UITableViewController {
+class TchHomeTableViewController: UITableViewController {
     
     let db = Firestore.firestore()
     let id = Auth.auth().currentUser?.uid
@@ -75,16 +75,15 @@ class TeacherHomeTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return traning.count
     }
-    
+
     // set table view height
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 50
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recordcell", for: indexPath) as! RecordTableViewCell
-        
-        cell.StdName.text = "hello"
+
         cell.TrainingMethod.text = traning[indexPath.row].trainingMethod
         cell.TrainingDay.text = traning[indexPath.row].trainingDay
         // Configure the cell...

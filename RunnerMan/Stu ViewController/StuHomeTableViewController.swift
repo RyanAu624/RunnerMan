@@ -1,5 +1,5 @@
 //
-//  StudentHomeTableViewController.swift
+//  StuHomeTableViewController.swift
 //  RunnerMan
 //
 //  Created by Long Hei Au on 11/2/2022.
@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 
-class StudentHomeTableViewController: UITableViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class StuHomeTableViewController: UITableViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var target = [Target]()
     let db = Firestore.firestore()

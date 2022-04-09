@@ -1,5 +1,5 @@
 //
-//  StudentSignUpViewController.swift
+//  StuSignUpViewController.swift
 //  RunnerMan
 //
 //  Created by Long Hei Au on 11/1/2022.
@@ -10,7 +10,7 @@ import FirebaseAuth
 import Firebase
 import FirebaseFirestore
 
-class StudentSignUpViewController: UIViewController {
+class StuSignUpViewController: UIViewController {
     
     let db = Firestore.firestore()
 

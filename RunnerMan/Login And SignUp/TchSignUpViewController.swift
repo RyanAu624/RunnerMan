@@ -1,5 +1,5 @@
 //
-//  TeacherSignUpViewController.swift
+//  TchSignUpViewController.swift
 //  RunnerMan
 //
 //  Created by Long Hei Au on 22/1/2022.
@@ -10,7 +10,7 @@ import FirebaseAuth
 import Firebase
 import FirebaseFirestore
 
-class TeacherSignUpViewController: UIViewController {
+class TchSignUpViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!

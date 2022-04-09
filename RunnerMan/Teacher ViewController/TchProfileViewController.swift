@@ -1,5 +1,5 @@
 //
-//  TeacherSettingViewController.swift
+//  TchProfileViewController.swift
 //  RunnerMan
 //
 //  Created by Long Hei Au on 6/2/2022.
@@ -10,7 +10,7 @@ import FirebaseAuth
 import Firebase
 import FirebaseFirestore
 
-class TeacherSettingViewController: UIViewController {
+class TchProfileViewController: UIViewController {
     
     let db = Firestore.firestore()
     let uID = Auth.auth().currentUser?.uid

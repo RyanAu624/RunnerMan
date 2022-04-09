@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00D48FC627E8728B00885E66 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D48FC527E8728B00885E66 /* DetailTableViewController.swift */; };
-		00D48FC827E8733B00885E66 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D48FC727E8733B00885E66 /* RecordTableViewCell.swift */; };
 		00F9674427E85809007AF4D1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 00F9674327E85809007AF4D1 /* FirebaseAnalytics */; };
 		00F9674627E85809007AF4D1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 00F9674527E85809007AF4D1 /* FirebaseAuth */; };
 		00F9674827E85809007AF4D1 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 00F9674727E85809007AF4D1 /* FirebaseDatabase */; };
@@ -18,10 +16,12 @@
 		252A45B827DF3D9D00F92519 /* CalendarVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252A45B727DF3D9D00F92519 /* CalendarVIewController.swift */; };
 		25B5C1F827F2E06B00A4F084 /* EKWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5C1F727F2E06B00A4F084 /* EKWrapper.swift */; };
 		25B5C25427F9CAE700A4F084 /* EventKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5C25327F9CAE700A4F084 /* EventKitController.swift */; };
-		9A866F3727B681F90070EF54 /* TeacherHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A866F3627B681F90070EF54 /* TeacherHomeTableViewController.swift */; };
-		9A866F3927B686090070EF54 /* StudentHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A866F3827B686090070EF54 /* StudentHomeTableViewController.swift */; };
+		9A866F3727B681F90070EF54 /* TchHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A866F3627B681F90070EF54 /* TchHomeTableViewController.swift */; };
+		9A866F3927B686090070EF54 /* StuHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A866F3827B686090070EF54 /* StuHomeTableViewController.swift */; };
 		9A866F3B27B69A350070EF54 /* TargetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A866F3A27B69A350070EF54 /* TargetCell.swift */; };
 		9A866F4127B77AD60070EF54 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A866F4027B77AD60070EF54 /* Target.swift */; };
+		9AA487A8280166F00050AA05 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA487A7280166F00050AA05 /* RecordTableViewCell.swift */; };
+		9AA487AA28016A5B0050AA05 /* TchTrainingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA487A928016A5B0050AA05 /* TchTrainingListTableViewController.swift */; };
 		9ABBEB2E278C41D800FB9F22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB2D278C41D800FB9F22 /* AppDelegate.swift */; };
 		9ABBEB30278C41D800FB9F22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB2F278C41D800FB9F22 /* SceneDelegate.swift */; };
 		9ABBEB35278C41D800FB9F22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ABBEB33278C41D800FB9F22 /* Main.storyboard */; };
@@ -32,33 +32,30 @@
 		9ABBEB48278C514700FB9F22 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9ABBEB47278C514700FB9F22 /* GoogleService-Info.plist */; };
 		9ABBEB59278C686900FB9F22 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB58278C686900FB9F22 /* Training.swift */; };
 		9ABBEB5B278C6A1500FB9F22 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB5A278C6A1400FB9F22 /* Comment.swift */; };
-		9ABBEB5D278D240F00FB9F22 /* StudentLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB5C278D240F00FB9F22 /* StudentLoginViewController.swift */; };
-		9ABBEB5F278D242300FB9F22 /* TeacherLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB5E278D242300FB9F22 /* TeacherLoginViewController.swift */; };
-		9ABBEB65278D50C300FB9F22 /* StudentSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB64278D50C300FB9F22 /* StudentSignUpViewController.swift */; };
-		9ABBEB67278DA68E00FB9F22 /* TeacherAddTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB66278DA68E00FB9F22 /* TeacherAddTrainingViewController.swift */; };
-		9ABBEB69278DA6A900FB9F22 /* StudentAddTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB68278DA6A900FB9F22 /* StudentAddTrainingViewController.swift */; };
+		9ABBEB5D278D240F00FB9F22 /* StuLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB5C278D240F00FB9F22 /* StuLoginViewController.swift */; };
+		9ABBEB5F278D242300FB9F22 /* TchLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB5E278D242300FB9F22 /* TchLoginViewController.swift */; };
+		9ABBEB65278D50C300FB9F22 /* StuSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB64278D50C300FB9F22 /* StuSignUpViewController.swift */; };
+		9ABBEB67278DA68E00FB9F22 /* TchNewActvityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB66278DA68E00FB9F22 /* TchNewActvityViewController.swift */; };
 		9ABC72DA27A1579C0079908B /* ManageStuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABC72D927A1579C0079908B /* ManageStuCell.swift */; };
-		9ABC72DC27A15AFD0079908B /* ManageStuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABC72DB27A15AFD0079908B /* ManageStuTableViewController.swift */; };
-		9ABC72E027AE8DE70079908B /* ManageStuDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABC72DF27AE8DE70079908B /* ManageStuDetailViewController.swift */; };
-		9ABC72E227AFB3BE0079908B /* TeacherSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABC72E127AFB3BE0079908B /* TeacherSettingViewController.swift */; };
-		9ABC72E427B0E5A70079908B /* StudentSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABC72E327B0E5A70079908B /* StudentSettingViewController.swift */; };
-		9AC814F52799104600BBF2BC /* StudentRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC814F42799104600BBF2BC /* StudentRecordViewController.swift */; };
-		9AC814F7279934CA00BBF2BC /* TeacherRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC814F6279934CA00BBF2BC /* TeacherRecordViewController.swift */; };
-		9AC814F9279C0DBA00BBF2BC /* TeacherSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC814F8279C0DBA00BBF2BC /* TeacherSignUpViewController.swift */; };
+		9ABC72DC27A15AFD0079908B /* TchStudentListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABC72DB27A15AFD0079908B /* TchStudentListTableViewController.swift */; };
+		9ABC72E027AE8DE70079908B /* TchStuProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABC72DF27AE8DE70079908B /* TchStuProfileDetailViewController.swift */; };
+		9ABC72E227AFB3BE0079908B /* TchProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABC72E127AFB3BE0079908B /* TchProfileViewController.swift */; };
+		9ABC72E427B0E5A70079908B /* StuProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABC72E327B0E5A70079908B /* StuProfileViewController.swift */; };
+		9AC814F9279C0DBA00BBF2BC /* TchSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC814F8279C0DBA00BBF2BC /* TchSignUpViewController.swift */; };
 		9AF7D09227E4D251005AAB76 /* StudentHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7D09127E4D251005AAB76 /* StudentHomeCollectionViewCell.swift */; };
 		9AF7D09827E4DAC0005AAB76 /* HeroBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7D09727E4DAC0005AAB76 /* HeroBanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00D48FC527E8728B00885E66 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
-		00D48FC727E8733B00885E66 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		252A45B727DF3D9D00F92519 /* CalendarVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVIewController.swift; sourceTree = "<group>"; };
 		25B5C1F727F2E06B00A4F084 /* EKWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKWrapper.swift; sourceTree = "<group>"; };
 		25B5C25327F9CAE700A4F084 /* EventKitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventKitController.swift; sourceTree = "<group>"; };
-		9A866F3627B681F90070EF54 /* TeacherHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherHomeTableViewController.swift; sourceTree = "<group>"; };
-		9A866F3827B686090070EF54 /* StudentHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeTableViewController.swift; sourceTree = "<group>"; };
+		9A866F3627B681F90070EF54 /* TchHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchHomeTableViewController.swift; sourceTree = "<group>"; };
+		9A866F3827B686090070EF54 /* StuHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuHomeTableViewController.swift; sourceTree = "<group>"; };
 		9A866F3A27B69A350070EF54 /* TargetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetCell.swift; sourceTree = "<group>"; };
 		9A866F4027B77AD60070EF54 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
+		9AA487A7280166F00050AA05 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
+		9AA487A928016A5B0050AA05 /* TchTrainingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchTrainingListTableViewController.swift; sourceTree = "<group>"; };
 		9ABBEB2A278C41D800FB9F22 /* RunnerMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunnerMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ABBEB2D278C41D800FB9F22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ABBEB2F278C41D800FB9F22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,19 +68,16 @@
 		9ABBEB47278C514700FB9F22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9ABBEB58278C686900FB9F22 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 		9ABBEB5A278C6A1400FB9F22 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
-		9ABBEB5C278D240F00FB9F22 /* StudentLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLoginViewController.swift; sourceTree = "<group>"; };
-		9ABBEB5E278D242300FB9F22 /* TeacherLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherLoginViewController.swift; sourceTree = "<group>"; };
-		9ABBEB64278D50C300FB9F22 /* StudentSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSignUpViewController.swift; sourceTree = "<group>"; };
-		9ABBEB66278DA68E00FB9F22 /* TeacherAddTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherAddTrainingViewController.swift; sourceTree = "<group>"; };
-		9ABBEB68278DA6A900FB9F22 /* StudentAddTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAddTrainingViewController.swift; sourceTree = "<group>"; };
+		9ABBEB5C278D240F00FB9F22 /* StuLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuLoginViewController.swift; sourceTree = "<group>"; };
+		9ABBEB5E278D242300FB9F22 /* TchLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchLoginViewController.swift; sourceTree = "<group>"; };
+		9ABBEB64278D50C300FB9F22 /* StuSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuSignUpViewController.swift; sourceTree = "<group>"; };
+		9ABBEB66278DA68E00FB9F22 /* TchNewActvityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchNewActvityViewController.swift; sourceTree = "<group>"; };
 		9ABC72D927A1579C0079908B /* ManageStuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageStuCell.swift; sourceTree = "<group>"; };
-		9ABC72DB27A15AFD0079908B /* ManageStuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageStuTableViewController.swift; sourceTree = "<group>"; };
-		9ABC72DF27AE8DE70079908B /* ManageStuDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageStuDetailViewController.swift; sourceTree = "<group>"; };
-		9ABC72E127AFB3BE0079908B /* TeacherSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherSettingViewController.swift; sourceTree = "<group>"; };
-		9ABC72E327B0E5A70079908B /* StudentSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSettingViewController.swift; sourceTree = "<group>"; };
-		9AC814F42799104600BBF2BC /* StudentRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRecordViewController.swift; sourceTree = "<group>"; };
-		9AC814F6279934CA00BBF2BC /* TeacherRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherRecordViewController.swift; sourceTree = "<group>"; };
-		9AC814F8279C0DBA00BBF2BC /* TeacherSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherSignUpViewController.swift; sourceTree = "<group>"; };
+		9ABC72DB27A15AFD0079908B /* TchStudentListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchStudentListTableViewController.swift; sourceTree = "<group>"; };
+		9ABC72DF27AE8DE70079908B /* TchStuProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchStuProfileDetailViewController.swift; sourceTree = "<group>"; };
+		9ABC72E127AFB3BE0079908B /* TchProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchProfileViewController.swift; sourceTree = "<group>"; };
+		9ABC72E327B0E5A70079908B /* StuProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuProfileViewController.swift; sourceTree = "<group>"; };
+		9AC814F8279C0DBA00BBF2BC /* TchSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchSignUpViewController.swift; sourceTree = "<group>"; };
 		9AF7D09127E4D251005AAB76 /* StudentHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		9AF7D09727E4DAC0005AAB76 /* HeroBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroBanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,10 +102,10 @@
 		3B4911E228006D3B00EA607C /* Login And SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				9ABBEB5E278D242300FB9F22 /* TeacherLoginViewController.swift */,
-				9ABBEB5C278D240F00FB9F22 /* StudentLoginViewController.swift */,
-				9AC814F8279C0DBA00BBF2BC /* TeacherSignUpViewController.swift */,
-				9ABBEB64278D50C300FB9F22 /* StudentSignUpViewController.swift */,
+				9ABBEB5E278D242300FB9F22 /* TchLoginViewController.swift */,
+				9ABBEB5C278D240F00FB9F22 /* StuLoginViewController.swift */,
+				9AC814F8279C0DBA00BBF2BC /* TchSignUpViewController.swift */,
+				9ABBEB64278D50C300FB9F22 /* StuSignUpViewController.swift */,
 			);
 			path = "Login And SignUp";
 			sourceTree = "<group>";
@@ -135,8 +129,7 @@
 				9AF7D09127E4D251005AAB76 /* StudentHomeCollectionViewCell.swift */,
 				9ABC72D927A1579C0079908B /* ManageStuCell.swift */,
 				9A866F3A27B69A350070EF54 /* TargetCell.swift */,
-				00D48FC527E8728B00885E66 /* DetailTableViewController.swift */,
-				00D48FC727E8733B00885E66 /* RecordTableViewCell.swift */,
+				9AA487A7280166F00050AA05 /* RecordTableViewCell.swift */,
 			);
 			path = "Table Cell";
 			sourceTree = "<group>";
@@ -144,10 +137,8 @@
 		3B4911E528006DB100EA607C /* Stu ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9ABC72E327B0E5A70079908B /* StudentSettingViewController.swift */,
-				9ABBEB68278DA6A900FB9F22 /* StudentAddTrainingViewController.swift */,
-				9AC814F42799104600BBF2BC /* StudentRecordViewController.swift */,
-				9A866F3827B686090070EF54 /* StudentHomeTableViewController.swift */,
+				9ABC72E327B0E5A70079908B /* StuProfileViewController.swift */,
+				9A866F3827B686090070EF54 /* StuHomeTableViewController.swift */,
 			);
 			path = "Stu ViewController";
 			sourceTree = "<group>";
@@ -158,12 +149,12 @@
 				25B5C25327F9CAE700A4F084 /* EventKitController.swift */,
 				252A45B727DF3D9D00F92519 /* CalendarVIewController.swift */,
 				25B5C1F727F2E06B00A4F084 /* EKWrapper.swift */,
-				9ABC72DB27A15AFD0079908B /* ManageStuTableViewController.swift */,
-				9ABC72DF27AE8DE70079908B /* ManageStuDetailViewController.swift */,
-				9ABC72E127AFB3BE0079908B /* TeacherSettingViewController.swift */,
-				9ABBEB66278DA68E00FB9F22 /* TeacherAddTrainingViewController.swift */,
-				9AC814F6279934CA00BBF2BC /* TeacherRecordViewController.swift */,
-				9A866F3627B681F90070EF54 /* TeacherHomeTableViewController.swift */,
+				9ABC72DB27A15AFD0079908B /* TchStudentListTableViewController.swift */,
+				9ABC72DF27AE8DE70079908B /* TchStuProfileDetailViewController.swift */,
+				9ABC72E127AFB3BE0079908B /* TchProfileViewController.swift */,
+				9ABBEB66278DA68E00FB9F22 /* TchNewActvityViewController.swift */,
+				9A866F3627B681F90070EF54 /* TchHomeTableViewController.swift */,
+				9AA487A928016A5B0050AA05 /* TchTrainingListTableViewController.swift */,
 			);
 			path = "Teacher ViewController";
 			sourceTree = "<group>";
@@ -189,13 +180,13 @@
 			children = (
 				9ABBEB2D278C41D800FB9F22 /* AppDelegate.swift */,
 				9ABBEB2F278C41D800FB9F22 /* SceneDelegate.swift */,
+				9ABBEB33278C41D800FB9F22 /* Main.storyboard */,
+				3B4911E328006D5F00EA607C /* Model */,
 				3B4911E628006DD300EA607C /* Teacher ViewController */,
 				3B4911E528006DB100EA607C /* Stu ViewController */,
 				3B4911E428006D8D00EA607C /* Table Cell */,
 				3B4911E228006D3B00EA607C /* Login And SignUp */,
-				3B4911E328006D5F00EA607C /* Model */,
 				9ABBEB36278C41DA00FB9F22 /* Assets.xcassets */,
-				9ABBEB33278C41D800FB9F22 /* Main.storyboard */,
 				9ABBEB38278C41DA00FB9F22 /* LaunchScreen.storyboard */,
 				9ABBEB3B278C41DA00FB9F22 /* Info.plist */,
 				9ABBEB47278C514700FB9F22 /* GoogleService-Info.plist */,
@@ -290,31 +281,28 @@
 				9ABBEB44278C49E600FB9F22 /* Teacher.swift in Sources */,
 				25B5C25427F9CAE700A4F084 /* EventKitController.swift in Sources */,
 				9ABC72DA27A1579C0079908B /* ManageStuCell.swift in Sources */,
-				9ABC72E027AE8DE70079908B /* ManageStuDetailViewController.swift in Sources */,
+				9ABC72E027AE8DE70079908B /* TchStuProfileDetailViewController.swift in Sources */,
+				9AA487A8280166F00050AA05 /* RecordTableViewCell.swift in Sources */,
 				9ABBEB59278C686900FB9F22 /* Training.swift in Sources */,
-				9ABBEB65278D50C300FB9F22 /* StudentSignUpViewController.swift in Sources */,
+				9ABBEB65278D50C300FB9F22 /* StuSignUpViewController.swift in Sources */,
 				9AF7D09227E4D251005AAB76 /* StudentHomeCollectionViewCell.swift in Sources */,
-				9ABC72E427B0E5A70079908B /* StudentSettingViewController.swift in Sources */,
-				9ABC72E227AFB3BE0079908B /* TeacherSettingViewController.swift in Sources */,
+				9ABC72E427B0E5A70079908B /* StuProfileViewController.swift in Sources */,
+				9ABC72E227AFB3BE0079908B /* TchProfileViewController.swift in Sources */,
+				9AA487AA28016A5B0050AA05 /* TchTrainingListTableViewController.swift in Sources */,
 				9A866F4127B77AD60070EF54 /* Target.swift in Sources */,
 				9ABBEB5B278C6A1500FB9F22 /* Comment.swift in Sources */,
 				25B5C1F827F2E06B00A4F084 /* EKWrapper.swift in Sources */,
-				9AC814F52799104600BBF2BC /* StudentRecordViewController.swift in Sources */,
-				9ABC72DC27A15AFD0079908B /* ManageStuTableViewController.swift in Sources */,
-				9ABBEB67278DA68E00FB9F22 /* TeacherAddTrainingViewController.swift in Sources */,
-				00D48FC627E8728B00885E66 /* DetailTableViewController.swift in Sources */,
-				00D48FC827E8733B00885E66 /* RecordTableViewCell.swift in Sources */,
-				9AC814F9279C0DBA00BBF2BC /* TeacherSignUpViewController.swift in Sources */,
+				9ABC72DC27A15AFD0079908B /* TchStudentListTableViewController.swift in Sources */,
+				9ABBEB67278DA68E00FB9F22 /* TchNewActvityViewController.swift in Sources */,
+				9AC814F9279C0DBA00BBF2BC /* TchSignUpViewController.swift in Sources */,
 				9AF7D09827E4DAC0005AAB76 /* HeroBanner.swift in Sources */,
-				9AC814F7279934CA00BBF2BC /* TeacherRecordViewController.swift in Sources */,
-				9A866F3927B686090070EF54 /* StudentHomeTableViewController.swift in Sources */,
+				9A866F3927B686090070EF54 /* StuHomeTableViewController.swift in Sources */,
 				9ABBEB2E278C41D800FB9F22 /* AppDelegate.swift in Sources */,
 				252A45B827DF3D9D00F92519 /* CalendarVIewController.swift in Sources */,
-				9A866F3727B681F90070EF54 /* TeacherHomeTableViewController.swift in Sources */,
-				9ABBEB5D278D240F00FB9F22 /* StudentLoginViewController.swift in Sources */,
+				9A866F3727B681F90070EF54 /* TchHomeTableViewController.swift in Sources */,
+				9ABBEB5D278D240F00FB9F22 /* StuLoginViewController.swift in Sources */,
 				9ABBEB46278C4AED00FB9F22 /* Student.swift in Sources */,
-				9ABBEB5F278D242300FB9F22 /* TeacherLoginViewController.swift in Sources */,
-				9ABBEB69278DA6A900FB9F22 /* StudentAddTrainingViewController.swift in Sources */,
+				9ABBEB5F278D242300FB9F22 /* TchLoginViewController.swift in Sources */,
 				9A866F3B27B69A350070EF54 /* TargetCell.swift in Sources */,
 				9ABBEB30278C41D800FB9F22 /* SceneDelegate.swift in Sources */,
 			);

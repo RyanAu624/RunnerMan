@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class ManageStuDetailViewController: UIViewController {
+class TchStuProfileDetailViewController: UIViewController {
     
     let db = Firestore.firestore()
     
