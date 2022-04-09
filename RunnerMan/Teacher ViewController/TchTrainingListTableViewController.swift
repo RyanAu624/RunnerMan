@@ -51,7 +51,7 @@ class TchTrainingListTableViewController: UITableViewController {
                 destination.trainingMethod = training[indexPath.row].trainingMethod
                 destination.trainingVideo = training[indexPath.row].trainingVideo
                 destination.trainingDescription = training[indexPath.row].trainingDescription
-                destination.training_Day = training[indexPath.row].trainingDay
+                destination.trainingDay = training[indexPath.row].trainingDay
                 destination.trainingStartTime = training[indexPath.row].trainingStartTime
                 destination.trainingEndTime = training[indexPath.row].trainingEndTime
             }

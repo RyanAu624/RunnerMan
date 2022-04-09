@@ -47,6 +47,30 @@ class TchParticipantTableViewController: UITableViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? TchTrainingDetailViewController {
+            destination.trainingID = self.trainingID
+            destination.trainingMethod = self.trainingMethod
+            destination.trainingVideo = self.trainingVideo
+            destination.trainingDescription = self.trainingDescription
+            destination.trainingDay = self.trainingDay
+            destination.trainingStartTime = self.trainingStartTime
+            destination.trainingEndTime = self.trainingEndTime
+        }
+        
+//        if let destination = segue.destination as? TchTrainingDetailViewController {
+//            if let indexPath = self.tableView.indexPathForSelectedRow {
+//                destination.trainingID = self.trainingID
+//                destination.trainingMethod = self.trainingMethod
+//                destination.trainingVideo = self.trainingVideo
+//                destination.trainingDescription = self.trainingDescription
+//                destination.training_Day = self.trainingDay
+//                destination.trainingStartTime = self.trainingStartTime
+//                destination.trainingEndTime = self.trainingEndTime
+//            }
+//        }
+    }
 
     // MARK: - Table view data source
 

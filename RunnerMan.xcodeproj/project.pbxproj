@@ -25,6 +25,7 @@
 		9AA487AC28016E0A0050AA05 /* TchParticipantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA487AB28016E0A0050AA05 /* TchParticipantTableViewController.swift */; };
 		9AA487AE280170070050AA05 /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA487AD280170070050AA05 /* Participant.swift */; };
 		9AA487B0280183450050AA05 /* ParticipantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA487AF280183450050AA05 /* ParticipantTableViewCell.swift */; };
+		9AA487B22801C6370050AA05 /* TchTrainingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA487B12801C6370050AA05 /* TchTrainingDetailViewController.swift */; };
 		9ABBEB2E278C41D800FB9F22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB2D278C41D800FB9F22 /* AppDelegate.swift */; };
 		9ABBEB30278C41D800FB9F22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB2F278C41D800FB9F22 /* SceneDelegate.swift */; };
 		9ABBEB35278C41D800FB9F22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ABBEB33278C41D800FB9F22 /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 		9AA487AB28016E0A0050AA05 /* TchParticipantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchParticipantTableViewController.swift; sourceTree = "<group>"; };
 		9AA487AD280170070050AA05 /* Participant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
 		9AA487AF280183450050AA05 /* ParticipantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantTableViewCell.swift; sourceTree = "<group>"; };
+		9AA487B12801C6370050AA05 /* TchTrainingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchTrainingDetailViewController.swift; sourceTree = "<group>"; };
 		9ABBEB2A278C41D800FB9F22 /* RunnerMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunnerMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ABBEB2D278C41D800FB9F22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ABBEB2F278C41D800FB9F22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				25B5C25327F9CAE700A4F084 /* EventKitController.swift */,
 				252A45B727DF3D9D00F92519 /* CalendarVIewController.swift */,
 				25B5C1F727F2E06B00A4F084 /* EKWrapper.swift */,
+				9AA487B12801C6370050AA05 /* TchTrainingDetailViewController.swift */,
 				9AA487AB28016E0A0050AA05 /* TchParticipantTableViewController.swift */,
 				9AA487A928016A5B0050AA05 /* TchTrainingListTableViewController.swift */,
 				9ABC72DF27AE8DE70079908B /* TchStuProfileDetailViewController.swift */,
@@ -302,6 +305,7 @@
 				9A866F4127B77AD60070EF54 /* Target.swift in Sources */,
 				9ABBEB5B278C6A1500FB9F22 /* Comment.swift in Sources */,
 				25B5C1F827F2E06B00A4F084 /* EKWrapper.swift in Sources */,
+				9AA487B22801C6370050AA05 /* TchTrainingDetailViewController.swift in Sources */,
 				9ABC72DC27A15AFD0079908B /* TchStudentListTableViewController.swift in Sources */,
 				9ABBEB67278DA68E00FB9F22 /* TchNewActvityViewController.swift in Sources */,
 				9AC814F9279C0DBA00BBF2BC /* TchSignUpViewController.swift in Sources */,
