@@ -11,7 +11,8 @@ import FirebaseFirestore
 class TchTrainingListTableViewController: UITableViewController {
     
     let db = Firestore.firestore()
-    var traning = [Training]()
+    var training = [Training]()
+    
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -23,9 +24,10 @@ class TchTrainingListTableViewController: UITableViewController {
         let db = Firestore.firestore()
         
         db.collection("Training").getDocuments() {(snapshot, err) in
+            
             if err == nil {
                 if let snapshot = snapshot {
-                    self.traning = snapshot.documents.map { d in
+                    self.training = snapshot.documents.map { d in
                         return Training(trainingID: d.documentID,
                                         trainingMethod: d["Training Method"] as? String ?? "",
                                         trainingVideo: "" as? String ?? "",
@@ -41,6 +43,20 @@ class TchTrainingListTableViewController: UITableViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? TchParticipantTableViewController {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                destination.trainingID = training[indexPath.row].trainingID
+                destination.trainingMethod = training[indexPath.row].trainingMethod
+                destination.trainingVideo = training[indexPath.row].trainingVideo
+                destination.trainingDescription = training[indexPath.row].trainingDescription
+                destination.training_Day = training[indexPath.row].trainingDay
+                destination.trainingStartTime = training[indexPath.row].trainingStartTime
+                destination.trainingEndTime = training[indexPath.row].trainingEndTime
+            }
+        }
+    }
 
     // MARK: - Table view data source
 
@@ -51,7 +67,7 @@ class TchTrainingListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return traning.count
+        return training.count
     }
 
     // set table view height
@@ -62,8 +78,8 @@ class TchTrainingListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recordcell", for: indexPath) as! RecordTableViewCell
 
-        cell.TrainingMethod.text = traning[indexPath.row].trainingMethod
-        cell.TrainingDay.text = traning[indexPath.row].trainingDay
+        cell.TrainingMethod.text = training[indexPath.row].trainingMethod
+        cell.TrainingDay.text = training[indexPath.row].trainingDay
         // Configure the cell...
 
         return cell
