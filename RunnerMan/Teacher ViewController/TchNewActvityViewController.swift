@@ -121,7 +121,7 @@ class TchNewActvityViewController: UIViewController, UIImagePickerControllerDele
             }
         }
         
-        let date = ["Postid" : postid,
+        let data = ["Postid" : postid,
                     "Training Method": MethodText.text!,
                     "Train Day": TrainDay.text!,
                     "Start time": StartTime.text!,
@@ -129,7 +129,7 @@ class TchNewActvityViewController: UIViewController, UIImagePickerControllerDele
                     "Video" : "\(PostUrl)",
                     "description": DescriText.text!]
         
-        db.collection("Training").addDocument(data: date)
+        db.collection("Training").document(postid).setData(data)
         dismiss(animated: true, completion: nil)
         
     }
