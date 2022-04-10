@@ -25,7 +25,7 @@ class TchStuProfileDetailViewController: UIViewController {
 
     @IBOutlet weak var studentNumberTF: UITextField!
     @IBOutlet weak var studentNameTF: UITextField!
-    @IBOutlet weak var studentEmailTF: UITextField!
+    @IBOutlet weak var studentEmailLabel: UILabel!
     @IBOutlet weak var studentPhoneNumTF: UITextField!
     @IBOutlet weak var studentClassTF: UITextField!
     @IBOutlet weak var studentAgeTF: UITextField!
@@ -36,7 +36,7 @@ class TchStuProfileDetailViewController: UIViewController {
         super.viewWillAppear(animated)
         studentNumberTF.text = studentNumber
         studentNameTF.text = studentName
-        studentEmailTF.text = studentEmail
+        studentEmailLabel.text = studentEmail
         studentPhoneNumTF.text = studentPhoneNum
         studentClassTF.text = studentClass
         studentAgeTF.text = studentAge
@@ -48,7 +48,6 @@ class TchStuProfileDetailViewController: UIViewController {
         
         let stuNum = studentNumberTF.text
         let stuName = studentNameTF.text
-        let stuEmail = studentEmailTF.text
         let stuPhoneNum = studentPhoneNumTF.text
         let stuClass = studentClassTF.text
         let stuAge = studentAgeTF.text
@@ -57,8 +56,7 @@ class TchStuProfileDetailViewController: UIViewController {
         
         let ref = db.collection("student").document(studentUid)
         
-        ref.updateData(["studentEmail":stuEmail as Any,
-                        "studentName":stuName as Any,
+        ref.updateData(["studentName":stuName as Any,
                         "studentContactNumber":stuPhoneNum as Any,
                         "studentId":stuNum as Any,
                         "studentClass":stuClass as Any,

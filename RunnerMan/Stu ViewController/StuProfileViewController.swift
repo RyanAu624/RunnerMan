@@ -17,7 +17,7 @@ class StuProfileViewController: UIViewController {
 
     @IBOutlet weak var studentNumberTF: UITextField!
     @IBOutlet weak var studentNameTF: UITextField!
-    @IBOutlet weak var studentEmailTF: UITextField!
+    @IBOutlet weak var studentEmailLabel: UILabel!
     @IBOutlet weak var studentPhoneNumTF: UITextField!
     @IBOutlet weak var studentClassTF: UITextField!
     @IBOutlet weak var studentAgeTF: UITextField!
@@ -48,7 +48,7 @@ class StuProfileViewController: UIViewController {
                         
                         self.studentNumberTF.text = (studentNumber as! String)
                         self.studentNameTF.text = (studentName as! String)
-                        self.studentEmailTF.text = (studentEmail as! String)
+                        self.studentEmailLabel.text = (studentEmail as! String)
                         self.studentPhoneNumTF.text = (studentPhoneNum as! String)
                         self.studentClassTF.text = (studentClass as! String)
                         self.studentAgeTF.text = (studentAge as! String)
@@ -63,7 +63,6 @@ class StuProfileViewController: UIViewController {
     @IBAction func updateBtnClicked(_ sender: Any) {
         let stuNumber = studentNumberTF.text
         let stuName = studentNameTF.text
-        let stuEmail = studentEmailTF.text
         let stuPhoneNum = studentPhoneNumTF.text
         let stuClass = studentClassTF.text
         let stuAge = studentAgeTF.text
@@ -74,7 +73,6 @@ class StuProfileViewController: UIViewController {
         
         ref.updateData(["studentId":stuNumber as Any,
                         "studentName":stuName as Any,
-                        "studentEmail":stuEmail as Any,
                         "studentContactNumber":stuPhoneNum as Any,
                         "studentClass":stuClass as Any,
                         "studentAge":stuAge as Any,

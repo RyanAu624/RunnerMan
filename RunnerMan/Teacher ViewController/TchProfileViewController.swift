@@ -19,8 +19,6 @@ class TchProfileViewController: UIViewController {
     @IBOutlet weak var teacherEmailLabel: UILabel!
     @IBOutlet weak var teacherPhoneNumTF: UITextField!
     
-    @IBOutlet weak var teacherPasswdTF: UITextField!
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getUserData()
@@ -57,9 +55,6 @@ class TchProfileViewController: UIViewController {
         
         ref.updateData(["teacherName":teaName as Any,
                         "teacherContactNumber":teaPhoneNum as Any])
-    }
-    
-    @IBAction func updatePasswdClicked(_ sender: Any) {
     }
     
     @IBAction func logout(_ sender: Any) {

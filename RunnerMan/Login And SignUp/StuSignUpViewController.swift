@@ -19,8 +19,8 @@ class StuSignUpViewController: UIViewController {
     @IBOutlet weak var phoneNumTextField: UITextField!
     @IBOutlet weak var classTextField: UITextField!
     @IBOutlet weak var passwdTextField: UITextField!
-    @IBOutlet weak var CpasswdTextField: UITextField!
-    @IBOutlet weak var inviteCodeTextField: UITextField!
+    @IBOutlet weak var cPasswdTextField: UITextField!
+    @IBOutlet weak var studentNumTextField: UITextField!
     
     func vaildateFields() -> String? {
         //Check that all fields are filled in
@@ -29,48 +29,45 @@ class StuSignUpViewController: UIViewController {
             phoneNumTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             classTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             passwdTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            CpasswdTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            inviteCodeTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            cPasswdTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            studentNumTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             
             return "Please fill in all fields."
         }
         
         //Check Comfirm password == password
-        if CpasswdTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != passwdTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
+        if cPasswdTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != passwdTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
             
             return "Make sure your password is correct."
         }
         
         //Get inviteCode from firebase
-        let ref = db.collection("inviteCode").document("code")
-        
-        ref.getDocument{(document, err) in
-            if let document = document, document.exists {
-                let code = document.data()!["code"]
-                print(code!)
-            }
-        }
+//        let ref = db.collection("inviteCode").document("code")
+//
+//        ref.getDocument{(document, err) in
+//            if let document = document, document.exists {
+//                let code = document.data()!["code"]
+//                print(code!)
+//            }
+//        }
         
         return nil
     }
     
     @IBAction func studentSignUp(_ sender: Any) {
         let error = vaildateFields()
-        checkCode()
         
         if error == "Please fill in all fields." {
             showAlertMessage(0)
         } else if error == "Make sure your password is correct." {
             showAlertMessage(1)
-            self.passwdTextField.text? = ""
-            self.CpasswdTextField.text? = ""
         } else {
             
             let name = nameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let phoneNumber = phoneNumTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let clss = classTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let stuId = ""
+            let stuId = studentNumTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let age = ""
             let weight = ""
             let height = ""
@@ -112,11 +109,11 @@ class StuSignUpViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    func checkCode(){
-        let ref = db.collection("teacher").getDocuments(){ data, error in
-            print(data)
-        }
-    }
+//    func checkCode(){
+//        let ref = db.collection("teacher").getDocuments(){ data, error in
+//            print(data)
+//        }
+//    }
     
     func showAlertMessage(_ number:Int) {
         var message = ""
@@ -126,8 +123,12 @@ class StuSignUpViewController: UIViewController {
             message = "Please fill in all fields."
         case 1:
             message = "Make sure your password is correct."
+            self.passwdTextField.text? = ""
+            self.cPasswdTextField.text? = ""
         case 2:
             message = "There have some error, Please try again later."
+            self.passwdTextField.text? = ""
+            self.cPasswdTextField.text? = ""
         default:
             break
         }

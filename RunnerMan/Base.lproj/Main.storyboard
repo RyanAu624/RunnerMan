@@ -381,20 +381,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comfirm Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Uq-uU-jsE">
-                                <rect key="frame" x="20" y="513" width="149" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Uq-uU-jsE">
+                                <rect key="frame" x="20" y="513" width="78" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSK-Go-oI1">
-                                <rect key="frame" x="20" y="427" width="78" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSK-Go-oI1">
+                                <rect key="frame" x="20" y="427" width="131" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invite Code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2z-kc-edb">
-                                <rect key="frame" x="19.999999999999993" y="599" width="90.333333333333314" height="20.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comfirm Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2z-kc-edb">
+                                <rect key="frame" x="20" y="599" width="149" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -418,7 +418,7 @@
                                 <rect key="frame" x="14" y="542" width="362" height="52"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="textFieldBG" translatesAutoresizingMaskIntoConstraints="NO" id="Q4h-Q2-u2j">
-                                <rect key="frame" x="14" y="627.33333333333337" width="362" height="52"/>
+                                <rect key="frame" x="14" y="628" width="362" height="52"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8y-bT-XD3">
                                 <rect key="frame" x="30" y="127.33333333333331" width="330" height="25"/>
@@ -475,7 +475,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWf-v1-REj">
-                                <rect key="frame" x="30" y="641.33333333333337" width="330" height="25"/>
+                                <rect key="frame" x="30" y="642" width="330" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="ptG-Ab-WG0"/>
                                     <constraint firstAttribute="width" constant="330" id="sL3-K2-euY"/>
@@ -554,13 +554,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="MhA-Gm-5tH"/>
                     <connections>
-                        <outlet property="CpasswdTextField" destination="H2L-ow-DMO" id="gyB-Ys-SMt"/>
+                        <outlet property="cPasswdTextField" destination="qWf-v1-REj" id="YZr-zO-eC1"/>
                         <outlet property="classTextField" destination="7LY-bK-RXV" id="uCf-bL-XaH"/>
                         <outlet property="emailTextField" destination="3yg-gj-ZMn" id="SN8-eM-eQN"/>
-                        <outlet property="inviteCodeTextField" destination="qWf-v1-REj" id="X5U-A8-g17"/>
                         <outlet property="nameTextField" destination="b8y-bT-XD3" id="BF9-bj-Ft9"/>
-                        <outlet property="passwdTextField" destination="P2f-hK-UOh" id="C7B-Rc-oPn"/>
+                        <outlet property="passwdTextField" destination="H2L-ow-DMO" id="Uii-th-9v4"/>
                         <outlet property="phoneNumTextField" destination="Xpz-yQ-9u0" id="cu6-gi-PVf"/>
+                        <outlet property="studentNumTextField" destination="P2f-hK-UOh" id="BHP-ua-4ok"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YV9-QN-VDk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1284,15 +1284,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AE4-Vj-5Ao">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaT-Zi-mqr">
                                 <rect key="frame" x="30" y="134" width="330" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="330" id="NDq-dm-keU"/>
-                                    <constraint firstAttribute="height" constant="25" id="qgp-h4-Ep9"/>
+                                    <constraint firstAttribute="height" constant="25" id="Rqt-bD-d9W"/>
+                                    <constraint firstAttribute="width" constant="330" id="Tdt-s5-0NO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -1307,6 +1308,7 @@
                             <constraint firstItem="p5L-9R-jHZ" firstAttribute="top" secondItem="lzF-Gi-ZKY" secondAttribute="bottom" constant="20" id="9V0-lT-qpP"/>
                             <constraint firstItem="wxQ-jd-IWL" firstAttribute="leading" secondItem="d37-hq-PKx" secondAttribute="leading" constant="14" id="9Wt-Hh-oUf"/>
                             <constraint firstItem="Gsn-uu-gS0" firstAttribute="leading" secondItem="d37-hq-PKx" secondAttribute="leadingMargin" constant="14" id="AQC-s5-sX2"/>
+                            <constraint firstItem="FaT-Zi-mqr" firstAttribute="leading" secondItem="d37-hq-PKx" secondAttribute="leadingMargin" constant="14" id="Cjb-O7-XKG"/>
                             <constraint firstItem="UIm-Y9-63K" firstAttribute="leading" secondItem="d37-hq-PKx" secondAttribute="leadingMargin" constant="4" id="Elw-R2-Wdu"/>
                             <constraint firstItem="y0C-Jd-9yb" firstAttribute="leading" secondItem="d37-hq-PKx" secondAttribute="leadingMargin" constant="4" id="FB1-Kr-osv"/>
                             <constraint firstItem="fqL-9l-yE0" firstAttribute="top" secondItem="UIm-Y9-63K" secondAttribute="bottom" constant="20" id="Fww-hR-DO8"/>
@@ -1316,7 +1318,6 @@
                             <constraint firstItem="wxQ-jd-IWL" firstAttribute="top" secondItem="y0C-Jd-9yb" secondAttribute="bottom" constant="8" symbolic="YES" id="NmD-KR-hme"/>
                             <constraint firstItem="UIm-Y9-63K" firstAttribute="top" secondItem="wxQ-jd-IWL" secondAttribute="bottom" constant="10" id="OIF-fQ-yJJ"/>
                             <constraint firstItem="7Il-5D-W3n" firstAttribute="leading" secondItem="d37-hq-PKx" secondAttribute="leading" constant="14" id="P0L-tP-Svc"/>
-                            <constraint firstItem="AE4-Vj-5Ao" firstAttribute="leading" secondItem="d37-hq-PKx" secondAttribute="leadingMargin" constant="14" id="SJu-93-jOF"/>
                             <constraint firstItem="gQs-Sw-3vv" firstAttribute="top" secondItem="wVI-Cy-avw" secondAttribute="bottom" constant="20" id="TJY-1F-ECE"/>
                             <constraint firstItem="RjD-P6-OJm" firstAttribute="top" secondItem="lzF-Gi-ZKY" secondAttribute="bottom" constant="8" symbolic="YES" id="Toh-sO-9Wz"/>
                             <constraint firstItem="RjD-P6-OJm" firstAttribute="leading" secondItem="d37-hq-PKx" secondAttribute="leading" constant="14" id="TsQ-hS-IWo"/>
@@ -1324,6 +1325,7 @@
                             <constraint firstItem="S7S-9n-Vn7" firstAttribute="top" secondItem="WqL-v0-3SA" secondAttribute="bottom" constant="20" id="WXY-sf-MRv"/>
                             <constraint firstItem="LeU-Uq-rmy" firstAttribute="leading" secondItem="d37-hq-PKx" secondAttribute="leading" constant="14" id="WYZ-DL-BVe"/>
                             <constraint firstItem="RxS-MA-9Np" firstAttribute="leading" secondItem="d37-hq-PKx" secondAttribute="leadingMargin" constant="14" id="WuD-Eh-L9u"/>
+                            <constraint firstItem="FaT-Zi-mqr" firstAttribute="top" secondItem="SHY-p1-o5b" secondAttribute="bottom" constant="20" id="XHm-8g-krP"/>
                             <constraint firstItem="WqL-v0-3SA" firstAttribute="leading" secondItem="d37-hq-PKx" secondAttribute="leadingMargin" constant="4" id="ZGH-NW-WSc"/>
                             <constraint firstItem="Ton-tX-N4z" firstAttribute="leading" secondItem="d37-hq-PKx" secondAttribute="leading" constant="14" id="ZJy-nY-ipo"/>
                             <constraint firstItem="WqL-v0-3SA" firstAttribute="top" secondItem="Q9w-e4-Ua4" secondAttribute="bottom" constant="15" id="ZKx-aK-kkO"/>
@@ -1343,7 +1345,6 @@
                             <constraint firstItem="gQs-Sw-3vv" firstAttribute="leading" secondItem="d37-hq-PKx" secondAttribute="leadingMargin" constant="14" id="s06-7i-bvg"/>
                             <constraint firstItem="fqL-9l-yE0" firstAttribute="leading" secondItem="d37-hq-PKx" secondAttribute="leadingMargin" constant="14" id="slQ-un-w52"/>
                             <constraint firstItem="dB6-Uw-9ID" firstAttribute="top" secondItem="htM-XJ-82V" secondAttribute="bottom" constant="10" id="tiD-Rx-Rhu"/>
-                            <constraint firstItem="AE4-Vj-5Ao" firstAttribute="top" secondItem="SHY-p1-o5b" secondAttribute="bottom" constant="20" id="v4M-5X-kSv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jte-lf-kod">
@@ -1356,7 +1357,7 @@
                     <connections>
                         <outlet property="studentAgeTF" destination="Gsn-uu-gS0" id="OK4-BD-kKz"/>
                         <outlet property="studentClassTF" destination="gQs-Sw-3vv" id="mGi-7l-ZL7"/>
-                        <outlet property="studentEmailTF" destination="AE4-Vj-5Ao" id="tFE-aP-lgf"/>
+                        <outlet property="studentEmailLabel" destination="FaT-Zi-mqr" id="RNh-r7-fUq"/>
                         <outlet property="studentHeightTF" destination="p5L-9R-jHZ" id="tNl-cN-j70"/>
                         <outlet property="studentNameTF" destination="gRr-BE-zmv" id="adM-8o-meN"/>
                         <outlet property="studentNumberTF" destination="S7S-9n-Vn7" id="RCc-bO-tcm"/>
@@ -1515,15 +1516,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H0S-3l-rfo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMY-8D-1Lw">
                                 <rect key="frame" x="30" y="134" width="330" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="330" id="T0v-Om-dMH"/>
-                                    <constraint firstAttribute="height" constant="25" id="ZGd-kQ-2gN"/>
+                                    <constraint firstAttribute="height" constant="25" id="7l2-7l-Jsd"/>
+                                    <constraint firstAttribute="width" constant="330" id="DBX-tU-ylA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1549,7 +1551,6 @@
                             <constraint firstItem="g9G-Ck-1Pc" firstAttribute="top" secondItem="7aj-TA-7pt" secondAttribute="bottom" constant="5" id="RcG-kB-gs4"/>
                             <constraint firstItem="aWb-Ka-AB1" firstAttribute="leading" secondItem="7vD-OB-er8" secondAttribute="leading" constant="14" id="S6V-di-QKO"/>
                             <constraint firstItem="IKN-Em-IAq" firstAttribute="leading" secondItem="7vD-OB-er8" secondAttribute="leadingMargin" constant="14" id="Tv8-ve-SSl"/>
-                            <constraint firstItem="H0S-3l-rfo" firstAttribute="leading" secondItem="7vD-OB-er8" secondAttribute="leadingMargin" constant="14" id="Vot-CQ-CGx"/>
                             <constraint firstItem="sWk-Hy-Esx" firstAttribute="leading" secondItem="7vD-OB-er8" secondAttribute="leadingMargin" constant="4" id="WIK-BF-IDd"/>
                             <constraint firstItem="qye-hu-qjO" firstAttribute="top" secondItem="Yqp-Xi-nGF" secondAttribute="bottom" constant="12" id="X0m-tE-1qc"/>
                             <constraint firstItem="l3Q-9s-RpZ" firstAttribute="top" secondItem="WMh-KQ-ydU" secondAttribute="bottom" constant="20" id="XUV-hn-kjf"/>
@@ -1557,6 +1558,7 @@
                             <constraint firstItem="a2T-Oe-yN1" firstAttribute="leading" secondItem="7vD-OB-er8" secondAttribute="leadingMargin" constant="4" id="cSL-Ir-0ng"/>
                             <constraint firstItem="fpY-cU-7fG" firstAttribute="top" secondItem="2FA-VM-w6g" secondAttribute="bottom" constant="12" id="dC4-jc-fMj"/>
                             <constraint firstItem="fpY-cU-7fG" firstAttribute="leading" secondItem="7vD-OB-er8" secondAttribute="leadingMargin" constant="4" id="dOD-3A-SJo"/>
+                            <constraint firstItem="GMY-8D-1Lw" firstAttribute="top" secondItem="g9G-Ck-1Pc" secondAttribute="bottom" constant="20" id="dPh-nC-fmG"/>
                             <constraint firstItem="a2T-Oe-yN1" firstAttribute="top" secondItem="Rxk-Md-A0q" secondAttribute="bottom" constant="12" id="hYL-Bk-HWb"/>
                             <constraint firstItem="dEj-ei-5Cq" firstAttribute="leading" secondItem="7vD-OB-er8" secondAttribute="leadingMargin" constant="4" id="iex-bv-hxJ"/>
                             <constraint firstItem="l3Q-9s-RpZ" firstAttribute="leading" secondItem="7vD-OB-er8" secondAttribute="leadingMargin" constant="14" id="jIp-gD-BN3"/>
@@ -1566,7 +1568,7 @@
                             <constraint firstItem="IKN-Em-IAq" firstAttribute="top" secondItem="sWk-Hy-Esx" secondAttribute="bottom" constant="20" id="nUt-50-SWv"/>
                             <constraint firstItem="zHr-we-2Ll" firstAttribute="top" secondItem="a2T-Oe-yN1" secondAttribute="bottom" constant="8" symbolic="YES" id="pc6-kQ-ZcW"/>
                             <constraint firstItem="WMh-KQ-ydU" firstAttribute="top" secondItem="aWb-Ka-AB1" secondAttribute="bottom" constant="12" id="pgo-nG-9uA"/>
-                            <constraint firstItem="H0S-3l-rfo" firstAttribute="top" secondItem="g9G-Ck-1Pc" secondAttribute="bottom" constant="20" id="rUv-oh-I6N"/>
+                            <constraint firstItem="GMY-8D-1Lw" firstAttribute="leading" secondItem="7vD-OB-er8" secondAttribute="leadingMargin" constant="14" id="rBx-r5-quT"/>
                             <constraint firstItem="qye-hu-qjO" firstAttribute="leading" secondItem="7vD-OB-er8" secondAttribute="leadingMargin" constant="4" id="rnz-qF-rHg"/>
                             <constraint firstItem="gah-uW-Yon" firstAttribute="top" secondItem="dEj-ei-5Cq" secondAttribute="bottom" constant="8" symbolic="YES" id="slK-Qx-LaF"/>
                             <constraint firstItem="Yqp-Xi-nGF" firstAttribute="top" secondItem="WMh-KQ-ydU" secondAttribute="bottom" constant="8" symbolic="YES" id="tOA-EE-zFH"/>
@@ -1587,7 +1589,7 @@
                     <connections>
                         <outlet property="studentAgeTF" destination="IKN-Em-IAq" id="7fI-hR-eCa"/>
                         <outlet property="studentClassTF" destination="lJU-E6-vgT" id="W7B-OT-OYx"/>
-                        <outlet property="studentEmailTF" destination="H0S-3l-rfo" id="qf1-NR-AOm"/>
+                        <outlet property="studentEmailLabel" destination="GMY-8D-1Lw" id="pgO-rV-awE"/>
                         <outlet property="studentHeightTF" destination="Yyu-1I-n0S" id="amz-fx-kZC"/>
                         <outlet property="studentNameTF" destination="l3Q-9s-RpZ" id="7me-OT-MVQ"/>
                         <outlet property="studentNumberTF" destination="1SR-0u-fGj" id="sgM-QX-TLu"/>
