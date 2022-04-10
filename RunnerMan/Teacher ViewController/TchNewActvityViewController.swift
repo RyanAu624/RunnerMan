@@ -114,12 +114,12 @@ class TchNewActvityViewController: UIViewController, UIImagePickerControllerDele
         let postid = db.collection("Training").document().documentID
         let storage2 = Storage.storage().reference().child("video")
         
-        storage2.child(postid).putData(videoData, metadata: metadata) { (metaData, error) in
+        storage2.child("\(postid).mov").putData(videoData, metadata: metadata) { (metaData, error) in
             guard error == nil else {
                 print("ERROR HERE: \(error?.localizedDescription)")
                 return
             }
-            storage2.child(postid).downloadURL{ url, error in
+            storage2.child("\(postid).mov").downloadURL{ url, error in
                 if let error = error {
                     print("HERERER(ERROR)")
                     print(error.localizedDescription)

@@ -50,7 +50,7 @@ class TchHomeTableViewController: UITableViewController {
                     self.training = snapshot.documents.map { d in
                         return Training(trainingID: d.documentID,
                                         trainingMethod: d["Training Method"] as? String ?? "",
-                                        trainingVideo: "" as? String ?? "",
+                                        trainingVideo: d["Video"] as? String ?? "",
                                         trainingDescription: d["description"] as? String ?? "",
                                         trainingDay: d["Train Day"] as? String ?? "",
                                         trainingStartTime: d["Start time"] as? String ?? "",
