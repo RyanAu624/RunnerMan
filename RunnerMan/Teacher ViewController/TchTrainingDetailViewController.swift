@@ -32,12 +32,17 @@ class TchTrainingDetailViewController: UIViewController {
         trainingDayLabel.text = trainingDay
         trainingStartTimeLabel.text = trainingStartTime
         trainingEndTimeLabel.text = trainingEndTime
+
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         playVideo()
     }
 
     
     func playVideo(){
-        if let Videourl = URL(string: "\(trainingVideo)") {
+        if let Videourl = URL(string: trainingVideo) {
             print(Videourl)
             let player = AVPlayer(url: Videourl)
             let playerlayer = AVPlayerLayer(player: player)
