@@ -27,8 +27,7 @@ class TchNewActvityViewController: UIViewController, UIImagePickerControllerDele
     let db = Firestore.firestore()
     let id = Auth.auth().currentUser?.uid
     var videoData : Data = Data()
-    var PostUrl : NSURL!
-
+    var fileurl : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,14 +78,15 @@ class TchNewActvityViewController: UIViewController, UIImagePickerControllerDele
         self.view.endEditing(true)
     }
     
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let storage2 = Storage.storage().reference().child("video").child(id!)
-        let metadata = StorageMetadata()
         
         if let videourl = info[UIImagePickerController.InfoKey.mediaURL] as? NSURL {
             do{
                 videoData = try Data(contentsOf: videourl as URL)
-                PostUrl = videourl
             } catch {
                 print(error.localizedDescription)
                 return
@@ -112,25 +112,34 @@ class TchNewActvityViewController: UIViewController, UIImagePickerControllerDele
         
         let metadata = StorageMetadata()
         let postid = db.collection("Training").document().documentID
-        let storage2 = Storage.storage().reference().child("video").child("\(postid)")
+        let storage2 = Storage.storage().reference().child("video")
         
-        storage2.putData(videoData, metadata: metadata) { (metaData, error) in
+        storage2.child(postid).putData(videoData, metadata: metadata) { (metaData, error) in
             guard error == nil else {
                 print("ERROR HERE: \(error?.localizedDescription)")
                 return
             }
+            storage2.child(postid).downloadURL{ url, error in
+                if let error = error {
+                    print("HERERER(ERROR)")
+                    print(error.localizedDescription)
+                } else {
+                    self.fileurl = url?.absoluteString
+                    let data : [String: Any] = ["Postid" : postid,
+                                "Training Method": self.MethodText.text!,
+                                "Train Day": self.TrainDay.text!,
+                                "Start time": self.StartTime.text!,
+                                "End time": self.EndTime.text!,
+                                "Video" : self.fileurl,
+                                "description": self.DescriText.text!]
+                    
+                    
+                    self.db.collection("Training").document(postid).setData(data)
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
         }
-        
-        let data = ["Postid" : postid,
-                    "Training Method": MethodText.text!,
-                    "Train Day": TrainDay.text!,
-                    "Start time": StartTime.text!,
-                    "End time": EndTime.text!,
-                    "Video" : "\(PostUrl)",
-                    "description": DescriText.text!]
-        
-        db.collection("Training").document(postid).setData(data)
-        dismiss(animated: true, completion: nil)
+
         
     }
     
