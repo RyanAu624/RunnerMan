@@ -20,9 +20,9 @@ class TchParticipantTableViewController: UITableViewController {
     var trainingDescription : String!
     var trainingStartTime : String!
     var trainingEndTime : String!
-    var training_Day : String!
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         getFirebaseData()
         self.tableView.reloadData()
     }
