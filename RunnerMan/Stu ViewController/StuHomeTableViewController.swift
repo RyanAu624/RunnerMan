@@ -106,20 +106,22 @@ class StuHomeTableViewController: UITableViewController, UICollectionViewDataSou
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.deselectItem(at: indexPath, animated: true)
-        let cell = collectionView.cellForItem(at: indexPath) as? StudentHomeCollectionViewCell
-        
-        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "studentAddTrainingPage") {
-            self.present(controller, animated: true, completion: nil)
-        }
-        
-//        if banners[indexPath.item].featuredImage == UIImage(named: "stuAddTrainingBox") {
-//            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "studentAddTrainingPage") {
-//                self.present(controller, animated: true, completion: nil)
-//            }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        collectionView.deselectItem(at: indexPath, animated: true)
+//        let cell = collectionView.cellForItem(at: indexPath) as? StudentHomeCollectionViewCell
+//
+//        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "StuAddRecordALview") {
+//            self.present(controller, animated: true, completion: nil)
 //        }
-    }
+//
+////        StuAddRecordView.instance.showAlert(stuUid: "\(self.uID!)")
+//
+////        if banners[indexPath.item].featuredImage == UIImage(named: "stuAddTrainingBox") {
+////            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "studentAddTrainingPage") {
+////                self.present(controller, animated: true, completion: nil)
+////            }
+////        }
+//    }
 
     // MARK: - Table view data source
 
