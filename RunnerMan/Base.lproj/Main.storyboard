@@ -921,42 +921,6 @@
             </objects>
             <point key="canvasLocation" x="3011" y="-1314"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="vZs-Um-gjU">
-            <objects>
-                <viewController id="kWW-nk-tj6" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UhN-zt-t4k"/>
-                        <viewControllerLayoutGuide type="bottom" id="dq9-gt-1Ir"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xJY-3W-mfH">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LH-Zh-uwN">
-                                <rect key="frame" x="20" y="698" width="350" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="350" id="2wc-0w-ZGN"/>
-                                    <constraint firstAttribute="height" constant="50" id="YE1-97-ZU3"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="addBtn" title=""/>
-                                <connections>
-                                    <action selector="uploadbtn:" destination="ZHk-0g-N4F" eventType="touchUpInside" id="s80-Ro-yL7"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="1LH-Zh-uwN" firstAttribute="leading" secondItem="xJY-3W-mfH" secondAttribute="leadingMargin" constant="4" id="FUr-rA-DW5"/>
-                            <constraint firstItem="dq9-gt-1Ir" firstAttribute="top" secondItem="1LH-Zh-uwN" secondAttribute="bottom" constant="8" symbolic="YES" id="wN6-yL-uRI"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pIB-fp-Ama" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1268" y="795"/>
-        </scene>
         <!--New Activity-->
         <scene sceneID="ILp-Om-9GF">
             <objects>
@@ -1735,7 +1699,6 @@
                                             <connections>
                                                 <outlet property="featuredImageView" destination="XWE-pJ-A8W" id="ySl-Dj-fQ9"/>
                                                 <outlet property="tempLabel" destination="IYw-ew-vc9" id="Ls4-aZ-LpX"/>
-                                                <segue destination="kWW-nk-tj6" kind="showDetail" id="MY1-8V-3iQ"/>
                                             </connections>
                                         </collectionViewCell>
                                     </cells>
