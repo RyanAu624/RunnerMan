@@ -49,6 +49,7 @@
 		9ABC72E427B0E5A70079908B /* StuProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABC72E327B0E5A70079908B /* StuProfileViewController.swift */; };
 		9AC814F9279C0DBA00BBF2BC /* TchSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC814F8279C0DBA00BBF2BC /* TchSignUpViewController.swift */; };
 		9AE103A9280832DA00BD3AF0 /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE103A8280832DA00BD3AF0 /* CustomAlertViewController.swift */; };
+		9AE103AB2808434300BD3AF0 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE103AA2808434300BD3AF0 /* ForgetPasswordViewController.swift */; };
 		9AF7D09227E4D251005AAB76 /* StudentHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7D09127E4D251005AAB76 /* StudentHomeCollectionViewCell.swift */; };
 		9AF7D09827E4DAC0005AAB76 /* HeroBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7D09727E4DAC0005AAB76 /* HeroBanner.swift */; };
 /* End PBXBuildFile section */
@@ -92,6 +93,7 @@
 		9ABC72E327B0E5A70079908B /* StuProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuProfileViewController.swift; sourceTree = "<group>"; };
 		9AC814F8279C0DBA00BBF2BC /* TchSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchSignUpViewController.swift; sourceTree = "<group>"; };
 		9AE103A8280832DA00BD3AF0 /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
+		9AE103AA2808434300BD3AF0 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		9AF7D09127E4D251005AAB76 /* StudentHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		9AF7D09727E4DAC0005AAB76 /* HeroBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroBanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +122,7 @@
 				9ABBEB5C278D240F00FB9F22 /* StuLoginViewController.swift */,
 				9AC814F8279C0DBA00BBF2BC /* TchSignUpViewController.swift */,
 				9ABBEB64278D50C300FB9F22 /* StuSignUpViewController.swift */,
+				9AE103AA2808434300BD3AF0 /* ForgetPasswordViewController.swift */,
 			);
 			path = "Login And SignUp";
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				9ABBEB46278C4AED00FB9F22 /* Student.swift in Sources */,
 				9ABBEB5F278D242300FB9F22 /* TchLoginViewController.swift in Sources */,
 				9A866F3B27B69A350070EF54 /* TargetCell.swift in Sources */,
+				9AE103AB2808434300BD3AF0 /* ForgetPasswordViewController.swift in Sources */,
 				9ABBEB30278C41D800FB9F22 /* SceneDelegate.swift in Sources */,
 				9AA487AE280170070050AA05 /* Participant.swift in Sources */,
 			);

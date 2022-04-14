@@ -69,4 +69,11 @@ class TchLoginViewController: UIViewController {
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
+    
+    @IBAction func forgetPasswdPageBtn(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let alertView = sb.instantiateViewController(withIdentifier: "ForgetPassAlertViewController") as! ForgetPasswordViewController
+        alertView.modalPresentationStyle = .overCurrentContext
+        present(alertView, animated: true, completion: nil)
+    }
 }

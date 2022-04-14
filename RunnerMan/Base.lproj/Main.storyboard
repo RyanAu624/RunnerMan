@@ -157,6 +157,15 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="teacherLoginBG" translatesAutoresizingMaskIntoConstraints="NO" id="9wZ-68-8OF">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDs-jk-tIv">
+                                <rect key="frame" x="16" y="652" width="179" height="33"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="forgetPasswdBtn" title=""/>
+                                <connections>
+                                    <action selector="forgetPasswdPageBtn:" destination="Sih-mP-dm4" eventType="touchUpInside" id="DeS-Sw-lVs"/>
+                                    <action selector="forgetPasswdPageBtn:" destination="Vyq-fa-etr" eventType="touchUpInside" id="cQO-za-vI9"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="loginTextFieldBG" translatesAutoresizingMaskIntoConstraints="NO" id="WST-x0-4te">
                                 <rect key="frame" x="20" y="368" width="350" height="150"/>
                             </imageView>
@@ -192,14 +201,6 @@
                                     <action selector="teacherLogin:" destination="Vyq-fa-etr" eventType="touchUpInside" id="t9c-GO-p5v"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f72-bt-pL5">
-                                <rect key="frame" x="16" y="652" width="153" height="33.333333333333371"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="studentLogin" title=""/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="6Q9-qt-ewE"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSH-1I-fwc">
                                 <rect key="frame" x="278" y="652" width="96" height="34"/>
                                 <state key="normal" title="Button"/>
@@ -208,12 +209,21 @@
                                     <segue destination="e0b-Gl-rfV" kind="showDetail" id="bJ9-Qg-OzV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f72-bt-pL5">
+                                <rect key="frame" x="16" y="693" width="153" height="33.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="studentLogin" title=""/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="6Q9-qt-ewE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
                             <constraint firstItem="9wZ-68-8OF" firstAttribute="leading" secondItem="e6T-fk-FLy" secondAttribute="leading" id="0JV-3l-CEV"/>
                             <constraint firstItem="IMj-P5-UzN" firstAttribute="top" secondItem="1NL-97-EQQ" secondAttribute="bottom" constant="23" id="0hf-6t-MV2"/>
                             <constraint firstItem="IMj-P5-UzN" firstAttribute="leading" secondItem="e6T-fk-FLy" secondAttribute="leadingMargin" constant="24" id="1b1-99-Lzt"/>
+                            <constraint firstItem="f72-bt-pL5" firstAttribute="leading" secondItem="e6T-fk-FLy" secondAttribute="leadingMargin" id="30n-L9-0QT"/>
                             <constraint firstItem="1NL-97-EQQ" firstAttribute="leading" secondItem="e6T-fk-FLy" secondAttribute="leadingMargin" constant="4" id="4fw-ra-8Y4"/>
                             <constraint firstItem="Q4h-Rw-hw8" firstAttribute="leading" secondItem="e6T-fk-FLy" secondAttribute="leadingMargin" constant="53" id="4yY-VO-meK"/>
                             <constraint firstItem="ym4-NJ-Fev" firstAttribute="leading" secondItem="e6T-fk-FLy" secondAttribute="leading" constant="8" id="6Ad-9W-qSS"/>
@@ -222,9 +232,10 @@
                             <constraint firstItem="WST-x0-4te" firstAttribute="top" secondItem="Q4h-Rw-hw8" secondAttribute="bottom" constant="80" id="BQG-5A-lgq"/>
                             <constraint firstItem="ym4-NJ-Fev" firstAttribute="top" secondItem="WST-x0-4te" secondAttribute="bottom" constant="50" id="Boj-NS-Y3I"/>
                             <constraint firstItem="FSH-1I-fwc" firstAttribute="top" secondItem="ym4-NJ-Fev" secondAttribute="bottom" constant="20" id="Fht-Jb-GKI"/>
-                            <constraint firstItem="f72-bt-pL5" firstAttribute="top" secondItem="ym4-NJ-Fev" secondAttribute="bottom" constant="20" id="T2f-dL-pg3"/>
+                            <constraint firstItem="FDs-jk-tIv" firstAttribute="top" secondItem="ym4-NJ-Fev" secondAttribute="bottom" constant="20" id="Fth-Nf-B5d"/>
                             <constraint firstAttribute="trailing" secondItem="9wZ-68-8OF" secondAttribute="trailing" id="XyV-Ha-AYf"/>
-                            <constraint firstItem="f72-bt-pL5" firstAttribute="leading" secondItem="e6T-fk-FLy" secondAttribute="leadingMargin" id="p6g-r4-pyK"/>
+                            <constraint firstItem="f72-bt-pL5" firstAttribute="top" secondItem="FDs-jk-tIv" secondAttribute="bottom" constant="8" symbolic="YES" id="bje-lO-G2j"/>
+                            <constraint firstItem="FDs-jk-tIv" firstAttribute="leading" secondItem="e6T-fk-FLy" secondAttribute="leadingMargin" id="lSV-BE-yc1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FSH-1I-fwc" secondAttribute="trailing" id="rsH-6B-Zzv"/>
                             <constraint firstAttribute="bottom" secondItem="9wZ-68-8OF" secondAttribute="bottom" id="ua7-W2-Fxk"/>
                             <constraint firstItem="Q4h-Rw-hw8" firstAttribute="top" secondItem="1El-D9-MN1" secondAttribute="bottom" constant="110" id="vKQ-4A-z8F"/>
@@ -241,6 +252,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y5v-gO-Rka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Sih-mP-dm4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="20" y="-599"/>
         </scene>
@@ -302,8 +314,16 @@
                                     <segue destination="oDu-2O-SkZ" kind="showDetail" id="G7A-zi-v9g"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWd-BY-AlD">
+                                <rect key="frame" x="16" y="652" width="179" height="33"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="forgetPasswdBtn" title=""/>
+                                <connections>
+                                    <action selector="forgetPasswdPageBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iGK-Sl-jEa"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tch-zl-Sbq">
-                                <rect key="frame" x="16" y="652" width="154" height="34"/>
+                                <rect key="frame" x="16" y="693" width="154" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="teacherLogin" title=""/>
                                 <connections>
@@ -325,13 +345,15 @@
                             <constraint firstItem="aef-ma-vXj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="Unj-5u-hOt"/>
                             <constraint firstItem="OyA-Od-HYw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="aYU-ga-vTA"/>
                             <constraint firstItem="ALs-gg-lZ8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="diH-hF-oIf"/>
+                            <constraint firstItem="FWd-BY-AlD" firstAttribute="top" secondItem="aef-ma-vXj" secondAttribute="bottom" constant="20" id="dqc-Nd-c2y"/>
                             <constraint firstItem="OyA-Od-HYw" firstAttribute="top" secondItem="akn-SN-jpR" secondAttribute="bottom" constant="80" id="e2e-d0-0rV"/>
                             <constraint firstItem="Er1-X5-usR" firstAttribute="top" secondItem="ALs-gg-lZ8" secondAttribute="bottom" constant="24" id="eue-fJ-owd"/>
+                            <constraint firstItem="FWd-BY-AlD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jsc-KO-XRN"/>
+                            <constraint firstItem="Tch-zl-Sbq" firstAttribute="top" secondItem="FWd-BY-AlD" secondAttribute="bottom" constant="8" symbolic="YES" id="kzu-22-vrA"/>
                             <constraint firstItem="bDW-hA-QMm" firstAttribute="top" secondItem="aef-ma-vXj" secondAttribute="bottom" constant="20" id="qCC-Q1-BTM"/>
                             <constraint firstItem="akn-SN-jpR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="53" id="qS0-D7-EN1"/>
                             <constraint firstItem="UQG-OS-wNe" firstAttribute="top" secondItem="Er1-X5-usR" secondAttribute="bottom" constant="23" id="rg5-Pd-xMe"/>
-                            <constraint firstItem="Tch-zl-Sbq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tvI-FA-Xcx"/>
-                            <constraint firstItem="Tch-zl-Sbq" firstAttribute="top" secondItem="aef-ma-vXj" secondAttribute="bottom" constant="20" id="uEu-po-VLt"/>
+                            <constraint firstItem="Tch-zl-Sbq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xFm-Dl-0Iv"/>
                             <constraint firstItem="Er1-X5-usR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="xMn-DD-Xk4"/>
                         </constraints>
                     </view>
@@ -921,6 +943,99 @@
             </objects>
             <point key="canvasLocation" x="3011" y="-1314"/>
         </scene>
+        <!--Forget Password View Controller-->
+        <scene sceneID="O5k-mE-HhQ">
+            <objects>
+                <viewController storyboardIdentifier="ForgetPassAlertViewController" id="plN-hp-LxE" customClass="ForgetPasswordViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jxe-xR-3Sg"/>
+                        <viewControllerLayoutGuide type="bottom" id="7MV-li-R9n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rcT-e1-730">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGd-ul-g2A">
+                                <rect key="frame" x="20" y="322" width="350" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xE8-9e-lsn">
+                                        <rect key="frame" x="20" y="25" width="185" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textFieldBG" translatesAutoresizingMaskIntoConstraints="NO" id="0Kr-Rk-Xcn">
+                                        <rect key="frame" x="10" y="65" width="330" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="NzN-ZM-YIq"/>
+                                            <constraint firstAttribute="width" constant="330" id="W6W-xN-f9d"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMO-bj-t54">
+                                        <rect key="frame" x="10" y="121" width="330" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="330" id="RNM-eX-BEH"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="sendBtn" title=""/>
+                                        <connections>
+                                            <action selector="forgetPasswdBtn:" destination="plN-hp-LxE" eventType="touchUpInside" id="8Uk-dP-5nE"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BNO-fJ-p2K">
+                                        <rect key="frame" x="20" y="73" width="310" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="310" id="a2d-qh-A96"/>
+                                            <constraint firstAttribute="height" constant="34" id="ggX-N0-Y6Z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4B-Ww-kPb">
+                                        <rect key="frame" x="310" y="25" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="YBg-pI-KYz"/>
+                                            <constraint firstAttribute="width" constant="30" id="m7X-hl-shY"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="exitBtn" title=""/>
+                                        <connections>
+                                            <action selector="cancelBtn:" destination="plN-hp-LxE" eventType="touchUpInside" id="AHN-4W-IcO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="xE8-9e-lsn" firstAttribute="top" secondItem="PGd-ul-g2A" secondAttribute="top" constant="25" id="0wQ-Vr-Y9v"/>
+                                    <constraint firstItem="0Kr-Rk-Xcn" firstAttribute="centerX" secondItem="PGd-ul-g2A" secondAttribute="centerX" id="4Ha-kK-CZC"/>
+                                    <constraint firstItem="xE8-9e-lsn" firstAttribute="leading" secondItem="PGd-ul-g2A" secondAttribute="leading" constant="20" symbolic="YES" id="ATF-t7-ue5"/>
+                                    <constraint firstItem="BNO-fJ-p2K" firstAttribute="centerX" secondItem="PGd-ul-g2A" secondAttribute="centerX" id="BbE-4w-u7Q"/>
+                                    <constraint firstAttribute="bottom" secondItem="yMO-bj-t54" secondAttribute="bottom" constant="25" id="Dd3-rU-62X"/>
+                                    <constraint firstItem="0Kr-Rk-Xcn" firstAttribute="top" secondItem="xE8-9e-lsn" secondAttribute="bottom" constant="10" id="G0b-xm-fxU"/>
+                                    <constraint firstAttribute="width" constant="350" id="KFE-nh-xrH"/>
+                                    <constraint firstItem="yMO-bj-t54" firstAttribute="centerX" secondItem="PGd-ul-g2A" secondAttribute="centerX" id="KNf-AB-hav"/>
+                                    <constraint firstAttribute="trailing" secondItem="h4B-Ww-kPb" secondAttribute="trailing" constant="10" id="TP5-eG-BKZ"/>
+                                    <constraint firstAttribute="height" constant="200" id="bUT-lP-noq"/>
+                                    <constraint firstItem="h4B-Ww-kPb" firstAttribute="top" secondItem="PGd-ul-g2A" secondAttribute="top" constant="25" id="bwD-yg-bre"/>
+                                    <constraint firstItem="BNO-fJ-p2K" firstAttribute="top" secondItem="xE8-9e-lsn" secondAttribute="bottom" constant="18" id="cCf-tm-kKY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="PGd-ul-g2A" firstAttribute="centerX" secondItem="rcT-e1-730" secondAttribute="centerX" id="Wnl-H3-U6b"/>
+                            <constraint firstItem="PGd-ul-g2A" firstAttribute="centerY" secondItem="rcT-e1-730" secondAttribute="centerY" id="hOK-vb-uPC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTF" destination="BNO-fJ-p2K" id="7ac-0N-Wqt"/>
+                        <outlet property="popUPView" destination="PGd-ul-g2A" id="E2y-M1-deG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="enZ-3B-TPR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="390.76923076923077" y="794.78672985781986"/>
+        </scene>
         <!--Custom Alert View Controller-->
         <scene sceneID="BQW-i1-gWV">
             <objects>
@@ -1042,7 +1157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="km4-nU-Ibi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1096.9230769230769" y="794.78672985781986"/>
+            <point key="canvasLocation" x="1274" y="795"/>
         </scene>
         <!--New Activity-->
         <scene sceneID="ILp-Om-9GF">
@@ -2537,7 +2652,9 @@
         <image name="cancelBtn" width="50" height="50"/>
         <image name="commentTextFieldBG" width="302" height="62"/>
         <image name="createStudentUserBox" width="170.66667175292969" height="70"/>
+        <image name="exitBtn" width="24.333333969116211" height="24.333333969116211"/>
         <image name="folder.badge.person.crop" catalog="system" width="128" height="91"/>
+        <image name="forgetPasswdBtn" width="154.33332824707031" height="19"/>
         <image name="loginTextFieldBG" width="350" height="150"/>
         <image name="loginTextFieldLine" width="350" height="1"/>
         <image name="manageStudentBox" width="170" height="70"/>
@@ -2545,6 +2662,7 @@
         <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="108"/>
         <image name="sAddBtn" width="270" height="50"/>
         <image name="sTrainingRecordBox" width="170" height="70.666664123535156"/>
+        <image name="sendBtn" width="330" height="40"/>
         <image name="settingBox" width="170" height="70"/>
         <image name="signOutBtn" width="350" height="50"/>
         <image name="signUpBtn" width="71.666664123535156" height="19.333333969116211"/>
