@@ -106,22 +106,18 @@ class StuHomeTableViewController: UITableViewController, UICollectionViewDataSou
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        collectionView.deselectItem(at: indexPath, animated: true)
-//        let cell = collectionView.cellForItem(at: indexPath) as? StudentHomeCollectionViewCell
-//
-//        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "StuAddRecordALview") {
-//            self.present(controller, animated: true, completion: nil)
-//        }
-//
-////        StuAddRecordView.instance.showAlert(stuUid: "\(self.uID!)")
-//
-////        if banners[indexPath.item].featuredImage == UIImage(named: "stuAddTrainingBox") {
-////            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "studentAddTrainingPage") {
-////                self.present(controller, animated: true, completion: nil)
-////            }
-////        }
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+
+        //******************
+        if banners[indexPath.item].featuredImage == UIImage(named: "stuAddTrainingBox") {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let alertView = sb.instantiateViewController(withIdentifier: "AlertViewController") as! CustomAlertViewController
+            alertView.modalPresentationStyle = .overCurrentContext
+            present(alertView, animated: true, completion: nil)
+        }
+        //******************
+    }
 
     // MARK: - Table view data source
 
@@ -188,12 +184,12 @@ class StuHomeTableViewController: UITableViewController, UICollectionViewDataSou
         if Auth.auth().currentUser != nil {
             do {
                 try Auth.auth().signOut()
-                
+
                 if let controller = self.storyboard?.instantiateViewController(withIdentifier: "studentLoginPage") {
                     controller.modalPresentationStyle = .fullScreen
                     self.present(controller, animated: true, completion: nil)
                 }
-                
+
             } catch let error as NSError {
                 print(error.localizedDescription)
             }
