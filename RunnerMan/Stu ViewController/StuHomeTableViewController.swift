@@ -15,7 +15,13 @@ class StuHomeTableViewController: UITableViewController, UICollectionViewDataSou
     let db = Firestore.firestore()
     let uID = Auth.auth().currentUser?.uid
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!{
+        didSet {
+            collectionView.isUserInteractionEnabled = true
+            collectionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapimage)))
+          
+        }
+    }
     var banners : [HeroBanner] = []
 
     override func viewWillAppear(_ animated: Bool) {
@@ -24,7 +30,7 @@ class StuHomeTableViewController: UITableViewController, UICollectionViewDataSou
         self.tableView.reloadData()
         self.tableView.separatorStyle = .none
         collectionView.dataSource = self
-        
+  
         HeroBanner.fetchBanner(completion: {
             banners in
             self.banners = banners
@@ -32,6 +38,12 @@ class StuHomeTableViewController: UITableViewController, UICollectionViewDataSou
                 self.collectionView.reloadData()
             }
         })
+    }
+    
+    @objc func tapimage(){
+        let story : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let next = story.instantiateViewController(withIdentifier: "Addrecord") as! CustomAlertViewController
+        self.navigationController?.pushViewController(next, animated: true)
     }
     //MARK: - Target Func
     

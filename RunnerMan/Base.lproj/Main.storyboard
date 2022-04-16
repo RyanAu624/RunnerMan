@@ -1039,7 +1039,7 @@
         <!--Custom Alert View Controller-->
         <scene sceneID="BQW-i1-gWV">
             <objects>
-                <viewController storyboardIdentifier="AlertViewController" id="qhb-40-TKb" customClass="CustomAlertViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Addrecord" id="qhb-40-TKb" customClass="CustomAlertViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pDB-Fc-yoQ"/>
                         <viewControllerLayoutGuide type="bottom" id="eWz-Zv-CnW"/>
@@ -1920,8 +1920,8 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="346.33333333333331" height="166"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stuAddTrainingBox" translatesAutoresizingMaskIntoConstraints="NO" id="XWE-pJ-A8W">
-                                                        <rect key="frame" x="0.0" y="0.0" width="346.33333333333331" height="166"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="stuAddTrainingBox" translatesAutoresizingMaskIntoConstraints="NO" id="XWE-pJ-A8W">
+                                                        <rect key="frame" x="0.0" y="-1" width="346.33333333333331" height="166"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYw-ew-vc9">
                                                         <rect key="frame" x="16.000000000000007" y="16" width="115.66666666666669" height="60"/>
