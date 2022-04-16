@@ -2040,13 +2040,13 @@
         <!--History-->
         <scene sceneID="iIP-BS-VnA">
             <objects>
-                <tableViewController id="7jf-MF-ilD" sceneMemberID="viewController">
+                <tableViewController id="7jf-MF-ilD" customClass="StuHistTableViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="vaB-kK-dGq">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="ZZ4-OQ-vuN" detailTextLabel="pua-By-Dbs" style="IBUITableViewCellStyleValue1" id="ou1-Vy-Cz1">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="ZZ4-OQ-vuN" detailTextLabel="pua-By-Dbs" style="IBUITableViewCellStyleValue1" id="ou1-Vy-Cz1" customClass="StuHistcell" customModule="RunnerMan" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ou1-Vy-Cz1" id="dMe-Fo-qL2">
@@ -2070,6 +2070,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="day" destination="pua-By-Dbs" id="hb5-2d-3Kh"/>
+                                    <outlet property="method" destination="ZZ4-OQ-vuN" id="AwO-6b-CWA"/>
                                     <segue destination="Gfh-d9-qNl" kind="show" id="csp-pe-xXl"/>
                                 </connections>
                             </tableViewCell>
