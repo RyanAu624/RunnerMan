@@ -14,7 +14,6 @@ import MobileCoreServices
 
 class TchNewActvityViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-
     @IBOutlet weak var MethodText: UITextField!
     @IBOutlet weak var DescriText: UITextField!
     @IBOutlet weak var TrainDay: UITextField!
@@ -131,7 +130,8 @@ class TchNewActvityViewController: UIViewController, UIImagePickerControllerDele
                                 "Start time": self.StartTime.text!,
                                 "End time": self.EndTime.text!,
                                 "Video" : self.fileurl,
-                                "description": self.DescriText.text!]
+                                "description": self.DescriText.text!,
+                                                "member" : []]
                     
                     
                     self.db.collection("Training").document(postid).setData(data)

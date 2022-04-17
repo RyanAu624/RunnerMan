@@ -33,7 +33,8 @@ class StuTrainingListTableViewController: UITableViewController {
                                         trainingDescription: d["description"] as? String ?? "",
                                         trainingDay: d["Train Day"] as? String ?? "",
                                         trainingStartTime: d["Start time"] as? String ?? "",
-                                        trainingEndTime: d["End time"] as? String ?? "")
+                                        trainingEndTime: d["End time"] as? String ?? "",
+                        member: [])
                     }
                     DispatchQueue.main.async {
                         self.tableView.reloadData()

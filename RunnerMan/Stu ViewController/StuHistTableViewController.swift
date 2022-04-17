@@ -13,11 +13,12 @@ class StuHistTableViewController: UITableViewController {
 
     let db = Firestore.firestore()
     var training = [Training]()
+    var list = [Training]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getRecord()
-        print(training)
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -33,14 +34,28 @@ class StuHistTableViewController: UITableViewController {
             if err == nil {
                 if let snapshot = snapshot {
                     self.training = snapshot.documents.map { d in
-                        return Training(trainingID: d["Postid"] as? String ?? "",
-                                        trainingMethod: d["Training Method"] as? String ?? "",
-                                        trainingVideo: d["Video"] as? String ?? "",
-                                        trainingDescription: d["description"] as? String ?? "",
-                                        trainingDay: d["Train Day"] as? String ?? "",
-                                        trainingStartTime: d["Start time"] as? String ?? "",
-                                        trainingEndTime: d["End time"] as? String ?? "")
+                        let id = d["Postid"] as! String
+                        let method = d["Training Method"] as! String
+                        let video = d["Video"] as! String
+                        let des = d["description"] as! String
+                        let day = d["Train Day"] as! String
+                        let Stime = d["Start time"] as! String
+                        let Etime = d["End time"] as! String
+                        let member = d["member"]
+                        let uid = Auth.auth().currentUser?.uid
+                        let member2 = d["member"] as! [String]
+                        let len2 = member2.count - 1
+                        if len2 >= 0 {
+                            for index in 0...len2 {
+                                if member2[index] == uid {
+                                    self.list.append(Training(trainingID: id, trainingMethod: method, trainingVideo: video, trainingDescription: des, trainingDay: day, trainingStartTime: Stime, trainingEndTime: Etime, member: member as! [String] ))
+                                }
+                            }
+                        }
+                        return Training(trainingID: id, trainingMethod: method, trainingVideo: video, trainingDescription: des, trainingDay: day, trainingStartTime: Stime, trainingEndTime: Etime, member: [])
+
                     }
+
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
@@ -58,15 +73,15 @@ class StuHistTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return training.count
+        return list.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! StuHistcell
 
-        cell.method.text = training[indexPath.row].trainingMethod
-        cell.day.text = training[indexPath.row].trainingDay
+        cell.method.text = list[indexPath.row].trainingMethod
+        cell.day.text = list[indexPath.row].trainingDay
         // Configure the cell...
 
         return cell

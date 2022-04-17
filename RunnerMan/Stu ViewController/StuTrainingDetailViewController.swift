@@ -58,10 +58,14 @@ class StuTrainingDetailViewController: UIViewController {
         if self.btnjoin.title == "join" {
             let data : [String: Any] = [ "Videourl" : "",
                                          "des" : ""]
+            let locref = db.collection("Training").document(trainingID)
+            locref.updateData(["member" : FieldValue.arrayUnion(["\(uid!)"])])
             ref.document(uid!).setData(data)
             self.btnjoin.title = "cancel"
         } else if self.btnjoin.title == "cancel"{
             ref.document(uid!).delete()
+            let locref = db.collection("Training").document(trainingID)
+            locref.updateData(["member" : FieldValue.arrayRemove(["\(uid!)"])])
             self.btnjoin.title = "join"
         }
 
