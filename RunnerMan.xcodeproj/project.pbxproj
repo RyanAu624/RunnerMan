@@ -18,6 +18,8 @@
 		252A45B827DF3D9D00F92519 /* CalendarVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252A45B727DF3D9D00F92519 /* CalendarVIewController.swift */; };
 		25B5C1F827F2E06B00A4F084 /* EKWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5C1F727F2E06B00A4F084 /* EKWrapper.swift */; };
 		25B5C25427F9CAE700A4F084 /* EventKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5C25327F9CAE700A4F084 /* EventKitController.swift */; };
+		9A82F91A280D87D200174F22 /* RecordDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A82F919280D87D200174F22 /* RecordDetailTableViewController.swift */; };
+		9A82F91C280DA92F00174F22 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A82F91B280DA92F00174F22 /* CommentTableViewCell.swift */; };
 		9A866F3727B681F90070EF54 /* TchHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A866F3627B681F90070EF54 /* TchHomeTableViewController.swift */; };
 		9A866F3927B686090070EF54 /* StuHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A866F3827B686090070EF54 /* StuHomeTableViewController.swift */; };
 		9A866F3B27B69A350070EF54 /* TargetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A866F3A27B69A350070EF54 /* TargetCell.swift */; };
@@ -62,6 +64,8 @@
 		252A45B727DF3D9D00F92519 /* CalendarVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVIewController.swift; sourceTree = "<group>"; };
 		25B5C1F727F2E06B00A4F084 /* EKWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKWrapper.swift; sourceTree = "<group>"; };
 		25B5C25327F9CAE700A4F084 /* EventKitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventKitController.swift; sourceTree = "<group>"; };
+		9A82F919280D87D200174F22 /* RecordDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailTableViewController.swift; sourceTree = "<group>"; };
+		9A82F91B280DA92F00174F22 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		9A866F3627B681F90070EF54 /* TchHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchHomeTableViewController.swift; sourceTree = "<group>"; };
 		9A866F3827B686090070EF54 /* StuHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuHomeTableViewController.swift; sourceTree = "<group>"; };
 		9A866F3A27B69A350070EF54 /* TargetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetCell.swift; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 				9AA487A7280166F00050AA05 /* RecordTableViewCell.swift */,
 				9AA487AF280183450050AA05 /* ParticipantTableViewCell.swift */,
 				0035EF6D280B1250002B5AEA /* StuHistcell.swift */,
+				9A82F91B280DA92F00174F22 /* CommentTableViewCell.swift */,
 			);
 			path = "Table Cell";
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				9ABC72E127AFB3BE0079908B /* TchProfileViewController.swift */,
 				9ABBEB66278DA68E00FB9F22 /* TchNewActvityViewController.swift */,
 				9A866F3627B681F90070EF54 /* TchHomeTableViewController.swift */,
+				9A82F919280D87D200174F22 /* RecordDetailTableViewController.swift */,
 			);
 			path = "Teacher ViewController";
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 				9ABC72E027AE8DE70079908B /* TchStuProfileDetailViewController.swift in Sources */,
 				9AA487A8280166F00050AA05 /* RecordTableViewCell.swift in Sources */,
 				9AA487B6280289330050AA05 /* StuTrainingDetailViewController.swift in Sources */,
+				9A82F91A280D87D200174F22 /* RecordDetailTableViewController.swift in Sources */,
 				0035EF6E280B1250002B5AEA /* StuHistcell.swift in Sources */,
 				9ABBEB59278C686900FB9F22 /* Training.swift in Sources */,
 				9ABBEB65278D50C300FB9F22 /* StuSignUpViewController.swift in Sources */,
@@ -341,6 +348,7 @@
 				9ABBEB5D278D240F00FB9F22 /* StuLoginViewController.swift in Sources */,
 				9ABBEB46278C4AED00FB9F22 /* Student.swift in Sources */,
 				9ABBEB5F278D242300FB9F22 /* TchLoginViewController.swift in Sources */,
+				9A82F91C280DA92F00174F22 /* CommentTableViewCell.swift in Sources */,
 				9A866F3B27B69A350070EF54 /* TargetCell.swift in Sources */,
 				9AE103AB2808434300BD3AF0 /* ForgetPasswordViewController.swift in Sources */,
 				9ABBEB30278C41D800FB9F22 /* SceneDelegate.swift in Sources */,

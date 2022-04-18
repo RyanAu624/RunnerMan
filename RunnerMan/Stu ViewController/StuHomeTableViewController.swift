@@ -89,7 +89,7 @@ class StuHomeTableViewController: UITableViewController, UICollectionViewDataSou
             
             if err == nil {
                 if let snapshot = snapshot {
-                    self.target = snapshot.documents.map{ d in
+                    self.target = snapshot.documents.map { d in
                         return Target(target: d["target"] as? String ?? "",
                                       mark: d["mark"] as! Bool)
                     }

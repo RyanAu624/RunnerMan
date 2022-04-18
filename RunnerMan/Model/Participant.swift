@@ -10,8 +10,8 @@ import CloudKit
 
 struct Participant {
     var participantId : String
-    var participantUid : String
-    var participantName : String
+//    var participantUid : String
+//    var participantName : String
     var participantDescription : String
     var participantVideo : String
 }

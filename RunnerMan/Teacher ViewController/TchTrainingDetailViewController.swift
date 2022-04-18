@@ -33,14 +33,9 @@ class TchTrainingDetailViewController: UIViewController {
         trainingStartTimeLabel.text = trainingStartTime
         trainingEndTimeLabel.text = trainingEndTime
 
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
         playVideo()
     }
 
-    
     func playVideo(){
         if let Videourl = URL(string: trainingVideo) {
             print(Videourl)
