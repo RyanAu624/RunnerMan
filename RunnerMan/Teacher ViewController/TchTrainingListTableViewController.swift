@@ -21,8 +21,6 @@ class TchTrainingListTableViewController: UITableViewController {
     }
     
     func getRecord(){
-        let db = Firestore.firestore()
-        
         db.collection("Training").getDocuments() {(snapshot, err) in
             
             if err == nil {

@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1121,6 +1122,19 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rg0-0q-SX8">
+                                        <rect key="frame" x="89" y="60" width="247" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="247" id="2J1-BW-N9p"/>
+                                        </constraints>
+                                        <menu key="menu" id="l3a-yc-7PR">
+                                            <children>
+                                                <command title="Item 1" id="I4e-zL-ieO"/>
+                                                <command title="Item 2" id="iKH-cN-y0n"/>
+                                            </children>
+                                        </menu>
+                                        <state key="normal" title="Button"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -1133,6 +1147,7 @@
                                     <constraint firstItem="DM1-cG-NMP" firstAttribute="top" secondItem="Z2z-z7-hpT" secondAttribute="bottom" constant="16" id="CXz-Y7-ymf"/>
                                     <constraint firstItem="hlM-zc-oXz" firstAttribute="leading" secondItem="XOT-Ub-jnw" secondAttribute="leading" constant="8" id="HbT-T5-GlS"/>
                                     <constraint firstItem="Z2z-z7-hpT" firstAttribute="leading" secondItem="XOT-Ub-jnw" secondAttribute="leading" constant="8" id="Iet-hn-KnH"/>
+                                    <constraint firstItem="Rg0-0q-SX8" firstAttribute="leading" secondItem="Z2z-z7-hpT" secondAttribute="trailing" constant="20" id="QzK-qt-oTc"/>
                                     <constraint firstItem="hlM-zc-oXz" firstAttribute="top" secondItem="XOT-Ub-jnw" secondAttribute="top" constant="25" id="Yjw-EL-sag"/>
                                     <constraint firstAttribute="trailing" secondItem="ebW-bM-LD2" secondAttribute="trailing" constant="8" id="aSj-dj-iIA"/>
                                     <constraint firstItem="5rF-ut-qiJ" firstAttribute="leading" secondItem="XOT-Ub-jnw" secondAttribute="leading" constant="8" id="ctc-T6-s7u"/>
@@ -1141,6 +1156,7 @@
                                     <constraint firstAttribute="height" constant="360" id="kv6-fW-sfO"/>
                                     <constraint firstAttribute="bottom" secondItem="ebW-bM-LD2" secondAttribute="bottom" constant="25" id="mJt-fU-yqZ"/>
                                     <constraint firstItem="4K3-40-4VV" firstAttribute="leading" secondItem="XOT-Ub-jnw" secondAttribute="leading" constant="8" id="p3j-aa-Jy3"/>
+                                    <constraint firstItem="Rg0-0q-SX8" firstAttribute="top" secondItem="hlM-zc-oXz" secondAttribute="bottom" constant="5" id="q6T-98-n8S"/>
                                     <constraint firstItem="DM1-cG-NMP" firstAttribute="leading" secondItem="jfN-AG-Vwc" secondAttribute="trailing" constant="20" id="wUO-zu-yFu"/>
                                 </constraints>
                             </view>
@@ -1152,12 +1168,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityListBtn" destination="Rg0-0q-SX8" id="Ay2-ro-wfX"/>
                         <outlet property="popUPView" destination="XOT-Ub-jnw" id="1kQ-xG-Pw2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="km4-nU-Ibi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1274" y="795"/>
+            <point key="canvasLocation" x="1273.8461538461538" y="794.78672985781986"/>
         </scene>
         <!--New Activity-->
         <scene sceneID="ILp-Om-9GF">
@@ -2643,7 +2660,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qPI-pr-rq3"/>
+        <segue reference="yFy-g0-uVn"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Add" width="29.333333969116211" height="13.333333015441895"/>

@@ -23,7 +23,6 @@ class StuTrainingDetailViewController: UIViewController {
     let db = Firestore.firestore()
     let uid = Auth.auth().currentUser?.uid
     
-    
     @IBOutlet weak var trainingMethodLabel: UILabel!
     @IBOutlet weak var trainingDescriptionLabel: UILabel!
     @IBOutlet weak var trainingDayLabel: UILabel!
@@ -49,7 +48,6 @@ class StuTrainingDetailViewController: UIViewController {
                 }
             }
         }
-        
     }
     
     @IBAction func joinbtn(_ sender: Any) {
@@ -68,8 +66,6 @@ class StuTrainingDetailViewController: UIViewController {
             locref.updateData(["member" : FieldValue.arrayRemove(["\(uid!)"])])
             self.btnjoin.title = "join"
         }
-
-        }
-
+    }
     
 }
