@@ -2531,7 +2531,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="D05-CB-hPK">
-                            <rect key="frame" x="0.0" y="0.0" width="390" height="446"/>
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="478"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2us-I9-scZ">
@@ -2595,7 +2595,7 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="???Description???" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqL-bf-VR1">
                                     <rect key="frame" x="20" y="302" width="350" height="20.333333333333314"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="350" id="sXr-Bz-aox"/>
+                                        <constraint firstAttribute="width" constant="350" id="AdX-y6-E6Z"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -2625,8 +2625,8 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="v5R-ly-aS8" detailTextLabel="7hp-WB-oWa" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="ZCz-Fm-lDl" customClass="CommentTableViewCell" customModule="RunnerMan" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="490.66666603088379" width="390" height="60"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cCell" textLabel="v5R-ly-aS8" detailTextLabel="7hp-WB-oWa" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="ZCz-Fm-lDl" customClass="CommentTableViewCell" customModule="RunnerMan" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="522.66666603088379" width="390" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZCz-Fm-lDl" id="xfY-mf-baS">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="60"/>
@@ -2649,8 +2649,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="commentDescription" destination="7hp-WB-oWa" id="Bgs-ne-rO6"/>
-                                    <outlet property="stuName" destination="v5R-ly-aS8" id="VsE-C6-zWy"/>
+                                    <outlet property="commentDescription" destination="7hp-WB-oWa" id="QK5-X8-SSz"/>
+                                    <outlet property="stuName" destination="v5R-ly-aS8" id="Fyf-6k-yU6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -2668,11 +2668,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H64-Yp-Xeq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5885" y="-166"/>
+            <point key="canvasLocation" x="5884.6153846153848" y="-166.35071090047393"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JK6-5u-1rw"/>
+        <segue reference="LvT-6y-m9n"/>
         <segue reference="yFy-g0-uVn"/>
     </inferredMetricsTieBreakers>
     <resources>

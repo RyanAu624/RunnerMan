@@ -38,12 +38,13 @@ class RecordDetailTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         getStuData()
         descriptionLabel.text = participantDescription
-//        getCommentList()
-//        self.tableView.reloadData()
+        
+        getCommentList()
+        self.tableView.reloadData()
     }
     
     func getStuData() {
-        let ref = db.collection("student").whereField("uid", isEqualTo: participantId)
+        let ref = db.collection("student").whereField("uid", isEqualTo: participantId!)
         
         ref.getDocuments {(snapshot, err) in
             if err == nil {
@@ -65,10 +66,10 @@ class RecordDetailTableViewController: UITableViewController {
         let postid = secRef.document().documentID
         
         if commentTF.text != "" {
-            secRef.document(postid).setData(["reviewer": uID,
-                                         "description": commentTF.text])
+            secRef.document(postid).setData(["reviewer": uID!,
+                                             "description": commentTF.text!])
             
-//            getCommentList()
+            getCommentList()
             commentTF.text = ""
         }
     }
@@ -97,21 +98,21 @@ class RecordDetailTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-//        return comment.count
-        return 0
+        return comment.count
     }
     
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cCell", for: indexPath) as! CommentTableViewCell
-//        cell.stuName.text = comment[indexPath.row].reviewer
-//        cell.commentDescription.text = comment[indexPath.row].commentDescription
-//
-//        return cell
-//    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cCell", for: indexPath) as! CommentTableViewCell
+        cell.commentDescription.text = comment[indexPath.row].commentDescription
+        cell.stuName.text = comment[indexPath.row].reviewer
+        
+        return cell
+    }
+
 
 }
