@@ -17,7 +17,6 @@ class TchTrainingListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getRecord()
-        self.tableView.reloadData()
     }
     
     func getRecord(){

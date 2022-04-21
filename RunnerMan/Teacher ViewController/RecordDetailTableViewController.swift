@@ -40,7 +40,6 @@ class RecordDetailTableViewController: UITableViewController {
         descriptionLabel.text = participantDescription
         
         getCommentList()
-        self.tableView.reloadData()
     }
     
     func getStuData() {

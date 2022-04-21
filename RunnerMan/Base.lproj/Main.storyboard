@@ -1086,7 +1086,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="bigTextFieldBG" translatesAutoresizingMaskIntoConstraints="NO" id="nvU-E3-7dT">
-                                        <rect key="frame" x="0.0" y="170" width="350" height="92"/>
+                                        <rect key="frame" x="10" y="172" width="330" height="92"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rF-ut-qiJ">
@@ -1174,7 +1174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="km4-nU-Ibi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1273.8461538461538" y="794.78672985781986"/>
+            <point key="canvasLocation" x="1112" y="795"/>
         </scene>
         <!--New Activity-->
         <scene sceneID="ILp-Om-9GF">

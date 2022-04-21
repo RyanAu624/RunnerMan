@@ -19,7 +19,6 @@ class TchHomeTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         self.tableView.separatorStyle = .none
         getRecord()
-        self.tableView.reloadData()
     }
     
     @IBAction func createStu(_ sender: Any) {

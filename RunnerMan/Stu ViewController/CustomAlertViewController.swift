@@ -14,6 +14,7 @@ class CustomAlertViewController: UIViewController {
     
     let db = Firestore.firestore()
     var training = [Training]()
+    var list = [Training]()
     
     @IBOutlet weak var popUPView: UIView!
     @IBOutlet weak var activityListBtn: UIButton!
@@ -26,38 +27,73 @@ class CustomAlertViewController: UIViewController {
         popUPView.layer.shadowOpacity = 0.5
         popUPView.layer.shadowOffset = .zero
         popUPView.layer.shadowRadius = 5
-        
-        getTrainingList()
-        
-        activityListBtn.showsMenuAsPrimaryAction = true
-        activityListBtn.changesSelectionAsPrimaryAction = true
-        
+
         let optionsClosure = { (action: UIAction) in
           print(action.title)
         }
         
-        activityListBtn.menu = UIMenu(children: [
-            UIAction(title: "Option 1", state: .on, handler: optionsClosure),
-            UIAction(title: "Option 2", handler: optionsClosure),
-            UIAction(title: "Option 3", handler: optionsClosure)
-        ])
+        getTrainingList(loadCompletion : {
+            var actions = [UIAction]()
+            for training in self.training {
+                actions.append(UIAction(title: "\(training.trainingMethod)", handler: optionsClosure))
+            }
+            self.activityListBtn.menu = UIMenu(children: actions)
+        })
+        
+        activityListBtn.showsMenuAsPrimaryAction = true
+        activityListBtn.changesSelectionAsPrimaryAction = true
     }
     
-    func getTrainingList() {
+//    func getRecord(loadCompletion : @escaping ()->Void){
+//        let db = Firestore.firestore()
+//        
+//        db.collection("Training").getDocuments() {(snapshot, err) in
+//            
+//            if err == nil {
+//                if let snapshot = snapshot {
+//                    self.training = snapshot.documents.map { d in
+//                        return Training(trainingID: d["Postid"] as? String ?? "",
+//                                        trainingMethod: d["Training Method"] as? String ?? "",
+//                                        trainingVideo: d["Video"] as? String ?? "",
+//                                        trainingDescription: d["description"] as? String ?? "",
+//                                        trainingDay: d["Train Day"] as? String ?? "",
+//                                        trainingStartTime: d["Start time"] as? String ?? "",
+//                                        trainingEndTime: d["End time"] as? String ?? "",
+//                        member: [])
+//                    }
+//                    loadCompletion()
+//                }
+//            }
+//        }
+//    }
+    
+    func getTrainingList(loadCompletion : @escaping ()->Void) {
         db.collection("Training").getDocuments() {(snapshot, err) in
-            
+
             if err == nil {
                 if let snapshot = snapshot {
                     self.training = snapshot.documents.map { d in
-                        return Training(trainingID: d["Psotid"] as? String ?? "",
-                                        trainingMethod: d["Training Method"] as? String ?? "",
-                                        trainingVideo: d["Video"] as? String ?? "",
-                                        trainingDescription: d["description"] as? String ?? "",
-                                        trainingDay: d["Train Day"] as? String ?? "",
-                                        trainingStartTime: d["Start time"] as? String ?? "",
-                                        trainingEndTime: d["End time"] as? String ?? "",
-                                        member: [])
+                        let id = d["Postid"] as! String
+                        let method = d["Training Method"] as! String
+                        let video = d["Video"] as! String
+                        let des = d["description"] as! String
+                        let day = d["Train Day"] as! String
+                        let Stime = d["Start time"] as! String
+                        let Etime = d["End time"] as! String
+                        let member = d["member"]
+                        let uid = Auth.auth().currentUser?.uid
+                        let member2 = d["member"] as! [String]
+                        let len2 = member2.count - 1
+                        if len2 >= 0 {
+                            for index in 0...len2 {
+                                if member2[index] == uid {
+                                    self.list.append(Training(trainingID: id, trainingMethod: method, trainingVideo: video, trainingDescription: des, trainingDay: day, trainingStartTime: Stime, trainingEndTime: Etime, member: member as! [String] ))
+                                }
+                            }
+                        }
+                        return Training(trainingID: id, trainingMethod: method, trainingVideo: video, trainingDescription: des, trainingDay: day, trainingStartTime: Stime, trainingEndTime: Etime, member: [])
                     }
+                    loadCompletion()
                 }
             }
         }

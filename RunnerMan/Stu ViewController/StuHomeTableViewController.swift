@@ -38,12 +38,15 @@ class StuHomeTableViewController: UITableViewController, UICollectionViewDataSou
                 self.collectionView.reloadData()
             }
         })
+
     }
     
     @objc func tapimage(){
         let story : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let next = story.instantiateViewController(withIdentifier: "Addrecord") as! CustomAlertViewController
-        self.navigationController?.pushViewController(next, animated: true)
+        next.modalPresentationStyle = .overCurrentContext
+        present(next, animated: true, completion: nil)
+
     }
     //MARK: - Target Func
     
@@ -69,7 +72,6 @@ class StuHomeTableViewController: UITableViewController, UICollectionViewDataSou
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         alertController.addAction(cancelAction)
-        
         present(alertController, animated: true, completion: nil)
     }
     

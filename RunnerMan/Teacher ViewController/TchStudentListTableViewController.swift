@@ -16,7 +16,6 @@ class TchStudentListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getStu()
-        self.tableView.reloadData()
     }
     
     func getStu() {

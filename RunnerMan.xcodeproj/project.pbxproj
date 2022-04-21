@@ -284,7 +284,7 @@
 			mainGroup = 9ABBEB21278C41D800FB9F22;
 			packageReferences = (
 				00F9674227E85809007AF4D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit" */,
+				252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit.git" */,
 			);
 			productRefGroup = 9ABBEB2B278C41D800FB9F22 /* Products */;
 			projectDirPath = "";
@@ -586,7 +586,7 @@
 				minimumVersion = 8.0.0;
 			};
 		};
-		252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit" */ = {
+		252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/richardtop/CalendarKit.git";
 			requirement = {
@@ -624,7 +624,7 @@
 		};
 		252A45B527DF3D1B00F92519 /* CalendarKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit" */;
+			package = 252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit.git" */;
 			productName = CalendarKit;
 		};
 /* End XCSwiftPackageProductDependency section */

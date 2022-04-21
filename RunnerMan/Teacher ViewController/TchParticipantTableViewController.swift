@@ -24,7 +24,6 @@ class TchParticipantTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getPartList()
-        self.tableView.reloadData()
     }
     
     func getPartList() {
