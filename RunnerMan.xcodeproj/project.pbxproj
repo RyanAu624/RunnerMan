@@ -56,7 +56,6 @@
 		9AE103AB2808434300BD3AF0 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE103AA2808434300BD3AF0 /* ForgetPasswordViewController.swift */; };
 		9AF7D09227E4D251005AAB76 /* StudentHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7D09127E4D251005AAB76 /* StudentHomeCollectionViewCell.swift */; };
 		9AF7D09827E4DAC0005AAB76 /* HeroBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7D09727E4DAC0005AAB76 /* HeroBanner.swift */; };
-		F0CB46040C4DB4665DA09CC3 /* Pods_RunnerMan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AD8BE6D66B03341AC2FB1F /* Pods_RunnerMan.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +64,6 @@
 		252A45B727DF3D9D00F92519 /* CalendarVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVIewController.swift; sourceTree = "<group>"; };
 		25B5C1F727F2E06B00A4F084 /* EKWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKWrapper.swift; sourceTree = "<group>"; };
 		25B5C25327F9CAE700A4F084 /* EventKitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventKitController.swift; sourceTree = "<group>"; };
-		7B5BCD0E3A3525857F2461D1 /* Pods-RunnerMan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerMan.release.xcconfig"; path = "Target Support Files/Pods-RunnerMan/Pods-RunnerMan.release.xcconfig"; sourceTree = "<group>"; };
 		9A82F919280D87D200174F22 /* RecordDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailTableViewController.swift; sourceTree = "<group>"; };
 		9A82F91B280DA92F00174F22 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		9A866F3627B681F90070EF54 /* TchHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchHomeTableViewController.swift; sourceTree = "<group>"; };
@@ -106,8 +104,6 @@
 		9AE103AA2808434300BD3AF0 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		9AF7D09127E4D251005AAB76 /* StudentHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		9AF7D09727E4DAC0005AAB76 /* HeroBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroBanner.swift; sourceTree = "<group>"; };
-		C851A2B6A8437F7D30FB290A /* Pods-RunnerMan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerMan.debug.xcconfig"; path = "Target Support Files/Pods-RunnerMan/Pods-RunnerMan.debug.xcconfig"; sourceTree = "<group>"; };
-		C9AD8BE6D66B03341AC2FB1F /* Pods_RunnerMan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunnerMan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +117,6 @@
 				00F9674C27E85809007AF4D1 /* FirebaseStorage in Frameworks */,
 				00F9674627E85809007AF4D1 /* FirebaseAuth in Frameworks */,
 				252A45B627DF3D1B00F92519 /* CalendarKit in Frameworks */,
-				F0CB46040C4DB4665DA09CC3 /* Pods_RunnerMan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,21 +195,11 @@
 			path = "Teacher ViewController";
 			sourceTree = "<group>";
 		};
-		6C06E9ECD3E6BF6A96B5BC3E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C9AD8BE6D66B03341AC2FB1F /* Pods_RunnerMan.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		9ABBEB21278C41D800FB9F22 = {
 			isa = PBXGroup;
 			children = (
 				9ABBEB2C278C41D800FB9F22 /* RunnerMan */,
 				9ABBEB2B278C41D800FB9F22 /* Products */,
-				DAB8B298AC3C13B5AB48BC05 /* Pods */,
-				6C06E9ECD3E6BF6A96B5BC3E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -245,16 +230,6 @@
 			path = RunnerMan;
 			sourceTree = "<group>";
 		};
-		DAB8B298AC3C13B5AB48BC05 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C851A2B6A8437F7D30FB290A /* Pods-RunnerMan.debug.xcconfig */,
-				7B5BCD0E3A3525857F2461D1 /* Pods-RunnerMan.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -262,12 +237,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9ABBEB3E278C41DA00FB9F22 /* Build configuration list for PBXNativeTarget "RunnerMan" */;
 			buildPhases = (
-				CD429DE1FA27B2AF59E42B0D /* [CP] Check Pods Manifest.lock */,
 				9ABBEB26278C41D800FB9F22 /* Sources */,
 				9ABBEB27278C41D800FB9F22 /* Frameworks */,
 				9ABBEB28278C41D800FB9F22 /* Resources */,
-				EA95DA172250E9E9B2041DC0 /* [CP] Embed Pods Frameworks */,
-				56EC5BBE356E2F2235F08382 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -336,65 +308,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		56EC5BBE356E2F2235F08382 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RunnerMan/Pods-RunnerMan-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RunnerMan/Pods-RunnerMan-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RunnerMan/Pods-RunnerMan-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CD429DE1FA27B2AF59E42B0D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RunnerMan-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EA95DA172250E9E9B2041DC0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RunnerMan/Pods-RunnerMan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RunnerMan/Pods-RunnerMan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RunnerMan/Pods-RunnerMan-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9ABBEB26278C41D800FB9F22 /* Sources */ = {
@@ -583,7 +496,6 @@
 		};
 		9ABBEB3F278C41DA00FB9F22 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C851A2B6A8437F7D30FB290A /* Pods-RunnerMan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -614,7 +526,6 @@
 		};
 		9ABBEB40278C41DA00FB9F22 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B5BCD0E3A3525857F2461D1 /* Pods-RunnerMan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
