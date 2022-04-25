@@ -15,7 +15,7 @@ import MobileCoreServices
 class TchNewActvityViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var MethodText: UITextField!
-    @IBOutlet weak var DescriText: UITextField!
+    @IBOutlet weak var DescriText: UITextView!
     @IBOutlet weak var TrainDay: UITextField!
     @IBOutlet weak var StartTime: UITextField!
     @IBOutlet weak var EndTime: UITextField!

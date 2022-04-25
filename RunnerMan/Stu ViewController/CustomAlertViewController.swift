@@ -23,7 +23,7 @@ class CustomAlertViewController: UIViewController {
     @IBOutlet weak var popUPView: UIView!
     @IBOutlet weak var activityListBtn: UIButton!
     
-    @IBOutlet weak var descriptionTF: UITextField!
+    @IBOutlet weak var descriptionTF: UITextView!
     @IBOutlet weak var uploadVideoBtn: UIButton!
     
     override func viewDidLoad() {
@@ -51,10 +51,10 @@ class CustomAlertViewController: UIViewController {
         
         activityListBtn.showsMenuAsPrimaryAction = true
         activityListBtn.changesSelectionAsPrimaryAction = true
+        
     }
     
-    //******************
-    func findTrainID(title: String, findCompetion: (_ result : String) -> Void) {
+    func findTrainID(title: String, findCompetion : @escaping ((String) -> Void)) {
         
         var postID = ""
         
@@ -65,15 +65,12 @@ class CustomAlertViewController: UIViewController {
                 if let snapshot = snapshot {
                     for document in snapshot.documents {
                         postID = document.data()["Postid"] as! String
-                        print("$$$\(postID)$$$")
+                        findCompetion("\(postID)")
                     }
                 }
             }
         }
-        print("***\(postID)***")
-        findCompetion("\(postID)")
     }
-    //******************
     
     func getTrainingList(loadCompletion : @escaping ()->Void) {
         db.collection("Training").getDocuments() {(snapshot, err) in
@@ -108,34 +105,18 @@ class CustomAlertViewController: UIViewController {
     }
     
     @IBAction func uploadBtn(_ sender: Any) {
-//        let activity = self.userInput
+        let activity = self.inputTrainingID
         let des = descriptionTF.text
+        let testUrl = "Urlll"
         
-//        let ref = db.collection("Training").whereField("Training Method", isEqualTo: activity)
-//        let ref = db.collection("Training").document(list.trainingID)
-//        let secRef = ref.firestore.collection("participant").document(uID!)
-//
-//        ref.updateData([""])
+        let ref = db.collection("Training").document(activity)
+        let secRef = ref.collection("participant").document(uID!)
         
+        secRef.updateData(["Videourl": testUrl as Any,
+                        "des": des as Any])
         
-//        let stuNumber = studentNumberTF.text
-//        let stuName = studentNameTF.text
-//        let stuPhoneNum = studentPhoneNumTF.text
-//        let stuClass = studentClassTF.text
-//        let stuAge = studentAgeTF.text
-//        let stuWeight = studentWeightTF.text
-//        let stuHeight = studentHeightTF.text
-//
-//        let ref = db.collection("student").document(uID!)
-//
-//        ref.updateData(["studentId":stuNumber as Any,
-//                        "studentName":stuName as Any,
-//                        "studentContactNumber":stuPhoneNum as Any,
-//                        "studentClass":stuClass as Any,
-//                        "studentAge":stuAge as Any,
-//                        "studentWeight":stuWeight as Any,
-//                        "studentHeight":stuHeight as Any])
-//    }
+        dismiss(animated: true, completion: nil)
+
     }
     
     @IBAction func cancelBtn(_ sender: Any) {
