@@ -16,6 +16,8 @@ class CustomAlertViewController: UIViewController {
     var training = [Training]()
     var list = [Training]()
     
+    private var userInput: String
+    
     @IBOutlet weak var popUPView: UIView!
     @IBOutlet weak var activityListBtn: UIButton!
     
@@ -34,8 +36,8 @@ class CustomAlertViewController: UIViewController {
         
         getTrainingList(loadCompletion : {
             var actions = [UIAction]()
-            for training in self.training {
-                actions.append(UIAction(title: "\(training.trainingMethod)", handler: optionsClosure))
+            for list in self.list {
+                actions.append(UIAction(title: "\(list.trainingMethod)", handler: optionsClosure))
             }
             self.activityListBtn.menu = UIMenu(children: actions)
         })
@@ -43,29 +45,6 @@ class CustomAlertViewController: UIViewController {
         activityListBtn.showsMenuAsPrimaryAction = true
         activityListBtn.changesSelectionAsPrimaryAction = true
     }
-    
-//    func getRecord(loadCompletion : @escaping ()->Void){
-//        let db = Firestore.firestore()
-//        
-//        db.collection("Training").getDocuments() {(snapshot, err) in
-//            
-//            if err == nil {
-//                if let snapshot = snapshot {
-//                    self.training = snapshot.documents.map { d in
-//                        return Training(trainingID: d["Postid"] as? String ?? "",
-//                                        trainingMethod: d["Training Method"] as? String ?? "",
-//                                        trainingVideo: d["Video"] as? String ?? "",
-//                                        trainingDescription: d["description"] as? String ?? "",
-//                                        trainingDay: d["Train Day"] as? String ?? "",
-//                                        trainingStartTime: d["Start time"] as? String ?? "",
-//                                        trainingEndTime: d["End time"] as? String ?? "",
-//                        member: [])
-//                    }
-//                    loadCompletion()
-//                }
-//            }
-//        }
-//    }
     
     func getTrainingList(loadCompletion : @escaping ()->Void) {
         db.collection("Training").getDocuments() {(snapshot, err) in

@@ -32,6 +32,7 @@
 		9AA487B22801C6370050AA05 /* TchTrainingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA487B12801C6370050AA05 /* TchTrainingDetailViewController.swift */; };
 		9AA487B4280285DD0050AA05 /* StuTrainingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA487B3280285DD0050AA05 /* StuTrainingListTableViewController.swift */; };
 		9AA487B6280289330050AA05 /* StuTrainingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA487B5280289330050AA05 /* StuTrainingDetailViewController.swift */; };
+		9AAA952B281572EB00F038C3 /* StuRecordDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA952A281572EB00F038C3 /* StuRecordDetailTableViewController.swift */; };
 		9ABBEB2E278C41D800FB9F22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB2D278C41D800FB9F22 /* AppDelegate.swift */; };
 		9ABBEB30278C41D800FB9F22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBEB2F278C41D800FB9F22 /* SceneDelegate.swift */; };
 		9ABBEB35278C41D800FB9F22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ABBEB33278C41D800FB9F22 /* Main.storyboard */; };
@@ -78,6 +79,7 @@
 		9AA487B12801C6370050AA05 /* TchTrainingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchTrainingDetailViewController.swift; sourceTree = "<group>"; };
 		9AA487B3280285DD0050AA05 /* StuTrainingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuTrainingListTableViewController.swift; sourceTree = "<group>"; };
 		9AA487B5280289330050AA05 /* StuTrainingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuTrainingDetailViewController.swift; sourceTree = "<group>"; };
+		9AAA952A281572EB00F038C3 /* StuRecordDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuRecordDetailTableViewController.swift; sourceTree = "<group>"; };
 		9ABBEB2A278C41D800FB9F22 /* RunnerMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunnerMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ABBEB2D278C41D800FB9F22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ABBEB2F278C41D800FB9F22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				9AA487B5280289330050AA05 /* StuTrainingDetailViewController.swift */,
 				9AE103A8280832DA00BD3AF0 /* CustomAlertViewController.swift */,
 				0035EF6B280B120D002B5AEA /* StuHistTableViewController.swift */,
+				9AAA952A281572EB00F038C3 /* StuRecordDetailTableViewController.swift */,
 			);
 			path = "Stu ViewController";
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				252A45B727DF3D9D00F92519 /* CalendarVIewController.swift */,
 				25B5C1F727F2E06B00A4F084 /* EKWrapper.swift */,
 				9AA487B12801C6370050AA05 /* TchTrainingDetailViewController.swift */,
+				9A82F919280D87D200174F22 /* RecordDetailTableViewController.swift */,
 				9AA487AB28016E0A0050AA05 /* TchParticipantTableViewController.swift */,
 				9AA487A928016A5B0050AA05 /* TchTrainingListTableViewController.swift */,
 				9ABC72DF27AE8DE70079908B /* TchStuProfileDetailViewController.swift */,
@@ -190,7 +194,6 @@
 				9ABC72E127AFB3BE0079908B /* TchProfileViewController.swift */,
 				9ABBEB66278DA68E00FB9F22 /* TchNewActvityViewController.swift */,
 				9A866F3627B681F90070EF54 /* TchHomeTableViewController.swift */,
-				9A82F919280D87D200174F22 /* RecordDetailTableViewController.swift */,
 			);
 			path = "Teacher ViewController";
 			sourceTree = "<group>";
@@ -284,7 +287,7 @@
 			mainGroup = 9ABBEB21278C41D800FB9F22;
 			packageReferences = (
 				00F9674227E85809007AF4D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit.git" */,
+				252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit" */,
 			);
 			productRefGroup = 9ABBEB2B278C41D800FB9F22 /* Products */;
 			projectDirPath = "";
@@ -338,6 +341,7 @@
 				9ABC72DC27A15AFD0079908B /* TchStudentListTableViewController.swift in Sources */,
 				9ABBEB67278DA68E00FB9F22 /* TchNewActvityViewController.swift in Sources */,
 				9AC814F9279C0DBA00BBF2BC /* TchSignUpViewController.swift in Sources */,
+				9AAA952B281572EB00F038C3 /* StuRecordDetailTableViewController.swift in Sources */,
 				9AF7D09827E4DAC0005AAB76 /* HeroBanner.swift in Sources */,
 				9A866F3927B686090070EF54 /* StuHomeTableViewController.swift in Sources */,
 				9AA487AC28016E0A0050AA05 /* TchParticipantTableViewController.swift in Sources */,
@@ -586,7 +590,7 @@
 				minimumVersion = 8.0.0;
 			};
 		};
-		252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit.git" */ = {
+		252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/richardtop/CalendarKit.git";
 			requirement = {
@@ -624,7 +628,7 @@
 		};
 		252A45B527DF3D1B00F92519 /* CalendarKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit.git" */;
+			package = 252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit" */;
 			productName = CalendarKit;
 		};
 /* End XCSwiftPackageProductDependency section */
