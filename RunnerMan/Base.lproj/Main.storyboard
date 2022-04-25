@@ -1169,7 +1169,9 @@
                     </view>
                     <connections>
                         <outlet property="activityListBtn" destination="Rg0-0q-SX8" id="Ay2-ro-wfX"/>
+                        <outlet property="descriptionTF" destination="4K3-40-4VV" id="acj-Yg-I1a"/>
                         <outlet property="popUPView" destination="XOT-Ub-jnw" id="1kQ-xG-Pw2"/>
+                        <outlet property="uploadVideoBtn" destination="DM1-cG-NMP" id="rnW-fb-sYf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="km4-nU-Ibi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
