@@ -189,7 +189,7 @@
                                     <constraint firstAttribute="width" constant="310" id="3Ky-oK-MLV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="loginTextFieldLine" translatesAutoresizingMaskIntoConstraints="NO" id="1NL-97-EQQ">
                                 <rect key="frame" x="20" y="442" width="350" height="1"/>
@@ -297,7 +297,7 @@
                                     <constraint firstAttribute="height" constant="25" id="Rgk-Wl-Jjc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aef-ma-vXj">
                                 <rect key="frame" x="8" y="568" width="374" height="64"/>

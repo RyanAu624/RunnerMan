@@ -80,15 +80,26 @@ class StuRecordDetailTableViewController: UITableViewController {
     @IBAction func uploadCommentBtn(_ sender: Any) {
         let ref = db.collection("Training").document(trainingID).collection("participant")
         let secRef = ref.document(uID!).collection("commentList")
-
+        let ref2 = db.collection("student").whereField("uid", isEqualTo: uID!)
         let postid = secRef.document().documentID
 
-        if commentTF.text != "" {
-            secRef.document(postid).setData(["reviewer": uID!,
-                                             "description": commentTF.text!])
-
-            getCommentList()
-            commentTF.text = ""
+        ref2.getDocuments {(snapshot, err) in
+            if err == nil {
+                if let snapshot = snapshot {
+                    for document in snapshot.documents {
+                        let Name = document.data()["studentName"]
+                        guard let Tname = Name else {return}
+                        if self.commentTF.text != "" {
+                            secRef.document(postid).setData(["reviewer": self.uID!,
+                                                             "description": self.commentTF.text!,
+                                                             "name": Tname])
+                            
+                            self.getCommentList()
+                            self.commentTF.text = ""
+                        }
+                    }
+                }
+            }
         }
     }
     
@@ -102,7 +113,8 @@ class StuRecordDetailTableViewController: UITableViewController {
                 if let snapshot = snapshot {
                     self.comment = snapshot.documents.map { d in
                         return Comment(reviewer: d["reviewer"] as? String ?? "",
-                                       commentDescription: d["description"] as? String ?? "")
+                                       commentDescription: d["description"] as? String ?? "",
+                                       name : d["name"] as? String ?? "")
                     }
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
@@ -127,7 +139,7 @@ class StuRecordDetailTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "comCell", for: indexPath) as! CommentTableViewCell
         cell.commentDescription.text = comment[indexPath.row].commentDescription
-        cell.stuName.text = comment[indexPath.row].reviewer
+        cell.stuName.text = comment[indexPath.row].name
         
         return cell
     }

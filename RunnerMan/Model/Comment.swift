@@ -10,4 +10,5 @@ import Foundation
 struct Comment {
     var reviewer : String
     var commentDescription : String
+    var name : String
 }

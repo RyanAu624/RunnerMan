@@ -50,7 +50,6 @@ class RecordDetailTableViewController: UITableViewController {
                 if let snapshot = snapshot {
                     for document in snapshot.documents {
                         let studentName = document.data()["studentName"]
-                        
                         self.stuName.text = (studentName as! String)
                     }
                 }
@@ -61,16 +60,28 @@ class RecordDetailTableViewController: UITableViewController {
     @IBAction func uploadCommentBtn(_ sender: Any) {
         let ref = db.collection("Training").document(trainingID).collection("participant")
         let secRef = ref.document(participantId).collection("commentList")
-        
         let postid = secRef.document().documentID
-        
-        if commentTF.text != "" {
-            secRef.document(postid).setData(["reviewer": uID!,
-                                             "description": commentTF.text!])
-            
-            getCommentList()
-            commentTF.text = ""
+        let ref2 = db.collection("teacher").whereField("uid", isEqualTo: uID!)
+        ref2.getDocuments {(snapshot, err) in
+            if err == nil {
+                if let snapshot = snapshot {
+                    for document in snapshot.documents {
+                        let Name = document.data()["teacherName"]
+                        guard let Tname = Name else {return}
+                        if self.commentTF.text != "" {
+                            secRef.document(postid).setData(["reviewer": self.uID!,
+                                                             "description": self.commentTF.text!,
+                                                             "name": Tname])
+                            
+                            self.getCommentList()
+                            self.commentTF.text = ""
+                        }
+                    }
+                }
+            }
         }
+
+
     }
     
     func getCommentList() {
@@ -83,7 +94,8 @@ class RecordDetailTableViewController: UITableViewController {
                 if let snapshot = snapshot {
                     self.comment = snapshot.documents.map { d in
                         return Comment(reviewer: d["reviewer"] as? String ?? "",
-                                       commentDescription: d["description"] as? String ?? "")
+                                       commentDescription: d["description"] as? String ?? "",
+                                       name: d["name"] as? String ?? "")
                     }
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
@@ -108,7 +120,7 @@ class RecordDetailTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cCell", for: indexPath) as! CommentTableViewCell
         cell.commentDescription.text = comment[indexPath.row].commentDescription
-        cell.stuName.text = comment[indexPath.row].reviewer
+        cell.stuName.text = comment[indexPath.row].name
         
         return cell
     }
