@@ -1078,6 +1078,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Upload Video"/>
+                                        <connections>
+                                            <action selector="selectVideo:" destination="qhb-40-TKb" eventType="touchUpInside" id="bre-6Z-Xz8"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40p-So-2Dy">
                                         <rect key="frame" x="8" y="147" width="92" height="21"/>

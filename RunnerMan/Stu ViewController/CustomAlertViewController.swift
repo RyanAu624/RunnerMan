@@ -9,16 +9,19 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import FirebaseStorage
+import MobileCoreServices
 
-class CustomAlertViewController: UIViewController {
+class CustomAlertViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    let picker = UIImagePickerController()
     let db = Firestore.firestore()
     var training = [Training]()
     var list = [Training]()
-    
+    var videoData : Data = Data()
     let uID = Auth.auth().currentUser?.uid
     
     private var inputTrainingID: String = ""
+    private var titlename: String = ""
     
     @IBOutlet weak var popUPView: UIView!
     @IBOutlet weak var activityListBtn: UIButton!
@@ -36,6 +39,7 @@ class CustomAlertViewController: UIViewController {
         popUPView.layer.shadowRadius = 5
 
         let optionsClosure = { (action: UIAction) in
+            self.titlename = action.title
             self.findTrainID(title: action.title, findCompetion: { (result) in
                 self.inputTrainingID = result
             })
@@ -104,18 +108,66 @@ class CustomAlertViewController: UIViewController {
         }
     }
     
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let videourl = info[UIImagePickerController.InfoKey.mediaURL] as? NSURL {
+            do{
+                videoData = try Data(contentsOf: videourl as URL)
+            } catch {
+                print(error.localizedDescription)
+                return
+            }
+            
+                
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func selectVideo(_ sender: Any) {
+        picker.delegate = self
+        picker.allowsEditing = true
+        picker.sourceType = .photoLibrary
+        picker.mediaTypes = [kUTTypeMovie as String]
+        
+        present(picker, animated: true, completion: nil)
+        
+    }
+    
     @IBAction func uploadBtn(_ sender: Any) {
         let activity = self.inputTrainingID
         let des = descriptionTF.text
-        let testUrl = "Urlll"
-        
+        let metadata = StorageMetadata()
+        guard let postid = Auth.auth().currentUser?.uid else {return}
+        let storage2 = Storage.storage().reference().child("\(titlename)")
         let ref = db.collection("Training").document(activity)
         let secRef = ref.collection("participant").document(uID!)
+
+        storage2.child("\(postid).mov").putData(videoData, metadata: metadata) { (metaData, error) in
+            guard error == nil else {
+                print("ERROR HERE: \(error?.localizedDescription)")
+                return
+            }
+            storage2.child("\(postid).mov").downloadURL{ url, error in
+                if let error = error {
+                    print("HERERER(ERROR)")
+                    print(error.localizedDescription)
+                } else {
+                    guard let testurl = url?.absoluteString else {return}
+                    secRef.updateData(["Videourl": testurl,
+                                    "des": des as Any])
+                    
+
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
+
         
-        secRef.updateData(["Videourl": testUrl as Any,
-                        "des": des as Any])
-        
-        dismiss(animated: true, completion: nil)
 
     }
     
