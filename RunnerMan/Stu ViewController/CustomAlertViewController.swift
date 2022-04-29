@@ -131,7 +131,7 @@ class CustomAlertViewController: UIViewController, UIImagePickerControllerDelega
     @IBAction func selectVideo(_ sender: Any) {
         picker.delegate = self
         picker.allowsEditing = true
-        picker.sourceType = .photoLibrary
+        picker.sourceType = .savedPhotosAlbum
         picker.mediaTypes = [kUTTypeMovie as String]
         
         present(picker, animated: true, completion: nil)

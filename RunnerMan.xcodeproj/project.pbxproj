@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00053B82281954EE00480DBE /* RealtimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00053B81281954EE00480DBE /* RealtimeViewController.swift */; };
+		00053B842819553200480DBE /* Videocapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00053B832819553200480DBE /* Videocapture.swift */; };
+		00053B86281C5D3E00480DBE /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00053B85281C5D3E00480DBE /* SelectViewController.swift */; };
 		0035EF6C280B120D002B5AEA /* StuHistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0035EF6B280B120D002B5AEA /* StuHistTableViewController.swift */; };
 		0035EF6E280B1250002B5AEA /* StuHistcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0035EF6D280B1250002B5AEA /* StuHistcell.swift */; };
 		00F9674427E85809007AF4D1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 00F9674327E85809007AF4D1 /* FirebaseAnalytics */; };
@@ -60,6 +63,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00053B81281954EE00480DBE /* RealtimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeViewController.swift; sourceTree = "<group>"; };
+		00053B832819553200480DBE /* Videocapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Videocapture.swift; sourceTree = "<group>"; };
+		00053B85281C5D3E00480DBE /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectViewController.swift; path = "RunnerMan/Stu ViewController/SelectViewController.swift"; sourceTree = SOURCE_ROOT; };
 		0035EF6B280B120D002B5AEA /* StuHistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuHistTableViewController.swift; sourceTree = "<group>"; };
 		0035EF6D280B1250002B5AEA /* StuHistcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuHistcell.swift; sourceTree = "<group>"; };
 		252A45B727DF3D9D00F92519 /* CalendarVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVIewController.swift; sourceTree = "<group>"; };
@@ -175,6 +181,9 @@
 				9AE103A8280832DA00BD3AF0 /* CustomAlertViewController.swift */,
 				0035EF6B280B120D002B5AEA /* StuHistTableViewController.swift */,
 				9AAA952A281572EB00F038C3 /* StuRecordDetailTableViewController.swift */,
+				00053B81281954EE00480DBE /* RealtimeViewController.swift */,
+				00053B832819553200480DBE /* Videocapture.swift */,
+				00053B85281C5D3E00480DBE /* SelectViewController.swift */,
 			);
 			path = "Stu ViewController";
 			sourceTree = "<group>";
@@ -336,6 +345,7 @@
 				9AA487B0280183450050AA05 /* ParticipantTableViewCell.swift in Sources */,
 				9A866F4127B77AD60070EF54 /* Target.swift in Sources */,
 				9ABBEB5B278C6A1500FB9F22 /* Comment.swift in Sources */,
+				00053B842819553200480DBE /* Videocapture.swift in Sources */,
 				25B5C1F827F2E06B00A4F084 /* EKWrapper.swift in Sources */,
 				9AA487B22801C6370050AA05 /* TchTrainingDetailViewController.swift in Sources */,
 				9ABC72DC27A15AFD0079908B /* TchStudentListTableViewController.swift in Sources */,
@@ -348,7 +358,9 @@
 				9ABBEB2E278C41D800FB9F22 /* AppDelegate.swift in Sources */,
 				9AE103A9280832DA00BD3AF0 /* CustomAlertViewController.swift in Sources */,
 				252A45B827DF3D9D00F92519 /* CalendarVIewController.swift in Sources */,
+				00053B86281C5D3E00480DBE /* SelectViewController.swift in Sources */,
 				9A866F3727B681F90070EF54 /* TchHomeTableViewController.swift in Sources */,
+				00053B82281954EE00480DBE /* RealtimeViewController.swift in Sources */,
 				9ABBEB5D278D240F00FB9F22 /* StuLoginViewController.swift in Sources */,
 				9ABBEB46278C4AED00FB9F22 /* Student.swift in Sources */,
 				9ABBEB5F278D242300FB9F22 /* TchLoginViewController.swift in Sources */,
@@ -505,7 +517,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 29963AF748;
+				DEVELOPMENT_TEAM = 5KGFF9Y2HC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RunnerMan/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "access calendar to display eventkit";
@@ -535,7 +547,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 29963AF748;
+				DEVELOPMENT_TEAM = 5KGFF9Y2HC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RunnerMan/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "access calendar to display eventkit";
