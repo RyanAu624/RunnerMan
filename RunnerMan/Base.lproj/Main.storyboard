@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -142,6 +142,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmM-1H-UVa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-763" y="-599"/>
+        </scene>
+        <!--Stu Calendar View Controller-->
+        <scene sceneID="tiL-eK-Aik">
+            <objects>
+                <viewController id="XPm-JR-aDw" customClass="StuCalendarViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S91-Ot-N2A"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qp5-UI-e4s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5mW-nJ-Zp7">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yre-dw-hNc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vaJ-pO-uQY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-403" y="795"/>
+        </scene>
+        <!--Tch Calendar View Controller-->
+        <scene sceneID="xvB-q7-obn">
+            <objects>
+                <viewController id="hh2-4R-inG" customClass="TchCalendarViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oVa-Kh-vN1"/>
+                        <viewControllerLayoutGuide type="bottom" id="2m6-qx-yBi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YAd-fB-pKp">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8qH-Zb-YaR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="An8-aw-R2P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="837" y="-1314"/>
         </scene>
         <!--Tch Login View Controller-->
         <scene sceneID="MBX-ZI-Up9">
@@ -663,6 +701,9 @@
                                     </constraints>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="calendarBox" title=""/>
+                                    <connections>
+                                        <segue destination="hh2-4R-inG" kind="show" id="97n-e6-3Lu"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnW-kx-r2H">
                                     <rect key="frame" x="200" y="265" width="170" height="70"/>
@@ -1948,6 +1989,9 @@
                                     </constraints>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="calendarBox" title=""/>
+                                    <connections>
+                                        <segue destination="XPm-JR-aDw" kind="show" id="bfS-Gd-IKB"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJF-RL-OUW">
                                     <rect key="frame" x="200" y="270" width="170" height="70"/>
