@@ -6,6 +6,11 @@ target 'RunnerMan' do
   use_frameworks!
 
   # Pods for RunnerMan
+pod 'Firebase/Firestore'
+pod 'Firebase/Auth'
+pod 'Firebase/Storage'
+pod 'Firebase/Database'
+pod 'Firebase/Analytics'
 
 # If you want to use the base implementation:
 pod 'GoogleMLKit/PoseDetection', '2.6.0'
