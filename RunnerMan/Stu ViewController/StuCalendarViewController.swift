@@ -107,11 +107,9 @@ class StuCalendarViewController: DayViewController, EKEventEditViewDelegate {
                 presentEditingView(editingEvent.ekEvent)
             } else {
                 try! eventStore.save(editingEvent.ekEvent, span: .thisEvent)
-                reloadData()
             }
-            
-            
         }
+        reloadData()
     }
     
     
@@ -168,6 +166,8 @@ class StuCalendarViewController: DayViewController, EKEventEditViewDelegate {
     }
     
     func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
+        endEventEditing()
+        reloadData()
         controller.dismiss(animated: true, completion: nil)
     }
 }

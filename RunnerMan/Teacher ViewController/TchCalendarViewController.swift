@@ -107,11 +107,10 @@ class TchCalendarViewController: DayViewController, EKEventEditViewDelegate{
                 presentEditingView(editingEvent.ekEvent)
             } else {
                 try! eventStore.save(editingEvent.ekEvent, span: .thisEvent)
-                reloadData()
+                
             }
-            
-            
         }
+        reloadData()
     }
     
     
@@ -168,6 +167,8 @@ class TchCalendarViewController: DayViewController, EKEventEditViewDelegate{
     }
     
     func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
+        endEventEditing()
+        reloadData()
         controller.dismiss(animated: true, completion: nil)
     }
 }
