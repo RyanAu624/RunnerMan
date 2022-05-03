@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+import AVFoundation
 
 class StuTrainingDetailViewController: UIViewController {
     
@@ -23,6 +24,7 @@ class StuTrainingDetailViewController: UIViewController {
     let db = Firestore.firestore()
     let uid = Auth.auth().currentUser?.uid
     
+    @IBOutlet weak var videoly : UIView!
     @IBOutlet weak var trainingMethodLabel: UILabel!
     @IBOutlet weak var trainingDescriptionLabel: UILabel!
     @IBOutlet weak var trainingDayLabel: UILabel!
@@ -31,6 +33,7 @@ class StuTrainingDetailViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        playvideo()
         trainingMethodLabel.text = trainingMethod
         trainingDescriptionLabel.text = trainingDescription
         trainingDayLabel.text = trainingDay
@@ -50,6 +53,17 @@ class StuTrainingDetailViewController: UIViewController {
         }
     }
     
+    func playvideo(){
+        if let Videourl = URL(string: trainingVideo) {
+            print(Videourl)
+            let player = AVPlayer(url: Videourl)
+            let playerlayer = AVPlayerLayer(player: player)
+            playerlayer.frame = videoly.frame
+            self.videoly.layer.addSublayer(playerlayer)
+            player.play()
+        }
+    }
+    
     @IBAction func joinbtn(_ sender: Any) {
         let ref = db.collection("Training").document(trainingID).collection("participant")
 
@@ -62,6 +76,7 @@ class StuTrainingDetailViewController: UIViewController {
             self.btnjoin.title = "cancel"
         } else if self.btnjoin.title == "cancel"{
             ref.document(uid!).delete()
+            ref.document(uid!).collection("commentList").document(uid!).delete()
             let locref = db.collection("Training").document(trainingID)
             locref.updateData(["member" : FieldValue.arrayRemove(["\(uid!)"])])
             self.btnjoin.title = "join"

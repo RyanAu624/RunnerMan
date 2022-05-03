@@ -16,8 +16,8 @@ class StuHistTableViewController: UITableViewController {
     var list = [Training]()
     let uID = Auth.auth().currentUser?.uid
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         getRecord()
 
         // Uncomment the following line to preserve selection between presentations

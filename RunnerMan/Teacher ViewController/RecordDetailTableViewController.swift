@@ -9,6 +9,7 @@ import UIKit
 import FirebaseFirestore
 import FirebaseStorage
 import FirebaseAuth
+import AVFoundation
 
 class RecordDetailTableViewController: UITableViewController {
     
@@ -31,15 +32,16 @@ class RecordDetailTableViewController: UITableViewController {
 
     @IBOutlet weak var stuName: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
+    @IBOutlet weak var videoly: UIView!
     @IBOutlet weak var commentTF: UITextField!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getStuData()
         descriptionLabel.text = participantDescription
-        
         getCommentList()
+        playvideo()
+        
     }
     
     func getStuData() {
@@ -54,6 +56,17 @@ class RecordDetailTableViewController: UITableViewController {
                     }
                 }
             }
+        }
+    }
+    
+    func playvideo(){
+        if let Videourl = URL(string: trainingVideo) {
+            print(Videourl)
+            let player = AVPlayer(url: Videourl)
+            let playerlayer = AVPlayerLayer(player: player)
+            playerlayer.frame = videoly.frame
+            self.videoly.layer.addSublayer(playerlayer)
+            player.play()
         }
     }
     

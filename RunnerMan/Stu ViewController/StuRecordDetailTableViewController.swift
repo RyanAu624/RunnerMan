@@ -9,6 +9,7 @@ import UIKit
 import FirebaseFirestore
 import FirebaseStorage
 import FirebaseAuth
+import AVFoundation
 
 class StuRecordDetailTableViewController: UITableViewController {
     
@@ -25,6 +26,7 @@ class StuRecordDetailTableViewController: UITableViewController {
     var trainingStartTime : String!
     var trainingEndTime : String!
     
+    @IBOutlet weak var videolay: UIView!
     @IBOutlet weak var stuName: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
 
@@ -34,8 +36,12 @@ class StuRecordDetailTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         getStuData()
         getParticipantDetail()
-        
         getCommentList()
+        guard let des = trainingDescription else {return}
+        descriptionLabel.text = des
+        descriptionLabel.sizeToFit()
+        print(des)
+        playvideo()
     }
     
     func getParticipantDetail() {
@@ -48,6 +54,17 @@ class StuRecordDetailTableViewController: UITableViewController {
             
                 self.descriptionLabel.text = (des as! String)
             }
+        }
+    }
+    
+    func playvideo(){
+        if let Videourl = URL(string: trainingVideo) {
+            print(Videourl)
+            let player = AVPlayer(url: Videourl)
+            let playerlayer = AVPlayerLayer(player: player)
+            playerlayer.frame = videolay.frame
+            self.videolay.layer.addSublayer(playerlayer)
+            player.play()
         }
     }
     
@@ -81,7 +98,6 @@ class StuRecordDetailTableViewController: UITableViewController {
         let ref = db.collection("Training").document(trainingID).collection("participant")
         let secRef = ref.document(uID!).collection("commentList")
         let ref2 = db.collection("student").whereField("uid", isEqualTo: uID!)
-        let postid = secRef.document().documentID
 
         ref2.getDocuments {(snapshot, err) in
             if err == nil {
@@ -90,7 +106,7 @@ class StuRecordDetailTableViewController: UITableViewController {
                         let Name = document.data()["studentName"]
                         guard let Tname = Name else {return}
                         if self.commentTF.text != "" {
-                            secRef.document(postid).setData(["reviewer": self.uID!,
+                            secRef.document(self.uID!).setData(["reviewer": self.uID!,
                                                              "description": self.commentTF.text!,
                                                              "name": Tname])
                             
