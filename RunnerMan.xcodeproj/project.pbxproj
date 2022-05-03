@@ -22,6 +22,9 @@
 		9A866F3927B686090070EF54 /* StuHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A866F3827B686090070EF54 /* StuHomeTableViewController.swift */; };
 		9A866F3B27B69A350070EF54 /* TargetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A866F3A27B69A350070EF54 /* TargetCell.swift */; };
 		9A866F4127B77AD60070EF54 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A866F4027B77AD60070EF54 /* Target.swift */; };
+		9AA05E782820D6640036ED0A /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA05E772820D6640036ED0A /* VideoViewController.swift */; };
+		9AA05E7A2820D8370036ED0A /* MLKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA05E792820D8370036ED0A /* MLKitExtensions.swift */; };
+		9AA05E7C2820D8660036ED0A /* UIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA05E7B2820D8660036ED0A /* UIUtilities.swift */; };
 		9AA487A8280166F00050AA05 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA487A7280166F00050AA05 /* RecordTableViewCell.swift */; };
 		9AA487AA28016A5B0050AA05 /* TchTrainingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA487A928016A5B0050AA05 /* TchTrainingListTableViewController.swift */; };
 		9AA487AC28016E0A0050AA05 /* TchParticipantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA487AB28016E0A0050AA05 /* TchParticipantTableViewController.swift */; };
@@ -75,6 +78,9 @@
 		9A866F3827B686090070EF54 /* StuHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuHomeTableViewController.swift; sourceTree = "<group>"; };
 		9A866F3A27B69A350070EF54 /* TargetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetCell.swift; sourceTree = "<group>"; };
 		9A866F4027B77AD60070EF54 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
+		9AA05E772820D6640036ED0A /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		9AA05E792820D8370036ED0A /* MLKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLKitExtensions.swift; sourceTree = "<group>"; };
+		9AA05E7B2820D8660036ED0A /* UIUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtilities.swift; sourceTree = "<group>"; };
 		9AA487A7280166F00050AA05 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		9AA487A928016A5B0050AA05 /* TchTrainingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchTrainingListTableViewController.swift; sourceTree = "<group>"; };
 		9AA487AB28016E0A0050AA05 /* TchParticipantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchParticipantTableViewController.swift; sourceTree = "<group>"; };
@@ -216,7 +222,6 @@
 				B943EA3BE20A1E3866CD2CC8 /* Pods-RunnerMan.debug.xcconfig */,
 				8F5DD6F52560E60C44DADF56 /* Pods-RunnerMan.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -253,6 +258,9 @@
 				9ABBEB38278C41DA00FB9F22 /* LaunchScreen.storyboard */,
 				9ABBEB3B278C41DA00FB9F22 /* Info.plist */,
 				9ABBEB47278C514700FB9F22 /* GoogleService-Info.plist */,
+				9AA05E772820D6640036ED0A /* VideoViewController.swift */,
+				9AA05E792820D8370036ED0A /* MLKitExtensions.swift */,
+				9AA05E7B2820D8660036ED0A /* UIUtilities.swift */,
 			);
 			path = RunnerMan;
 			sourceTree = "<group>";
@@ -308,7 +316,7 @@
 			);
 			mainGroup = 9ABBEB21278C41D800FB9F22;
 			packageReferences = (
-				252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit.git" */,
+				252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit" */,
 			);
 			productRefGroup = 9ABBEB2B278C41D800FB9F22 /* Products */;
 			projectDirPath = "";
@@ -403,6 +411,8 @@
 				9ABC72E027AE8DE70079908B /* TchStuProfileDetailViewController.swift in Sources */,
 				9AA487A8280166F00050AA05 /* RecordTableViewCell.swift in Sources */,
 				9AA487B6280289330050AA05 /* StuTrainingDetailViewController.swift in Sources */,
+				9AA05E7C2820D8660036ED0A /* UIUtilities.swift in Sources */,
+				9AA05E782820D6640036ED0A /* VideoViewController.swift in Sources */,
 				9A82F91A280D87D200174F22 /* RecordDetailTableViewController.swift in Sources */,
 				0035EF6E280B1250002B5AEA /* StuHistcell.swift in Sources */,
 				9ABBEB59278C686900FB9F22 /* Training.swift in Sources */,
@@ -419,6 +429,7 @@
 				25B5C1F827F2E06B00A4F084 /* EKWrapper.swift in Sources */,
 				9AA487B22801C6370050AA05 /* TchTrainingDetailViewController.swift in Sources */,
 				9ABC72DC27A15AFD0079908B /* TchStudentListTableViewController.swift in Sources */,
+				9AA05E7A2820D8370036ED0A /* MLKitExtensions.swift in Sources */,
 				9ABBEB67278DA68E00FB9F22 /* TchNewActvityViewController.swift in Sources */,
 				9AC814F9279C0DBA00BBF2BC /* TchSignUpViewController.swift in Sources */,
 				9AAA952B281572EB00F038C3 /* StuRecordDetailTableViewController.swift in Sources */,
@@ -667,7 +678,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit.git" */ = {
+		252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/richardtop/CalendarKit.git";
 			requirement = {
@@ -680,7 +691,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		252A45B527DF3D1B00F92519 /* CalendarKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit.git" */;
+			package = 252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit" */;
 			productName = CalendarKit;
 		};
 /* End XCSwiftPackageProductDependency section */

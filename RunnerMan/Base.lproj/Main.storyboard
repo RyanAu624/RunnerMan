@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -160,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vaJ-pO-uQY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-403" y="795"/>
+            <point key="canvasLocation" x="-966" y="795"/>
         </scene>
         <!--Tch Calendar View Controller-->
         <scene sceneID="xvB-q7-obn">
@@ -1076,7 +1076,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="enZ-3B-TPR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="390.76923076923077" y="794.78672985781986"/>
+            <point key="canvasLocation" x="-172" y="795"/>
         </scene>
         <!--Custom Alert View Controller-->
         <scene sceneID="BQW-i1-gWV">
@@ -1230,7 +1230,76 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="km4-nU-Ibi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1110.7692307692307" y="794.78672985781986"/>
+            <point key="canvasLocation" x="548" y="795"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="gQU-A3-BEA">
+            <objects>
+                <viewController id="HFc-U7-zrq" customClass="VideoViewController" customModule="RunnerMan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZVx-CC-Brb"/>
+                        <viewControllerLayoutGuide type="bottom" id="qQM-H8-BMN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VIa-Zs-KhZ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Pu-IE-F1c">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5F6-Ov-1FW">
+                                <rect key="frame" x="0.0" y="784" width="390" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4M-q3-jmT">
+                                        <rect key="frame" x="30" y="20" width="31" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jk-i3-NXo">
+                                        <rect key="frame" x="321" y="19" width="39" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="FyO-s6-FUu"/>
+                                            <constraint firstAttribute="width" constant="39" id="jUB-bg-rWQ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrow.triangle.2.circlepath.camera" catalog="system" title=""/>
+                                        <connections>
+                                            <action selector="switchCamera:" destination="HFc-U7-zrq" eventType="touchUpInside" id="s5y-tj-7Nx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="d4M-q3-jmT" firstAttribute="top" secondItem="5F6-Ov-1FW" secondAttribute="top" constant="20" symbolic="YES" id="7er-01-77y"/>
+                                    <constraint firstAttribute="height" constant="60" id="BVq-0a-gIT"/>
+                                    <constraint firstItem="d4M-q3-jmT" firstAttribute="leading" secondItem="5F6-Ov-1FW" secondAttribute="leading" constant="30" id="ES4-V4-CXr"/>
+                                    <constraint firstAttribute="trailing" secondItem="8jk-i3-NXo" secondAttribute="trailing" constant="30" id="P7N-iN-wDK"/>
+                                    <constraint firstItem="8jk-i3-NXo" firstAttribute="top" secondItem="5F6-Ov-1FW" secondAttribute="top" constant="19" id="mnv-xl-1J3"/>
+                                    <constraint firstAttribute="width" constant="390" id="suM-93-Cpx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="5F6-Ov-1FW" secondAttribute="bottom" id="2vo-ro-XZB"/>
+                            <constraint firstItem="9Pu-IE-F1c" firstAttribute="top" secondItem="VIa-Zs-KhZ" secondAttribute="top" id="AU4-oi-Jv5"/>
+                            <constraint firstItem="5F6-Ov-1FW" firstAttribute="leading" secondItem="VIa-Zs-KhZ" secondAttribute="leading" id="FQk-JT-htd"/>
+                            <constraint firstAttribute="bottom" secondItem="9Pu-IE-F1c" secondAttribute="bottom" id="GbH-iH-BuH"/>
+                            <constraint firstItem="9Pu-IE-F1c" firstAttribute="leading" secondItem="VIa-Zs-KhZ" secondAttribute="leading" id="XXH-uX-sUI"/>
+                            <constraint firstAttribute="trailing" secondItem="9Pu-IE-F1c" secondAttribute="trailing" id="fdx-6n-7hq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0IW-eF-OaL"/>
+                    <connections>
+                        <outlet property="cameraView" destination="9Pu-IE-F1c" id="I2C-a8-9Rw"/>
+                        <outlet property="fpsLabel" destination="d4M-q3-jmT" id="wTq-V3-jqv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MJg-SW-uCW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1396.9230769230769" y="794.78672985781986"/>
         </scene>
         <!--New Activity-->
         <scene sceneID="ILp-Om-9GF">
@@ -2146,11 +2215,18 @@
                         <barButtonItem key="leftBarButtonItem" image="navLogo" id="haO-E3-8Jy">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="rectangle.portrait.and.arrow.right" catalog="system" id="Sns-rj-1OG">
-                            <connections>
-                                <action selector="logout:" destination="xqo-c4-AMq" id="tCv-3q-HL9"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="rectangle.portrait.and.arrow.right" catalog="system" id="Sns-rj-1OG">
+                                <connections>
+                                    <action selector="logout:" destination="xqo-c4-AMq" id="tCv-3q-HL9"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="camera" catalog="system" id="20Q-6q-KAC">
+                                <connections>
+                                    <segue destination="HFc-U7-zrq" kind="show" id="sGR-7b-ppQ"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="axI-4T-JpB" id="bKv-kQ-rn1"/>
@@ -2940,8 +3016,10 @@
         <image name="addBtn" width="350" height="50"/>
         <image name="addCommentBtn" width="62" height="62"/>
         <image name="addTrainingBox" width="346.33334350585938" height="165.66667175292969"/>
+        <image name="arrow.triangle.2.circlepath.camera" catalog="system" width="128" height="94"/>
         <image name="bigTextFieldBG" width="362" height="92"/>
         <image name="calendarBox" width="170" height="70"/>
+        <image name="camera" catalog="system" width="128" height="94"/>
         <image name="cancelBtn" width="50" height="50"/>
         <image name="commentTextFieldBG" width="302" height="62"/>
         <image name="createStudentUserBox" width="170.66667175292969" height="70"/>
