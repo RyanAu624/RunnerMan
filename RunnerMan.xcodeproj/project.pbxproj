@@ -10,6 +10,8 @@
 		00053B82281954EE00480DBE /* RealtimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00053B81281954EE00480DBE /* RealtimeViewController.swift */; };
 		00053B842819553200480DBE /* Videocapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00053B832819553200480DBE /* Videocapture.swift */; };
 		00053B86281C5D3E00480DBE /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00053B85281C5D3E00480DBE /* SelectViewController.swift */; };
+		00053B972824020700480DBE /* detectAction 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 00053B962824020600480DBE /* detectAction 1.mlmodel */; };
+		00053B9928243AE700480DBE /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00053B9828243AE700480DBE /* Predictor.swift */; };
 		0035EF6C280B120D002B5AEA /* StuHistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0035EF6B280B120D002B5AEA /* StuHistTableViewController.swift */; };
 		0035EF6E280B1250002B5AEA /* StuHistcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0035EF6D280B1250002B5AEA /* StuHistcell.swift */; };
 		00F9674427E85809007AF4D1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 00F9674327E85809007AF4D1 /* FirebaseAnalytics */; };
@@ -66,6 +68,8 @@
 		00053B81281954EE00480DBE /* RealtimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeViewController.swift; sourceTree = "<group>"; };
 		00053B832819553200480DBE /* Videocapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Videocapture.swift; sourceTree = "<group>"; };
 		00053B85281C5D3E00480DBE /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectViewController.swift; path = "RunnerMan/Stu ViewController/SelectViewController.swift"; sourceTree = SOURCE_ROOT; };
+		00053B962824020600480DBE /* detectAction 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "detectAction 1.mlmodel"; sourceTree = "<group>"; };
+		00053B9828243AE700480DBE /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
 		0035EF6B280B120D002B5AEA /* StuHistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuHistTableViewController.swift; sourceTree = "<group>"; };
 		0035EF6D280B1250002B5AEA /* StuHistcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuHistcell.swift; sourceTree = "<group>"; };
 		252A45B727DF3D9D00F92519 /* TchCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchCalendarViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 				00053B832819553200480DBE /* Videocapture.swift */,
 				00053B85281C5D3E00480DBE /* SelectViewController.swift */,
 				25BAFA52281D3BB50047008B /* StuCalendarViewController.swift */,
+				00053B9828243AE700480DBE /* Predictor.swift */,
 			);
 			path = "Stu ViewController";
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 		9ABBEB2C278C41D800FB9F22 /* RunnerMan */ = {
 			isa = PBXGroup;
 			children = (
+				00053B962824020600480DBE /* detectAction 1.mlmodel */,
 				9ABBEB2D278C41D800FB9F22 /* AppDelegate.swift */,
 				9ABBEB2F278C41D800FB9F22 /* SceneDelegate.swift */,
 				9ABBEB33278C41D800FB9F22 /* Main.storyboard */,
@@ -356,9 +362,11 @@
 				9AA487AC28016E0A0050AA05 /* TchParticipantTableViewController.swift in Sources */,
 				9ABBEB2E278C41D800FB9F22 /* AppDelegate.swift in Sources */,
 				9AE103A9280832DA00BD3AF0 /* CustomAlertViewController.swift in Sources */,
+				00053B972824020700480DBE /* detectAction 1.mlmodel in Sources */,
 				252A45B827DF3D9D00F92519 /* TchCalendarViewController.swift in Sources */,
 				00053B86281C5D3E00480DBE /* SelectViewController.swift in Sources */,
 				9A866F3727B681F90070EF54 /* TchHomeTableViewController.swift in Sources */,
+				00053B9928243AE700480DBE /* Predictor.swift in Sources */,
 				00053B82281954EE00480DBE /* RealtimeViewController.swift in Sources */,
 				9ABBEB5D278D240F00FB9F22 /* StuLoginViewController.swift in Sources */,
 				9ABBEB46278C4AED00FB9F22 /* Student.swift in Sources */,
