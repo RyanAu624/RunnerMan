@@ -8,6 +8,7 @@
 import UIKit
 import AVFoundation
 import CoreVideo
+import ReplayKit
 import MLKit
 
 class VideoViewController: UIViewController {
@@ -16,6 +17,8 @@ class VideoViewController: UIViewController {
     private lazy var captureSession = AVCaptureSession()
     private lazy var sessionQueue = DispatchQueue(label: Constant.sessionQueueLabel)
     private var lastFrame: CMSampleBuffer?
+    
+    private let recorder = RPScreenRecorder.shared()
     
     private lazy var previewOverlayView: UIImageView = {
 
@@ -39,6 +42,9 @@ class VideoViewController: UIViewController {
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var fpsLabel: UILabel!
     
+    @IBOutlet weak var recordButton: UIButton!
+    
+    
     /// FPS calculation
     var lastFrameStartTime: TimeInterval = 0
     var averageFpsCounter: Int = 0
@@ -50,6 +56,8 @@ class VideoViewController: UIViewController {
         let options = PoseDetectorOptions()
         options.detectorMode = .stream
         poseDetector = PoseDetector.poseDetector(options: options)
+        
+//        recordButton.layer.cornerRadius = 25
         
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.videoGravity = .resizeAspectFill
@@ -82,6 +90,19 @@ class VideoViewController: UIViewController {
       removeDetectionAnnotations()
       setUpCaptureSessionInput()
     }
+    
+    @IBAction func recordButtonTapped(_ sender: Any) {
+        recordButton.isSelected = !recordButton.isSelected
+//        shouldSetVideoOutputDelegate(recordButton.isSelected)
+        if recordButton.isSelected {
+            recordButton.layer.cornerRadius = 0
+            startRecording()
+        } else {
+            recordButton.layer.cornerRadius = 25
+            stopRecording()
+        }
+    }
+    
 
     private func detectPose(in image: VisionImage, width: CGFloat, height: CGFloat) {
       if let poseDetector = self.poseDetector {
@@ -137,7 +158,6 @@ class VideoViewController: UIViewController {
     }
 
     // MARK: - Private
-
     private func setUpCaptureSessionOutput() {
       sessionQueue.async {
         self.captureSession.beginConfiguration()
@@ -302,11 +322,40 @@ class VideoViewController: UIViewController {
       normalizedPoint = previewLayer.layerPointConverted(fromCaptureDevicePoint: normalizedPoint)
       return normalizedPoint
     }
+    
+    
+    private func startRecording() {
+        recorder.startRecording { error in
+            if let error = error {
+                print(error)
+            }
+        }
+        print("Start Recording")
+    }
+    
+    private func stopRecording() {
+        recorder.stopRecording { previewViewController, error in
+            if let error = error {
+                print(error)
+            }
+            if let previewViewController = previewViewController {
+                previewViewController.previewControllerDelegate = self
+                self.present(previewViewController, animated: true, completion: nil)
+            }
+        }
+        print("Stop Recording")
+    }
+    
+}
 
+// MARK: RPPreviewViewControllerDelegate
+extension VideoViewController: RPPreviewViewControllerDelegate {
+    func previewControllerDidFinish(_ previewController: RPPreviewViewController) {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 // MARK: AVCaptureVideoDataOutputSampleBufferDelegate
-
 extension VideoViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
 
   func captureOutput(
@@ -333,7 +382,6 @@ extension VideoViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
 }
 
 // MARK: - Constants
-
 private enum Constant {
   static let videoDataOutputQueueLabel = "com.google.mlkit.visiondetector.VideoDataOutputQueue"
   static let sessionQueueLabel = "com.google.mlkit.visiondetector.SessionQueue"

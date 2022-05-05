@@ -160,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vaJ-pO-uQY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-966" y="795"/>
+            <point key="canvasLocation" x="-763" y="923"/>
         </scene>
         <!--Tch Calendar View Controller-->
         <scene sceneID="xvB-q7-obn">
@@ -1076,7 +1076,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="enZ-3B-TPR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-172" y="795"/>
+            <point key="canvasLocation" x="31" y="923"/>
         </scene>
         <!--Custom Alert View Controller-->
         <scene sceneID="BQW-i1-gWV">
@@ -1230,7 +1230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="km4-nU-Ibi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="548" y="795"/>
+            <point key="canvasLocation" x="751" y="923"/>
         </scene>
         <!--Video View Controller-->
         <scene sceneID="gQU-A3-BEA">
@@ -1249,16 +1249,16 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5F6-Ov-1FW">
-                                <rect key="frame" x="0.0" y="784" width="390" height="60"/>
+                                <rect key="frame" x="0.0" y="764" width="390" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4M-q3-jmT">
-                                        <rect key="frame" x="30" y="20" width="31" height="21"/>
+                                        <rect key="frame" x="30" y="30" width="31" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jk-i3-NXo">
-                                        <rect key="frame" x="321" y="19" width="39" height="24"/>
+                                        <rect key="frame" x="321" y="28" width="39" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="FyO-s6-FUu"/>
                                             <constraint firstAttribute="width" constant="39" id="jUB-bg-rWQ"/>
@@ -1269,37 +1269,56 @@
                                             <action selector="switchCamera:" destination="HFc-U7-zrq" eventType="touchUpInside" id="s5y-tj-7Nx"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wQ-qb-6gL">
+                                        <rect key="frame" x="175" y="20" width="40" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="8pP-ki-xpL"/>
+                                            <constraint firstAttribute="width" constant="40" id="QYv-Wg-NOo"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.83803666239999997" green="0.2669890392" blue="0.21986452810000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="">
+                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="recordButtonTapped:" destination="HFc-U7-zrq" eventType="touchUpInside" id="SQd-10-skl"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="d4M-q3-jmT" firstAttribute="top" secondItem="5F6-Ov-1FW" secondAttribute="top" constant="20" symbolic="YES" id="7er-01-77y"/>
-                                    <constraint firstAttribute="height" constant="60" id="BVq-0a-gIT"/>
-                                    <constraint firstItem="d4M-q3-jmT" firstAttribute="leading" secondItem="5F6-Ov-1FW" secondAttribute="leading" constant="30" id="ES4-V4-CXr"/>
-                                    <constraint firstAttribute="trailing" secondItem="8jk-i3-NXo" secondAttribute="trailing" constant="30" id="P7N-iN-wDK"/>
-                                    <constraint firstItem="8jk-i3-NXo" firstAttribute="top" secondItem="5F6-Ov-1FW" secondAttribute="top" constant="19" id="mnv-xl-1J3"/>
-                                    <constraint firstAttribute="width" constant="390" id="suM-93-Cpx"/>
+                                    <constraint firstAttribute="width" constant="390" id="5xM-uN-0zI"/>
+                                    <constraint firstItem="d4M-q3-jmT" firstAttribute="top" secondItem="5F6-Ov-1FW" secondAttribute="top" constant="30" id="DQ8-ax-gLr"/>
+                                    <constraint firstItem="9wQ-qb-6gL" firstAttribute="top" secondItem="5F6-Ov-1FW" secondAttribute="top" constant="20" symbolic="YES" id="GVb-Bq-YHy"/>
+                                    <constraint firstAttribute="height" constant="80" id="KKi-UT-uM0"/>
+                                    <constraint firstAttribute="trailing" secondItem="8jk-i3-NXo" secondAttribute="trailing" constant="30" id="KR6-WF-8te"/>
+                                    <constraint firstItem="8jk-i3-NXo" firstAttribute="top" secondItem="5F6-Ov-1FW" secondAttribute="top" constant="28" id="fTs-aa-jdY"/>
+                                    <constraint firstItem="d4M-q3-jmT" firstAttribute="leading" secondItem="5F6-Ov-1FW" secondAttribute="leading" constant="30" id="n6T-I7-mAy"/>
+                                    <constraint firstItem="9wQ-qb-6gL" firstAttribute="centerX" secondItem="5F6-Ov-1FW" secondAttribute="centerX" id="obB-x2-JaJ"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="5F6-Ov-1FW" secondAttribute="bottom" id="2vo-ro-XZB"/>
-                            <constraint firstItem="9Pu-IE-F1c" firstAttribute="top" secondItem="VIa-Zs-KhZ" secondAttribute="top" id="AU4-oi-Jv5"/>
-                            <constraint firstItem="5F6-Ov-1FW" firstAttribute="leading" secondItem="VIa-Zs-KhZ" secondAttribute="leading" id="FQk-JT-htd"/>
-                            <constraint firstAttribute="bottom" secondItem="9Pu-IE-F1c" secondAttribute="bottom" id="GbH-iH-BuH"/>
-                            <constraint firstItem="9Pu-IE-F1c" firstAttribute="leading" secondItem="VIa-Zs-KhZ" secondAttribute="leading" id="XXH-uX-sUI"/>
-                            <constraint firstAttribute="trailing" secondItem="9Pu-IE-F1c" secondAttribute="trailing" id="fdx-6n-7hq"/>
+                            <constraint firstItem="5F6-Ov-1FW" firstAttribute="leading" secondItem="VIa-Zs-KhZ" secondAttribute="leading" id="0Vx-IM-CYf"/>
+                            <constraint firstAttribute="bottom" secondItem="5F6-Ov-1FW" secondAttribute="bottom" id="8sj-Y4-mXA"/>
+                            <constraint firstAttribute="bottom" secondItem="9Pu-IE-F1c" secondAttribute="bottom" id="Ee4-74-GDp"/>
+                            <constraint firstAttribute="trailing" secondItem="9Pu-IE-F1c" secondAttribute="trailing" id="Flv-Pz-60f"/>
+                            <constraint firstItem="9Pu-IE-F1c" firstAttribute="leading" secondItem="VIa-Zs-KhZ" secondAttribute="leading" id="dmZ-Zj-hKa"/>
+                            <constraint firstItem="9Pu-IE-F1c" firstAttribute="top" secondItem="VIa-Zs-KhZ" secondAttribute="top" id="rJQ-Eq-ckj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0IW-eF-OaL"/>
                     <connections>
                         <outlet property="cameraView" destination="9Pu-IE-F1c" id="I2C-a8-9Rw"/>
                         <outlet property="fpsLabel" destination="d4M-q3-jmT" id="wTq-V3-jqv"/>
+                        <outlet property="recordButton" destination="9wQ-qb-6gL" id="Cfk-K7-xCo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MJg-SW-uCW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1396.9230769230769" y="794.78672985781986"/>
+            <point key="canvasLocation" x="1600" y="922.74881516587675"/>
         </scene>
         <!--New Activity-->
         <scene sceneID="ILp-Om-9GF">
@@ -1349,7 +1368,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3Z-IS-per" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2232" y="795"/>
+            <point key="canvasLocation" x="2434" y="923"/>
         </scene>
         <!--Select View Controller-->
         <scene sceneID="8Ci-tI-9KH">
@@ -1378,7 +1397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IjL-dT-ecU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1081.5384615384614" y="1504.9763033175354"/>
+            <point key="canvasLocation" x="1082" y="1724"/>
         </scene>
         <!--Realtime View Controller-->
         <scene sceneID="Nr3-p6-WXO">
@@ -1396,7 +1415,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3By-bM-m2g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2231" y="1493"/>
+            <point key="canvasLocation" x="2231" y="1712"/>
         </scene>
         <!--Stu Training Detail View Controller-->
         <scene sceneID="6eW-Z7-eae">
@@ -1531,7 +1550,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWm-uZ-vBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3063.0769230769229" y="794.78672985781986"/>
+            <point key="canvasLocation" x="3266" y="923"/>
         </scene>
         <!--Stu Profile View Controller-->
         <scene sceneID="F9y-Js-c8P">
@@ -3057,6 +3076,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

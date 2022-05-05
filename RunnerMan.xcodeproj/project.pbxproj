@@ -58,7 +58,7 @@
 		9AE103AB2808434300BD3AF0 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE103AA2808434300BD3AF0 /* ForgetPasswordViewController.swift */; };
 		9AF7D09227E4D251005AAB76 /* StudentHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7D09127E4D251005AAB76 /* StudentHomeCollectionViewCell.swift */; };
 		9AF7D09827E4DAC0005AAB76 /* HeroBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7D09727E4DAC0005AAB76 /* HeroBanner.swift */; };
-		E5F0900FD3D56E7A0996EF17 /* Pods_RunnerMan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7309C5B96FFEF2F9E343AA /* Pods_RunnerMan.framework */; };
+		B1D1A83006266EFB92215DE9 /* Pods_RunnerMan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC274F60DE9BCAD34FC61DB /* Pods_RunnerMan.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,11 +67,12 @@
 		00053B85281C5D3E00480DBE /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectViewController.swift; path = "RunnerMan/Stu ViewController/SelectViewController.swift"; sourceTree = SOURCE_ROOT; };
 		0035EF6B280B120D002B5AEA /* StuHistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuHistTableViewController.swift; sourceTree = "<group>"; };
 		0035EF6D280B1250002B5AEA /* StuHistcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuHistcell.swift; sourceTree = "<group>"; };
-		0C7309C5B96FFEF2F9E343AA /* Pods_RunnerMan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunnerMan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		043D99F0EA91813A6DCBC4D3 /* Pods-RunnerMan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerMan.debug.xcconfig"; path = "Target Support Files/Pods-RunnerMan/Pods-RunnerMan.debug.xcconfig"; sourceTree = "<group>"; };
+		1EC274F60DE9BCAD34FC61DB /* Pods_RunnerMan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunnerMan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		252A45B727DF3D9D00F92519 /* TchCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchCalendarViewController.swift; sourceTree = "<group>"; };
 		25B5C1F727F2E06B00A4F084 /* EKWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKWrapper.swift; sourceTree = "<group>"; };
 		25BAFA52281D3BB50047008B /* StuCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuCalendarViewController.swift; sourceTree = "<group>"; };
-		8F5DD6F52560E60C44DADF56 /* Pods-RunnerMan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerMan.release.xcconfig"; path = "Target Support Files/Pods-RunnerMan/Pods-RunnerMan.release.xcconfig"; sourceTree = "<group>"; };
+		6395736BDC6AA1D9A7BB26B6 /* Pods-RunnerMan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerMan.release.xcconfig"; path = "Target Support Files/Pods-RunnerMan/Pods-RunnerMan.release.xcconfig"; sourceTree = "<group>"; };
 		9A82F919280D87D200174F22 /* RecordDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailTableViewController.swift; sourceTree = "<group>"; };
 		9A82F91B280DA92F00174F22 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		9A866F3627B681F90070EF54 /* TchHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchHomeTableViewController.swift; sourceTree = "<group>"; };
@@ -116,7 +117,6 @@
 		9AE103AA2808434300BD3AF0 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		9AF7D09127E4D251005AAB76 /* StudentHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		9AF7D09727E4DAC0005AAB76 /* HeroBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroBanner.swift; sourceTree = "<group>"; };
-		B943EA3BE20A1E3866CD2CC8 /* Pods-RunnerMan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerMan.debug.xcconfig"; path = "Target Support Files/Pods-RunnerMan/Pods-RunnerMan.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				252A45B627DF3D1B00F92519 /* CalendarKit in Frameworks */,
-				E5F0900FD3D56E7A0996EF17 /* Pods_RunnerMan.framework in Frameworks */,
+				B1D1A83006266EFB92215DE9 /* Pods_RunnerMan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,10 +208,10 @@
 			path = "Teacher ViewController";
 			sourceTree = "<group>";
 		};
-		55090360EF7BAFD7C9F1C42C /* Frameworks */ = {
+		469259E19FAA52954C20DF9C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0C7309C5B96FFEF2F9E343AA /* Pods_RunnerMan.framework */,
+				1EC274F60DE9BCAD34FC61DB /* Pods_RunnerMan.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -219,8 +219,8 @@
 		6B3DD00F0ADAB8BD28680395 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B943EA3BE20A1E3866CD2CC8 /* Pods-RunnerMan.debug.xcconfig */,
-				8F5DD6F52560E60C44DADF56 /* Pods-RunnerMan.release.xcconfig */,
+				043D99F0EA91813A6DCBC4D3 /* Pods-RunnerMan.debug.xcconfig */,
+				6395736BDC6AA1D9A7BB26B6 /* Pods-RunnerMan.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -231,7 +231,7 @@
 				9ABBEB2C278C41D800FB9F22 /* RunnerMan */,
 				9ABBEB2B278C41D800FB9F22 /* Products */,
 				6B3DD00F0ADAB8BD28680395 /* Pods */,
-				55090360EF7BAFD7C9F1C42C /* Frameworks */,
+				469259E19FAA52954C20DF9C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -272,12 +272,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9ABBEB3E278C41DA00FB9F22 /* Build configuration list for PBXNativeTarget "RunnerMan" */;
 			buildPhases = (
-				196AAA061BDA9A029A9A6C75 /* [CP] Check Pods Manifest.lock */,
+				09C68E6DBA5B75EDCC50E76A /* [CP] Check Pods Manifest.lock */,
 				9ABBEB26278C41D800FB9F22 /* Sources */,
 				9ABBEB27278C41D800FB9F22 /* Frameworks */,
 				9ABBEB28278C41D800FB9F22 /* Resources */,
-				95500E4244618FE6B7050E91 /* [CP] Embed Pods Frameworks */,
-				DD54C62385FBC3650E66411C /* [CP] Copy Pods Resources */,
+				F0E3D9FDE94E9DABD89CABE5 /* [CP] Embed Pods Frameworks */,
+				2670E4470D2777FC743090A1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -316,7 +316,7 @@
 			);
 			mainGroup = 9ABBEB21278C41D800FB9F22;
 			packageReferences = (
-				252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit" */,
+				252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit.git" */,
 			);
 			productRefGroup = 9ABBEB2B278C41D800FB9F22 /* Products */;
 			projectDirPath = "";
@@ -342,7 +342,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		196AAA061BDA9A029A9A6C75 /* [CP] Check Pods Manifest.lock */ = {
+		09C68E6DBA5B75EDCC50E76A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -364,24 +364,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		95500E4244618FE6B7050E91 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RunnerMan/Pods-RunnerMan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RunnerMan/Pods-RunnerMan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RunnerMan/Pods-RunnerMan-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DD54C62385FBC3650E66411C /* [CP] Copy Pods Resources */ = {
+		2670E4470D2777FC743090A1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -396,6 +379,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RunnerMan/Pods-RunnerMan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0E3D9FDE94E9DABD89CABE5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RunnerMan/Pods-RunnerMan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RunnerMan/Pods-RunnerMan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RunnerMan/Pods-RunnerMan-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -594,7 +594,7 @@
 		};
 		9ABBEB3F278C41DA00FB9F22 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B943EA3BE20A1E3866CD2CC8 /* Pods-RunnerMan.debug.xcconfig */;
+			baseConfigurationReference = 043D99F0EA91813A6DCBC4D3 /* Pods-RunnerMan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -625,7 +625,7 @@
 		};
 		9ABBEB40278C41DA00FB9F22 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F5DD6F52560E60C44DADF56 /* Pods-RunnerMan.release.xcconfig */;
+			baseConfigurationReference = 6395736BDC6AA1D9A7BB26B6 /* Pods-RunnerMan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -678,7 +678,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit" */ = {
+		252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/richardtop/CalendarKit.git";
 			requirement = {
@@ -691,7 +691,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		252A45B527DF3D1B00F92519 /* CalendarKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit" */;
+			package = 252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit.git" */;
 			productName = CalendarKit;
 		};
 /* End XCSwiftPackageProductDependency section */
