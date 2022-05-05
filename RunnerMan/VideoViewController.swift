@@ -57,8 +57,6 @@ class VideoViewController: UIViewController {
         options.detectorMode = .stream
         poseDetector = PoseDetector.poseDetector(options: options)
         
-//        recordButton.layer.cornerRadius = 25
-        
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.videoGravity = .resizeAspectFill
         setUpPreviewOverlayView()
@@ -70,8 +68,8 @@ class VideoViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
       super.viewDidAppear(animated)
       startSession()
-        recordButton.layer.cornerRadius = recordButton.frame.width / 2
-        recordButton.layer.masksToBounds = true
+      recordButton.layer.cornerRadius = recordButton.frame.width / 2
+      recordButton.layer.masksToBounds = true
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -96,10 +94,12 @@ class VideoViewController: UIViewController {
         recordButton.isSelected = !recordButton.isSelected
 //        shouldSetVideoOutputDelegate(recordButton.isSelected)
         if recordButton.isSelected {
-            recordButton.layer.cornerRadius = 0
+            self.recordButton.layer.cornerRadius = 5
             startRecording()
         } else {
-            recordButton.layer.cornerRadius = 25
+            self.recordButton.layer.cornerRadius = recordButton.frame.width / 2
+            self.recordButton.layer.masksToBounds = true
+//            recordButton.layer.cornerRadius = 25
             stopRecording()
         }
     }
@@ -326,7 +326,6 @@ class VideoViewController: UIViewController {
     
     
     private func startRecording() {
-        self.recordButton.layer.cornerRadius = 5
         recorder.startRecording { error in
             if let error = error {
                 print(error)
@@ -336,8 +335,6 @@ class VideoViewController: UIViewController {
     }
     
     private func stopRecording() {
-        self.recordButton.layer.cornerRadius = recordButton.frame.width / 2
-        self.recordButton.layer.masksToBounds = true
         recorder.stopRecording { previewViewController, error in
             if let error = error {
                 print(error)
