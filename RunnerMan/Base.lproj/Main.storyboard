@@ -1277,7 +1277,6 @@
                                             <constraint firstAttribute="width" constant="40" id="QYv-Wg-NOo"/>
                                         </constraints>
                                         <color key="tintColor" red="0.83803666239999997" green="0.2669890392" blue="0.21986452810000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="">
                                             <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>

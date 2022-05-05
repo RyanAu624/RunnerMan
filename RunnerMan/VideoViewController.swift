@@ -69,8 +69,9 @@ class VideoViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
       super.viewDidAppear(animated)
-
       startSession()
+        recordButton.layer.cornerRadius = recordButton.frame.width / 2
+        recordButton.layer.masksToBounds = true
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -325,6 +326,7 @@ class VideoViewController: UIViewController {
     
     
     private func startRecording() {
+        self.recordButton.layer.cornerRadius = 5
         recorder.startRecording { error in
             if let error = error {
                 print(error)
@@ -334,6 +336,8 @@ class VideoViewController: UIViewController {
     }
     
     private func stopRecording() {
+        self.recordButton.layer.cornerRadius = recordButton.frame.width / 2
+        self.recordButton.layer.masksToBounds = true
         recorder.stopRecording { previewViewController, error in
             if let error = error {
                 print(error)
