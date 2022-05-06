@@ -64,18 +64,24 @@ class VideoViewController: UIViewController {
         setUpCaptureSessionOutput()
         setUpCaptureSessionInput()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        recordButton.layer.cornerRadius = recordButton.frame.width / 2
+        recordButton.layer.masksToBounds = true
+    }
 
     override func viewDidAppear(_ animated: Bool) {
       super.viewDidAppear(animated)
+        
       startSession()
-      recordButton.layer.cornerRadius = recordButton.frame.width / 2
-      recordButton.layer.masksToBounds = true
     }
 
     override func viewDidDisappear(_ animated: Bool) {
       super.viewDidDisappear(animated)
 
       stopSession()
+      stopRecording()
     }
 
     override func viewDidLayoutSubviews() {
@@ -94,12 +100,11 @@ class VideoViewController: UIViewController {
         recordButton.isSelected = !recordButton.isSelected
 //        shouldSetVideoOutputDelegate(recordButton.isSelected)
         if recordButton.isSelected {
-            self.recordButton.layer.cornerRadius = 5
+            self.recordButton.layer.cornerRadius = 6
             startRecording()
         } else {
             self.recordButton.layer.cornerRadius = recordButton.frame.width / 2
             self.recordButton.layer.masksToBounds = true
-//            recordButton.layer.cornerRadius = 25
             stopRecording()
         }
     }
@@ -126,7 +131,7 @@ class VideoViewController: UIViewController {
         DispatchQueue.main.sync {
           // Pose detected. Currently, only single person detection is supported.
           poses.forEach { pose in
-            /*for (startLandmarkType, endLandmarkTypesArray) in UIUtilities.poseConnections() {
+            for (startLandmarkType, endLandmarkTypesArray) in UIUtilities.poseConnections() {
               let startLandmark = pose.landmark(ofType: startLandmarkType)
               for endLandmarkType in endLandmarkTypesArray {
                 let endLandmark = pose.landmark(ofType: endLandmarkType)
@@ -142,17 +147,17 @@ class VideoViewController: UIViewController {
                   width: Constant.lineWidth
                 )
               }
-            }*/
-            for landmark in pose.landmarks {
-              let landmarkPoint = normalizedPoint(
-                fromVisionPoint: landmark.position, width: width, height: height)
-              UIUtilities.addCircle(
-                atPoint: landmarkPoint,
-                to: self.annotationOverlayView,
-                color: UIColor.red,
-                radius: Constant.smallDotRadius
-              )
             }
+//            for landmark in pose.landmarks {
+//              let landmarkPoint = normalizedPoint(
+//                fromVisionPoint: landmark.position, width: width, height: height)
+//              UIUtilities.addCircle(
+//                atPoint: landmarkPoint,
+//                to: self.annotationOverlayView,
+//                color: UIColor.red,
+//                radius: Constant.smallDotRadius
+//              )
+//            }
           }
         }
       }

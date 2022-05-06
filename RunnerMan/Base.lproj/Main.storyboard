@@ -1285,7 +1285,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="390" id="5xM-uN-0zI"/>
                                     <constraint firstItem="d4M-q3-jmT" firstAttribute="top" secondItem="5F6-Ov-1FW" secondAttribute="top" constant="30" id="DQ8-ax-gLr"/>
