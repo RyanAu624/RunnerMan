@@ -72,6 +72,17 @@ class TchTrainingListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
+    
+    // delete the training method by teacher press delete button
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let removedTrainMethod = training.remove(at: indexPath.row)
+            
+            let ref = db.collection("Training").document(removedTrainMethod.trainingID)
+            ref.delete()
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recordcell", for: indexPath) as! RecordTableViewCell
