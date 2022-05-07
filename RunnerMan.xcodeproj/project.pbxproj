@@ -135,6 +135,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00053B9A2824C1BB00480DBE /* Ai */ = {
+			isa = PBXGroup;
+			children = (
+				00053B81281954EE00480DBE /* RealtimeViewController.swift */,
+				00053B832819553200480DBE /* Videocapture.swift */,
+				00053B962824020600480DBE /* detectAction 1.mlmodel */,
+				00053B9828243AE700480DBE /* Predictor.swift */,
+			);
+			path = Ai;
+			sourceTree = "<group>";
+		};
 		3B4911E228006D3B00EA607C /* Login And SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,11 +197,8 @@
 				9AE103A8280832DA00BD3AF0 /* CustomAlertViewController.swift */,
 				0035EF6B280B120D002B5AEA /* StuHistTableViewController.swift */,
 				9AAA952A281572EB00F038C3 /* StuRecordDetailTableViewController.swift */,
-				00053B81281954EE00480DBE /* RealtimeViewController.swift */,
-				00053B832819553200480DBE /* Videocapture.swift */,
 				00053B85281C5D3E00480DBE /* SelectViewController.swift */,
 				25BAFA52281D3BB50047008B /* StuCalendarViewController.swift */,
-				00053B9828243AE700480DBE /* Predictor.swift */,
 			);
 			path = "Stu ViewController";
 			sourceTree = "<group>";
@@ -231,10 +239,10 @@
 		9ABBEB2C278C41D800FB9F22 /* RunnerMan */ = {
 			isa = PBXGroup;
 			children = (
-				00053B962824020600480DBE /* detectAction 1.mlmodel */,
 				9ABBEB2D278C41D800FB9F22 /* AppDelegate.swift */,
 				9ABBEB2F278C41D800FB9F22 /* SceneDelegate.swift */,
 				9ABBEB33278C41D800FB9F22 /* Main.storyboard */,
+				00053B9A2824C1BB00480DBE /* Ai */,
 				3B4911E328006D5F00EA607C /* Model */,
 				3B4911E628006DD300EA607C /* Teacher ViewController */,
 				3B4911E528006DB100EA607C /* Stu ViewController */,

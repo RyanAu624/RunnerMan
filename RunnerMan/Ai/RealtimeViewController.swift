@@ -15,10 +15,12 @@ class RealtimeViewController: UIViewController {
     var pointlayer = CAShapeLayer()
     
     var isrunning = false
+    var timer: Timer = Timer()
+    var count:Int = 0
+    var counting: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupvideo()
         video.pred.delegate = self
         // Do any additional setup after loading the view.
@@ -51,14 +53,36 @@ class RealtimeViewController: UIViewController {
 
 extension RealtimeViewController: PredictDelegrate {
     func predictor(_ predictor: Predictor, didLableAction action: String, with confience: Double) {
-        if action == "start" && confience > 0.5 && isrunning == false {
-            print("detected")
+        if action == "start" && isrunning == false {
             isrunning = true
-            
+            print(action)
+            print("detect")
+            if counting == true {
+                timerstart()
+                counting = false
+                print("timer start")
+            }
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 self.isrunning = false
             }
+        } else if action == "running" {
+            timer.invalidate()
+            print("timer stop")
         }
+    }
+    
+    func timerstart(){
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timecount), userInfo: nil, repeats: true)
+    }
+    
+    @objc func timecount(timer: Timer){
+        count = count + 1
+        let time = secondtoHour(second: count)
+        print(time)
+    }
+    
+    func secondtoHour(second: Int) -> (Int, Int, Int){
+        return ((second / 3600), ((second % 3600) / 60), ((second % 3600) % 60))
     }
     
     func predictor(_ predictor: Predictor, didFindNewRecognizedPoint point: [CGPoint]) {
