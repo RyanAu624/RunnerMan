@@ -18,6 +18,7 @@ class RecordDetailTableViewController: UITableViewController {
     var comment = [Comment]()
     let uID = Auth.auth().currentUser?.uid
 
+    var looper: AVPlayerLooper?
     var trainingID : String!
     var trainingMethod : String!
     var trainingVideo : String!
@@ -61,8 +62,8 @@ class RecordDetailTableViewController: UITableViewController {
     
     func playvideo(){
         if let Videourl = URL(string: trainingVideo) {
-            print(Videourl)
-            let player = AVPlayer(url: Videourl)
+            let player = AVQueuePlayer()
+            looper = AVPlayerLooper(player: player, templateItem: AVPlayerItem(asset: AVAsset(url: Videourl)))
             let playerlayer = AVPlayerLayer(player: player)
             playerlayer.frame = videoly.frame
             self.videoly.layer.addSublayer(playerlayer)

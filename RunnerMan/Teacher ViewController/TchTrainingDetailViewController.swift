@@ -18,6 +18,7 @@ class TchTrainingDetailViewController: UIViewController {
     var trainingDay : String!
     var trainingStartTime : String!
     var trainingEndTime : String!
+    var looper : AVPlayerLooper?
     
     @IBOutlet weak var trainingMethodLabel: UILabel!
     @IBOutlet weak var trainingDescriptionLabel: UILabel!
@@ -38,8 +39,8 @@ class TchTrainingDetailViewController: UIViewController {
 
     func playVideo(){
         if let Videourl = URL(string: trainingVideo) {
-            print(Videourl)
-            let player = AVPlayer(url: Videourl)
+            let player = AVQueuePlayer()
+            looper = AVPlayerLooper(player: player, templateItem: AVPlayerItem(asset: AVAsset(url: Videourl)))
             let playerlayer = AVPlayerLayer(player: player)
             playerlayer.frame = videolayer.frame
             self.videolayer.layer.addSublayer(playerlayer)
