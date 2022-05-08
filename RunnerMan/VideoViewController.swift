@@ -146,8 +146,11 @@ class VideoViewController: UIViewController {
                   color: UIColor.green,
                   width: Constant.lineWidth
                 )
+                  
               }
             }
+              let angle = getangle(Landmark1: pose.landmark(ofType: .rightKnee), Landmark2: pose.landmark(ofType: .rightHip), Landmark3: pose.landmark(ofType: .leftKnee))
+              print(angle)
 //            for landmark in pose.landmarks {
 //              let landmarkPoint = normalizedPoint(
 //                fromVisionPoint: landmark.position, width: width, height: height)
@@ -185,6 +188,17 @@ class VideoViewController: UIViewController {
         self.captureSession.addOutput(output)
         self.captureSession.commitConfiguration()
       }
+    }
+    
+    private func getangle(Landmark1 : PoseLandmark, Landmark2 : PoseLandmark, Landmark3 : PoseLandmark) -> CGFloat {
+        let radians: CGFloat = atan2(Landmark3.position.y - Landmark2.position.y, Landmark3.position.x - Landmark2.position.x) - atan2(Landmark1.position.y - Landmark2.position.y, Landmark1.position.x - Landmark2.position.x)
+        var degree = radians * 180.0 / .pi
+        degree = abs(degree)
+        if degree > 180.0 {
+            degree = 360.0 - degree
+        }
+        return degree
+        
     }
 
     private func setUpCaptureSessionInput() {
