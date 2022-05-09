@@ -12,6 +12,7 @@ import FirebaseFirestore
 class TchStudentListTableViewController: UITableViewController {
     
     var student = [Student]()
+    let db = Firestore.firestore()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -78,6 +79,17 @@ class TchStudentListTableViewController: UITableViewController {
         cell.stuId.text = student[indexPath.row].studentID
         
         return cell
+    }
+    
+    // delete the student profile by teacher press delete button
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let removedStudentProfile = student.remove(at: indexPath.row)
+            
+            let ref = db.collection("student").document(removedStudentProfile.uid)
+            ref.delete()
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
     
     // set table view height
