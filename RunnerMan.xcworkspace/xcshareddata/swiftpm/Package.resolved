@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CalendarKit",
+        "repositoryURL": "https://github.com/richardtop/CalendarKit.git",
+        "state": {
+          "branch": "master",
+          "revision": "4e21d70c9c8470d97406bb8c9b74a6ea5b9d0585",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
