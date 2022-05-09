@@ -43,8 +43,8 @@ class StuHistTableViewController: UITableViewController {
                         let Stime = d["Start time"] as! String
                         let Etime = d["End time"] as! String
                         let member = d["member"]
-                        let uid = Auth.auth().currentUser?.uid
                         let member2 = d["member"] as! [String]
+                        let uid = Auth.auth().currentUser?.uid
                         let len2 = member2.count - 1
                         if len2 >= 0 {
                             for index in 0...len2 {

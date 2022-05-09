@@ -54,16 +54,19 @@ class TchParticipantTableViewController: UITableViewController {
             destination.trainingDay = self.trainingDay
             destination.trainingStartTime = self.trainingStartTime
             destination.trainingEndTime = self.trainingEndTime
+            
         }
         
         if let destination = segue.destination as? RecordDetailTableViewController {
-            destination.trainingID = self.trainingID
-            destination.trainingMethod = self.trainingMethod
-            destination.trainingVideo = self.trainingVideo
-            destination.trainingDescription = self.trainingDescription
-            destination.trainingDay = self.trainingDay
-            destination.trainingStartTime = self.trainingStartTime
-            destination.trainingEndTime = self.trainingEndTime
+            if let indexPath = self.tableView.indexPathForSelectedRow{
+                destination.trainingID = self.trainingID
+                destination.trainingMethod = self.trainingMethod
+                destination.trainingVideo = participant[indexPath.row].participantVideo
+                destination.trainingDescription = participant[indexPath.row].participantDescription
+                destination.trainingDay = self.trainingDay
+                destination.trainingStartTime = self.trainingStartTime
+                destination.trainingEndTime = self.trainingEndTime
+            }
             
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 destination.participantId = participant[indexPath.row].participantId

@@ -150,7 +150,21 @@ class VideoViewController: UIViewController {
               }
             }
               let angle = getangle(Landmark1: pose.landmark(ofType: .rightKnee), Landmark2: pose.landmark(ofType: .rightHip), Landmark3: pose.landmark(ofType: .leftKnee))
-              print(angle)
+              let elbowsangle = elbowsangle(Landmark1: pose.landmark(ofType: .leftElbow), Landmark2: pose.landmark(ofType: .leftShoulder), Landmark3: pose.landmark(ofType: .leftHip))
+              print(elbowsangle)
+              if angle > 58 && 66 > angle {
+                  self.fpsLabel.textColor = UIColor.green
+                  self.fpsLabel.text = ("Angel: \(String(format: "%.2f", angle))")
+              } else if angle > 80 && 40 > angle{
+                  self.fpsLabel.textColor = UIColor.yellow
+                  self.fpsLabel.text = ("Angel: \(String(format: "%.2f", angle))")
+              } else if angle > 80 || 30 > angle {
+                  self.fpsLabel.textColor = UIColor.red
+                  self.fpsLabel.text = ("Angel: \(String(format: "%.2f", angle))")
+              } else {
+                  self.fpsLabel.text = "Angel: "
+              }
+        
 //            for landmark in pose.landmarks {
 //              let landmarkPoint = normalizedPoint(
 //                fromVisionPoint: landmark.position, width: width, height: height)
@@ -191,6 +205,17 @@ class VideoViewController: UIViewController {
     }
     
     private func getangle(Landmark1 : PoseLandmark, Landmark2 : PoseLandmark, Landmark3 : PoseLandmark) -> CGFloat {
+        let radians: CGFloat = atan2(Landmark3.position.y - Landmark2.position.y, Landmark3.position.x - Landmark2.position.x) - atan2(Landmark1.position.y - Landmark2.position.y, Landmark1.position.x - Landmark2.position.x)
+        var degree = radians * 180.0 / .pi
+        degree = abs(degree)
+        if degree > 180.0 {
+            degree = 360.0 - degree
+        }
+        return degree
+        
+    }
+    
+    private func elbowsangle(Landmark1 : PoseLandmark, Landmark2 : PoseLandmark, Landmark3 : PoseLandmark) -> CGFloat {
         let radians: CGFloat = atan2(Landmark3.position.y - Landmark2.position.y, Landmark3.position.x - Landmark2.position.x) - atan2(Landmark1.position.y - Landmark2.position.y, Landmark1.position.x - Landmark2.position.x)
         var degree = radians * 180.0 / .pi
         degree = abs(degree)
@@ -309,12 +334,7 @@ class VideoViewController: UIViewController {
         
         averageFpsCounter += 1
         averageFpsSum += Int(currentFps)
-        if averageFpsCounter > 15 {
-            let averageFps = averageFpsSum / averageFpsCounter
-            averageFpsCounter = 0
-            averageFpsSum = 0
-            self.fpsLabel.text = "FPS: \(averageFps)"
-        }
+
         lastFrameStartTime = currentFrameTime
     }
 
