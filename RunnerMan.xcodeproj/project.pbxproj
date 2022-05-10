@@ -330,7 +330,7 @@
 			);
 			mainGroup = 9ABBEB21278C41D800FB9F22;
 			packageReferences = (
-				252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit.git" */,
+				252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit" */,
 			);
 			productRefGroup = 9ABBEB2B278C41D800FB9F22 /* Products */;
 			projectDirPath = "";
@@ -620,6 +620,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RunnerMan/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "access calendar to display eventkit";
+				INFOPLIST_KEY_NSCameraUsageDescription = "plz allow";
+				INFOPLIST_KEY_NSContactsUsageDescription = access;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "pla allow";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "plz allow";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -651,6 +655,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RunnerMan/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "access calendar to display eventkit";
+				INFOPLIST_KEY_NSCameraUsageDescription = "plz allow";
+				INFOPLIST_KEY_NSContactsUsageDescription = access;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "pla allow";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "plz allow";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -694,7 +702,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit.git" */ = {
+		252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/richardtop/CalendarKit.git";
 			requirement = {
@@ -707,7 +715,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		252A45B527DF3D1B00F92519 /* CalendarKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit.git" */;
+			package = 252A45B427DF3D1B00F92519 /* XCRemoteSwiftPackageReference "CalendarKit" */;
 			productName = CalendarKit;
 		};
 /* End XCSwiftPackageProductDependency section */

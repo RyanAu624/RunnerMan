@@ -38,11 +38,12 @@ class TchCalendarViewController: DayViewController, EKEventEditViewDelegate{
             }
         }
     }
-    
+    // set the notifcation
     private func setNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(storeChanged(_:)), name: .EKEventStoreChanged, object: eventStore)
     }
     
+    // init the eventstore
     private func initializeStore() {
         eventStore = EKEventStore()
     }
@@ -67,7 +68,7 @@ class TchCalendarViewController: DayViewController, EKEventEditViewDelegate{
         return calendarKitEvents
     }
     
-    //show event details
+    //show selected event details
     override func dayViewDidSelectEventView(_ eventView: EventView) {
         guard let ckEvent = eventView.descriptor as? EKWrapper else {
             return
@@ -76,6 +77,7 @@ class TchCalendarViewController: DayViewController, EKEventEditViewDelegate{
         presentDetailView(ekEvent)
     }
     
+    // show the event detail page
     private func presentDetailView(_ ekEvent: EKEvent){
         
         let eventViewController = EKEventViewController()
@@ -166,6 +168,7 @@ class TchCalendarViewController: DayViewController, EKEventEditViewDelegate{
         }
     }
     
+    // MARK: - EKEventEditViewDelegate
     func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
         endEventEditing()
         reloadData()
