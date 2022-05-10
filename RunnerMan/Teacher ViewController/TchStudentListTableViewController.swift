@@ -9,17 +9,30 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class TchStudentListTableViewController: UITableViewController {
+class TchStudentListTableViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
+
+    
     
     var student = [Student]()
+    var otherlist = [Student]()
     let db = Firestore.firestore()
+    let searchController : UISearchController! = nil
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getStu()
+        getStu(loadCompletion: {
+            print(self.otherlist)
+            print(self.student)
+        })
+        tableView.delegate = self
+        tableView.dataSource = self
+        let searchController = UISearchController()
+        navigationItem.searchController = searchController
+        searchController.searchBar.sizeToFit()
+        searchController.searchResultsUpdater = self
     }
     
-    func getStu() {
+    func getStu(loadCompletion : @escaping ()->Void) {
         let db = Firestore.firestore()
         
         db.collection("student").getDocuments() {(snapshot, err) in
@@ -39,10 +52,23 @@ class TchStudentListTableViewController: UITableViewController {
                     }
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
+                        self.otherlist = self.student
+                        loadCompletion()
                     }
                 }
             }
         }
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        if let word = searchController.searchBar.text, word.isEmpty == false {
+            student = otherlist.filter({ stu in
+                stu.studentName.localizedStandardContains(word)
+            })
+        } else {
+            student = otherlist
+        }
+        tableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -76,7 +102,7 @@ class TchStudentListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mStuCell", for: indexPath) as! ManageStuCell
         cell.name.text = student[indexPath.row].studentName
-        cell.stuId.text = student[indexPath.row].studentID
+        cell.stuId.text = student[indexPath.row].studentClass
         
         return cell
     }
