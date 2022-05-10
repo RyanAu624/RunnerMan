@@ -1252,8 +1252,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5F6-Ov-1FW">
                                 <rect key="frame" x="0.0" y="764" width="390" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4M-q3-jmT">
-                                        <rect key="frame" x="30" y="30" width="31" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4M-q3-jmT">
+                                        <rect key="frame" x="32" y="8" width="44" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="BgColor"/>
                                         <nil key="highlightedColor"/>
@@ -1285,16 +1285,25 @@
                                             <action selector="recordButtonTapped:" destination="HFc-U7-zrq" eventType="touchUpInside" id="SQd-10-skl"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elbow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8k-2S-Eiy">
+                                        <rect key="frame" x="32" y="39" width="46" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="BgColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="390" id="5xM-uN-0zI"/>
-                                    <constraint firstItem="d4M-q3-jmT" firstAttribute="top" secondItem="5F6-Ov-1FW" secondAttribute="top" constant="30" id="DQ8-ax-gLr"/>
                                     <constraint firstItem="9wQ-qb-6gL" firstAttribute="top" secondItem="5F6-Ov-1FW" secondAttribute="top" constant="20" symbolic="YES" id="GVb-Bq-YHy"/>
+                                    <constraint firstItem="d4M-q3-jmT" firstAttribute="top" secondItem="5F6-Ov-1FW" secondAttribute="top" constant="8" id="IIC-GV-Deg"/>
+                                    <constraint firstItem="X8k-2S-Eiy" firstAttribute="top" secondItem="d4M-q3-jmT" secondAttribute="bottom" constant="10" id="Iag-LB-mIl"/>
                                     <constraint firstAttribute="height" constant="80" id="KKi-UT-uM0"/>
                                     <constraint firstAttribute="trailing" secondItem="8jk-i3-NXo" secondAttribute="trailing" constant="30" id="KR6-WF-8te"/>
+                                    <constraint firstItem="d4M-q3-jmT" firstAttribute="leading" secondItem="5F6-Ov-1FW" secondAttribute="leading" constant="32" id="NEa-xD-e7z"/>
+                                    <constraint firstAttribute="bottom" secondItem="X8k-2S-Eiy" secondAttribute="bottom" constant="20" symbolic="YES" id="PMX-8B-YFJ"/>
+                                    <constraint firstItem="X8k-2S-Eiy" firstAttribute="leading" secondItem="5F6-Ov-1FW" secondAttribute="leading" constant="32" id="WG7-iY-StX"/>
                                     <constraint firstItem="8jk-i3-NXo" firstAttribute="top" secondItem="5F6-Ov-1FW" secondAttribute="top" constant="28" id="fTs-aa-jdY"/>
-                                    <constraint firstItem="d4M-q3-jmT" firstAttribute="leading" secondItem="5F6-Ov-1FW" secondAttribute="leading" constant="30" id="n6T-I7-mAy"/>
                                     <constraint firstItem="9wQ-qb-6gL" firstAttribute="centerX" secondItem="5F6-Ov-1FW" secondAttribute="centerX" id="obB-x2-JaJ"/>
                                 </constraints>
                             </view>
@@ -1312,6 +1321,7 @@
                     <navigationItem key="navigationItem" id="0IW-eF-OaL"/>
                     <connections>
                         <outlet property="cameraView" destination="9Pu-IE-F1c" id="I2C-a8-9Rw"/>
+                        <outlet property="elblabel" destination="X8k-2S-Eiy" id="GJE-jY-0ed"/>
                         <outlet property="fpsLabel" destination="d4M-q3-jmT" id="wTq-V3-jqv"/>
                         <outlet property="recordButton" destination="9wQ-qb-6gL" id="Cfk-K7-xCo"/>
                     </connections>

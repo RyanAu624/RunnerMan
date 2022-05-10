@@ -41,6 +41,7 @@ class VideoViewController: UIViewController {
 
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var fpsLabel: UILabel!
+    @IBOutlet weak var elblabel: UILabel!
     
     @IBOutlet weak var recordButton: UIButton!
     
@@ -150,20 +151,9 @@ class VideoViewController: UIViewController {
               }
             }
               let angle = getangle(Landmark1: pose.landmark(ofType: .rightKnee), Landmark2: pose.landmark(ofType: .rightHip), Landmark3: pose.landmark(ofType: .leftKnee))
-              let elbowsangle = elbowsangle(Landmark1: pose.landmark(ofType: .leftElbow), Landmark2: pose.landmark(ofType: .leftShoulder), Landmark3: pose.landmark(ofType: .leftHip))
-              print(elbowsangle)
-              if angle > 58 && 66 > angle {
-                  self.fpsLabel.textColor = UIColor.green
-                  self.fpsLabel.text = ("Angel: \(String(format: "%.2f", angle))")
-              } else if angle > 80 && 40 > angle{
-                  self.fpsLabel.textColor = UIColor.yellow
-                  self.fpsLabel.text = ("Angel: \(String(format: "%.2f", angle))")
-              } else if angle > 80 || 30 > angle {
-                  self.fpsLabel.textColor = UIColor.red
-                  self.fpsLabel.text = ("Angel: \(String(format: "%.2f", angle))")
-              } else {
-                  self.fpsLabel.text = "Angel: "
-              }
+              let elbowsangle = elbowsangle(Landmark1: pose.landmark(ofType: .leftWrist), Landmark2: pose.landmark(ofType: .leftElbow), Landmark3: pose.landmark(ofType: .leftShoulder))
+              elangle(angle: elbowsangle)
+              anglelabel(angle: angle)
         
 //            for landmark in pose.landmarks {
 //              let landmarkPoint = normalizedPoint(
@@ -202,6 +192,36 @@ class VideoViewController: UIViewController {
         self.captureSession.addOutput(output)
         self.captureSession.commitConfiguration()
       }
+    }
+    
+    func elangle(angle: CGFloat){
+        if angle > 90 && 110 > angle {
+            self.elblabel.textColor = UIColor.green
+            self.elblabel.text = ("Elbow: \(String(format: "%.2f", angle))")
+        } else if angle > 110 && 130 > angle || angle > 70 && 90 > angle{
+            self.elblabel.textColor = UIColor.yellow
+            self.elblabel.text = ("Elbow: \(String(format: "%.2f", angle))")
+        } else if angle > 130 || 70 > angle {
+            self.elblabel.textColor = UIColor.red
+            self.elblabel.text = ("Elbow: \(String(format: "%.2f", angle))")
+        } else {
+            self.elblabel.text = "Elbow: "
+        }
+    }
+    
+    func anglelabel(angle: CGFloat){
+        if angle > 58 && 66 > angle {
+            self.fpsLabel.textColor = UIColor.green
+            self.fpsLabel.text = ("Angel: \(String(format: "%.2f", angle))")
+        } else if angle > 66 && 76 > angle || angle > 48 && 58 > angle{
+            self.fpsLabel.textColor = UIColor.yellow
+            self.fpsLabel.text = ("Angel: \(String(format: "%.2f", angle))")
+        } else if angle > 76 || 48 > angle {
+            self.fpsLabel.textColor = UIColor.red
+            self.fpsLabel.text = ("Angel: \(String(format: "%.2f", angle))")
+        } else {
+            self.fpsLabel.text = "Angel: "
+        }
     }
     
     private func getangle(Landmark1 : PoseLandmark, Landmark2 : PoseLandmark, Landmark3 : PoseLandmark) -> CGFloat {

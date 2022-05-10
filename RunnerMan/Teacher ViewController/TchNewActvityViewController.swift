@@ -20,6 +20,7 @@ class TchNewActvityViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var StartTime: UITextField!
     @IBOutlet weak var EndTime: UITextField!
     let bar = UIToolbar()
+    let textbar = UIToolbar()
     let datePicker = UIDatePicker()
     let formatter = DateFormatter()
     let picker = UIImagePickerController()
@@ -32,6 +33,7 @@ class TchNewActvityViewController: UIViewController, UIImagePickerControllerDele
         super.viewDidLoad()
         let screenWidth = self.view.frame.width
         let screenHeight = self.view.frame.height
+        
         datePicker.frame = CGRect(x: 0, y: screenHeight - 216 - 44, width: screenWidth, height: 216)
         TrainDay.inputView = datePicker
         StartTime.inputView = datePicker
@@ -42,6 +44,13 @@ class TchNewActvityViewController: UIViewController, UIImagePickerControllerDele
         TrainDay.inputAccessoryView = bar
         StartTime.inputAccessoryView = bar
         EndTime.inputAccessoryView = bar
+        
+        let btndone = UIBarButtonItem(title: "Done", style: .done, target: nil, action: #selector(enterdone))
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        textbar.setItems([space, btndone], animated: false)
+        textbar.sizeToFit()
+        MethodText.inputAccessoryView = textbar
+        DescriText.inputAccessoryView = textbar
 
         // Do any additional setup after loading the view.
     }
@@ -56,6 +65,10 @@ class TchNewActvityViewController: UIViewController, UIImagePickerControllerDele
         if textField == EndTime{
             datePicker.datePickerMode = .time
         }
+    }
+    
+    @objc func enterdone(){
+        view.endEditing(true)
     }
     
     @objc func datedone(){

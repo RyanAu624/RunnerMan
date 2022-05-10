@@ -19,6 +19,7 @@ class CustomAlertViewController: UIViewController, UIImagePickerControllerDelega
     var list = [Training]()
     var videoData : Data = Data()
     let uID = Auth.auth().currentUser?.uid
+    let toolbar = UIToolbar()
     
     private var inputTrainingID: String = ""
     private var titlename: String = ""
@@ -37,7 +38,12 @@ class CustomAlertViewController: UIViewController, UIImagePickerControllerDelega
         popUPView.layer.shadowOpacity = 0.5
         popUPView.layer.shadowOffset = .zero
         popUPView.layer.shadowRadius = 5
-
+        let btndone = UIBarButtonItem(title: "Done", style: .done, target: nil, action: #selector(done))
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        toolbar.setItems([space, btndone], animated: false)
+        toolbar.sizeToFit()
+        descriptionTF.inputAccessoryView = toolbar
+        
         let optionsClosure = { (action: UIAction) in
             self.titlename = action.title
             self.findTrainID(title: action.title, findCompetion: { (result) in
@@ -56,6 +62,10 @@ class CustomAlertViewController: UIViewController, UIImagePickerControllerDelega
         activityListBtn.showsMenuAsPrimaryAction = true
         activityListBtn.changesSelectionAsPrimaryAction = true
         
+    }
+    
+    @objc func done(){
+        view.endEditing(true)
     }
     
     func findTrainID(title: String, findCompetion : @escaping ((String) -> Void)) {
