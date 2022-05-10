@@ -77,7 +77,6 @@ class StuTrainingDetailViewController: UIViewController {
             self.btnjoin.title = "cancel"
         } else if self.btnjoin.title == "cancel"{
             ref.document(uid!).delete()
-            ref.document(uid!).collection("commentList").document(uid!).delete()
             let locref = db.collection("Training").document(trainingID)
             locref.updateData(["member" : FieldValue.arrayRemove(["\(uid!)"])])
             self.btnjoin.title = "join"

@@ -26,6 +26,7 @@ class StuRecordDetailTableViewController: UITableViewController {
     var trainingDay : String!
     var trainingStartTime : String!
     var trainingEndTime : String!
+    let bar = UIToolbar()
     
     @IBOutlet weak var videolay: UIView!
     @IBOutlet weak var stuName: UILabel!
@@ -41,8 +42,12 @@ class StuRecordDetailTableViewController: UITableViewController {
         guard let des = trainingDescription else {return}
         descriptionLabel.text = des
         descriptionLabel.sizeToFit()
-        print(des)
         playvideo()
+        let btndone = UIBarButtonItem(title: "Done", style: .done, target: nil, action: #selector(done))
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        bar.setItems([space, btndone], animated: false)
+        bar.sizeToFit()
+        commentTF.inputAccessoryView = bar
     }
     
     func getParticipantDetail() {
@@ -56,6 +61,10 @@ class StuRecordDetailTableViewController: UITableViewController {
                 self.descriptionLabel.text = (des as! String)
             }
         }
+    }
+    
+    @objc func done(){
+        view.endEditing(true)
     }
     
     func playvideo(){
@@ -99,7 +108,7 @@ class StuRecordDetailTableViewController: UITableViewController {
         let ref = db.collection("Training").document(trainingID).collection("participant")
         let secRef = ref.document(uID!).collection("commentList")
         let ref2 = db.collection("student").whereField("uid", isEqualTo: uID!)
-
+        let postid = secRef.document().documentID
         ref2.getDocuments {(snapshot, err) in
             if err == nil {
                 if let snapshot = snapshot {
@@ -107,7 +116,7 @@ class StuRecordDetailTableViewController: UITableViewController {
                         let Name = document.data()["studentName"]
                         guard let Tname = Name else {return}
                         if self.commentTF.text != "" {
-                            secRef.document(self.uID!).setData(["reviewer": self.uID!,
+                            secRef.document(postid).setData(["reviewer": self.uID!,
                                                              "description": self.commentTF.text!,
                                                              "name": Tname])
                             
@@ -155,6 +164,7 @@ class StuRecordDetailTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "comCell", for: indexPath) as! CommentTableViewCell
+        cell.stuName.font = UIFont.systemFont(ofSize: 22)
         cell.commentDescription.text = comment[indexPath.row].commentDescription
         cell.stuName.text = comment[indexPath.row].name
         

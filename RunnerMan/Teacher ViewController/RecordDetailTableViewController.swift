@@ -30,6 +30,7 @@ class RecordDetailTableViewController: UITableViewController {
     var participantId : String!
     var participantDescription : String!
     var participantVideo : String!
+    let bar = UIToolbar()
 
     @IBOutlet weak var stuName: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -42,7 +43,15 @@ class RecordDetailTableViewController: UITableViewController {
         descriptionLabel.text = participantDescription
         getCommentList()
         playvideo()
-        
+        let btndone = UIBarButtonItem(title: "Done", style: .done, target: nil, action: #selector(enterdone))
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        bar.setItems([space, btndone], animated: false)
+        bar.sizeToFit()
+        commentTF.inputAccessoryView = bar
+    }
+    
+    @objc func enterdone(){
+        view.endEditing(true)
     }
     
     func getStuData() {
@@ -133,6 +142,7 @@ class RecordDetailTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cCell", for: indexPath) as! CommentTableViewCell
+        cell.stuName.font = UIFont.systemFont(ofSize: 22)
         cell.commentDescription.text = comment[indexPath.row].commentDescription
         cell.stuName.text = comment[indexPath.row].name
         

@@ -46,6 +46,7 @@ class CustomAlertViewController: UIViewController, UIImagePickerControllerDelega
         
         let optionsClosure = { (action: UIAction) in
             self.titlename = action.title
+            self.activityListBtn.setAttributedTitle(NSAttributedString(string: action.title), for: UIControl.State.normal)
             self.findTrainID(title: action.title, findCompetion: { (result) in
                 self.inputTrainingID = result
             })
