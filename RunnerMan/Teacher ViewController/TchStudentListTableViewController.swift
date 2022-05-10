@@ -11,8 +11,6 @@ import FirebaseFirestore
 
 class TchStudentListTableViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
 
-    
-    
     var student = [Student]()
     var otherlist = [Student]()
     let db = Firestore.firestore()
@@ -21,8 +19,7 @@ class TchStudentListTableViewController: UITableViewController, UISearchResultsU
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getStu(loadCompletion: {
-            print(self.otherlist)
-            print(self.student)
+
         })
         tableView.delegate = self
         tableView.dataSource = self
@@ -63,7 +60,7 @@ class TchStudentListTableViewController: UITableViewController, UISearchResultsU
     func updateSearchResults(for searchController: UISearchController) {
         if let word = searchController.searchBar.text, word.isEmpty == false {
             student = otherlist.filter({ stu in
-                stu.studentName.localizedStandardContains(word)
+                stu.studentName.localizedStandardContains(word) || stu.studentClass.localizedStandardContains(word)
             })
         } else {
             student = otherlist

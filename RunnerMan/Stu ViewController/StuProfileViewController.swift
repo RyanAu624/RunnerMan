@@ -78,5 +78,7 @@ class StuProfileViewController: UIViewController {
                         "studentAge":stuAge as Any,
                         "studentWeight":stuWeight as Any,
                         "studentHeight":stuHeight as Any])
+        
+        self.navigationController?.popViewController(animated: true)
     }
 }
