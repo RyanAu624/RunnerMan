@@ -21,16 +21,7 @@ class TchHomeTableViewController: UITableViewController {
         getRecord()
     }
     
-    @IBAction func createStu(_ sender: Any) {
-        
-        let inviteCode = Int.random(in: 123009...987654)
-        showAlertMessage(inviteCode)
-        
-        let id = Auth.auth().currentUser?.uid
-        let ref = db.collection("teacher").document(id!)
-        
-        ref.updateData(["Code":String(inviteCode)])
-    }
+    
     
     func showAlertMessage(_ inviteCode:Int) {
         let alertController = UIAlertController(title: String(inviteCode), message: "InviteCode...", preferredStyle: .alert)
