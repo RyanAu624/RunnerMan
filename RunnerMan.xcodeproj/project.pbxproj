@@ -209,6 +209,7 @@
 		3B4911E628006DD300EA607C /* Teacher ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				25DFC674282AA3E700BEAF63 /* AddStuUserViewController.swift */,
 				252A45B727DF3D9D00F92519 /* TchCalendarViewController.swift */,
 				9AA487B12801C6370050AA05 /* TchTrainingDetailViewController.swift */,
 				9A82F919280D87D200174F22 /* RecordDetailTableViewController.swift */,
@@ -263,7 +264,6 @@
 			children = (
 				9ABBEB2D278C41D800FB9F22 /* AppDelegate.swift */,
 				9ABBEB2F278C41D800FB9F22 /* SceneDelegate.swift */,
-				25DFC674282AA3E700BEAF63 /* AddStuUserViewController.swift */,
 				9ABBEB33278C41D800FB9F22 /* Main.storyboard */,
 				00053B9A2824C1BB00480DBE /* Ai */,
 				3B4911E328006D5F00EA607C /* Model */,
