@@ -10,6 +10,7 @@ import FirebaseFirestore
 import FirebaseStorage
 import FirebaseAuth
 import AVFoundation
+import AVKit
 
 class RecordDetailTableViewController: UITableViewController {
     
@@ -48,6 +49,8 @@ class RecordDetailTableViewController: UITableViewController {
         bar.setItems([space, btndone], animated: false)
         bar.sizeToFit()
         commentTF.inputAccessoryView = bar
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(fullscn))
+        self.videoly.addGestureRecognizer(gesture)
     }
     
     @objc func enterdone(){
@@ -75,8 +78,23 @@ class RecordDetailTableViewController: UITableViewController {
             looper = AVPlayerLooper(player: player, templateItem: AVPlayerItem(asset: AVAsset(url: Videourl)))
             let playerlayer = AVPlayerLayer(player: player)
             playerlayer.frame = videoly.frame
+            playerlayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
             self.videoly.layer.addSublayer(playerlayer)
             player.play()
+        }
+    }
+    
+    @objc func fullscn(sender : UITapGestureRecognizer){
+        if let video = URL(string: trainingVideo){
+            DispatchQueue.main.async {
+                let player = AVPlayer(url: video)
+                let playerController = AVPlayerViewController()
+                playerController.player = player
+                
+                self.present(playerController, animated: true, completion: {
+                    playerController.player!.play()
+                })
+            }
         }
     }
     

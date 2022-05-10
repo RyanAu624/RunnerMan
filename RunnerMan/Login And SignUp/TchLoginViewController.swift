@@ -12,6 +12,21 @@ class TchLoginViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwdTextField: UITextField!
+    let bar = UIToolbar()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let btndone = UIBarButtonItem(title: "Done", style: .done, target: nil, action: #selector(enterdone))
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        bar.setItems([space, btndone], animated: false)
+        bar.sizeToFit()
+        emailTextField.inputAccessoryView = bar
+        passwdTextField.inputAccessoryView = bar
+    }
+    
+    @objc func enterdone(){
+        view.endEditing(true)
+    }
     
     func vaildateFields() -> String? {
         //Check that all fields are filled in

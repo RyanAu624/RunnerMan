@@ -10,6 +10,7 @@ import FirebaseFirestore
 import FirebaseStorage
 import FirebaseAuth
 import AVFoundation
+import AVKit
 
 class StuRecordDetailTableViewController: UITableViewController {
     
@@ -48,6 +49,22 @@ class StuRecordDetailTableViewController: UITableViewController {
         bar.setItems([space, btndone], animated: false)
         bar.sizeToFit()
         commentTF.inputAccessoryView = bar
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(fullscn))
+        self.videolay.addGestureRecognizer(gesture)
+    }
+    
+    @objc func fullscn(sender : UITapGestureRecognizer){
+        if let video = URL(string: trainingVideo){
+            DispatchQueue.main.async {
+                let player = AVPlayer(url: video)
+                let playerController = AVPlayerViewController()
+                playerController.player = player
+                
+                self.present(playerController, animated: true, completion: {
+                    playerController.player!.play()
+                })
+            }
+        }
     }
     
     func getParticipantDetail() {
@@ -73,6 +90,7 @@ class StuRecordDetailTableViewController: UITableViewController {
             looper = AVPlayerLooper(player: player, templateItem: AVPlayerItem(asset: AVAsset(url: Videourl)))
             let playerlayer = AVPlayerLayer(player: player)
             playerlayer.frame = videolay.frame
+            playerlayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
             self.videolay.layer.addSublayer(playerlayer)
             player.play()
         }

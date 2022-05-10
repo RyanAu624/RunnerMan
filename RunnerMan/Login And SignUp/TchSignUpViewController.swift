@@ -18,6 +18,25 @@ class TchSignUpViewController: UIViewController {
     @IBOutlet weak var passwdTextField: UITextField!
     @IBOutlet weak var CpasswdTextField: UITextField!
     
+    let bar = UIToolbar()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let btndone = UIBarButtonItem(title: "Done", style: .done, target: nil, action: #selector(enterdone))
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        bar.setItems([space, btndone], animated: false)
+        bar.sizeToFit()
+        nameTextField.inputAccessoryView = bar
+        emailTextField.inputAccessoryView = bar
+        phoneNumTextField.inputAccessoryView = bar
+        passwdTextField.inputAccessoryView = bar
+        CpasswdTextField.inputAccessoryView = bar
+    }
+    
+    @objc func enterdone(){
+        view.endEditing(true)
+    }
+    
     func validateFields() -> String? {
         //Check that all fields are filled in
         if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
