@@ -57,7 +57,7 @@ class StuHomeTableViewController: UITableViewController, UICollectionViewDataSou
     func showAlertController() {
         let alertController = UIAlertController(title: "Post", message: "Let's setup a new task.", preferredStyle: .alert)
         alertController.addTextField { textField in
-            textField.keyboardType = UIKeyboardType.phonePad
+            textField.keyboardType = UIKeyboardType.default
         }
         
         let okAction = UIAlertAction(title: "OK", style: .default) { [unowned alertController] _ in
